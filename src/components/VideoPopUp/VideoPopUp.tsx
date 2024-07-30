@@ -1,6 +1,11 @@
 import { NewVideo } from "../NewVideo";
 import style from "./style.module.scss";
 
+type Theme = {
+  style?: string;
+  icon: JSX.Element;
+};
+
 const VideoPopUp = (props: any) => {
   return (
     <div
@@ -58,7 +63,7 @@ const crossLP = (
   </svg>
 );
 
-const theme = {
+const theme: Record<string, Theme> = {
   lp: {
     style: style.lp,
     icon: crossLP,
