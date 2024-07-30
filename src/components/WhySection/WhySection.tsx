@@ -76,7 +76,6 @@ const WhySection = () => {
       id="why"
       className="xl:pt-[101px] xl:px-[180px] pt-[101px] pb-[71px] md:pb-[59px] xl:pb-[101px] overflow-hidden"
     >
-     <div className="container">
         <h2 className="px-[30px] md:mb-[39px] lg:mb-[21px] mb-[54px] xl:px-0 text-[var(--primary-text-color)] font-manrope text-[40px] leading-[57px] font-extrabold text-center md:text-start">
           {t("whySection.title.title")} <br />
           <span className="text-[var(--accent-color)]">
@@ -90,7 +89,7 @@ const WhySection = () => {
             <li
               className={`transition-all ${
                 style.whySectionItemWidth
-              } px-[18px] pt-8 pb-[25px] rounded-[7px] h-[300px] ${
+              } px-[18px] pt-8 pb-[25px] rounded-[7px] md:h-[335px] lg:h-[300px] ${
                 item.id % 2 === 0
                   ? "bg-gradient-to-r from-[#0090FF] to-[rgba(0,144,255,0)]"
                   : "bg-[var(--secondary-bg-color)]"
@@ -119,7 +118,6 @@ const WhySection = () => {
             </li>
           ))}
         </ul>
-     </div>
     </section>
   );
 };

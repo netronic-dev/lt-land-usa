@@ -39,6 +39,8 @@
 }
 
 .unlockingBusinessSectionItemWidth {
+  width: 100%;
+
   @media (min-width: 744px) {
     width: calc(100% / 2 - 10px);
   }

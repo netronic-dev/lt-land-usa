@@ -80,7 +80,7 @@ const UnlockingBusinessSection = () => {
               data-index={index}
               className={`${getClassForItem(
                 index
-              )} md:gap-[16px] lg:gap-[20px] h-[259px] p-[45px] xl:pr-[70px] rounded-[7px] w-full ${
+              )} md:gap-[16px] lg:gap-[20px] h-[259px] p-[45px] xl:pr-[70px] rounded-[7px] ${
                 style.unlockingBusinessSectionItemWidth
               }`}
               style={
