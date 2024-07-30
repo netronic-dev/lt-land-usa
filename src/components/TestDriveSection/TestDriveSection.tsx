@@ -65,9 +65,9 @@ const TestDriveSection = () => {
                 listItemsRefs.current[index] = el;
               }}
               data-index={index}
-              className={`${
-                style.listItem
-              } testDriveSection-item-width flex items-start gap-[24px] md:gap-[20px] lg:gap-[24px] ${
+              className={`${style.listItem} ${
+                style.testDriveSectionItemWidth
+              } flex items-start gap-[24px] md:gap-[20px] lg:gap-[24px] ${
                 index === 0 || index === 3
                   ? "md:h-[361px]"
                   : index === 1 || index === 4
@@ -85,7 +85,9 @@ const TestDriveSection = () => {
                   : ""
               }`}
             >
-              <p className="test-drive-number-text font-manrope text-[44px] font-extrabold uppercase">
+              <p
+                className={`${style.testDriveNumberText} font-manrope text-[44px] font-extrabold uppercase`}
+              >
                 0{index + 1}
               </p>
               <div className="flex flex-col gap-[10px] md:gap-[8px] md:max-w-[250px] lg:max-w-[370px] xl:max-w-[440px]">

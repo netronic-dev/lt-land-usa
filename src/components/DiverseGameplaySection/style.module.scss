@@ -26,3 +26,9 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.diverseGameplaySectionItemWidth {
+  @media (min-width: 1024px) {
+    width: calc(100% / 2 - 10px);
+  }
+}

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Icon } from "../Icon";
 import { PopularityAndDemandList } from "@/constants/globalConstants";
 import { PrimaryButton } from "../PrimaryButton";
+import style from "./style.module.scss";
 
 const PopularitySection = () => {
   const { t } = useTranslation();
@@ -108,7 +109,9 @@ const PopularitySection = () => {
       <ul className="flex gap-[10px] md:gap-[25px] lg:gap-[32px] xl:gap-[27px] overflow-x-hidden mb-[36px] md:mb-[24px]">
         {popularityAndDemandSectionList.map((item) => (
           <li
-            className="popularityAndDemandSection-item-width min-w-full w-full flex bg-[transparent] flex-col gap-[16px] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px]"
+            className={`${
+              style.popularityAndDemandSectionItemWidth
+            } min-w-full w-full flex bg-[transparent] flex-col gap-[16px] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px]`}
             key={item.id}
             style={{
               transform: `translateX(-${activeIndex * slideWidth}px)`,

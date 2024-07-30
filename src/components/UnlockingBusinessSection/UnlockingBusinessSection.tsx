@@ -1,9 +1,8 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import style from "./style.module.scss";
-import { useIntersectionObserver } from "@/hooks";
 
 const UnlockingBusinessSection = () => {
   const { t } = useTranslation();
@@ -81,7 +80,9 @@ const UnlockingBusinessSection = () => {
               data-index={index}
               className={`${getClassForItem(
                 index
-              )} md:gap-[16px] lg:gap-[20px] h-[259px] p-[45px] xl:pr-[70px] rounded-[7px] w-full unlockingBusinessSection-item-width`}
+              )} md:gap-[16px] lg:gap-[20px] h-[259px] p-[45px] xl:pr-[70px] rounded-[7px] w-full ${
+                style.unlockingBusinessSectionItemWidth
+              }`}
               style={
                 index % 2 === 0
                   ? {

@@ -1,4 +1,5 @@
 export interface ErrorResponse {
+  response: any;
   message: string;
   data?: { [key: string]: string };
   additionalInfo?: Record<string, unknown>;

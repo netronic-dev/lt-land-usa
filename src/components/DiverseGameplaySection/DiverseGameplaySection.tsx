@@ -79,7 +79,7 @@ const DiverseGameplaySection = () => {
               } flex flex-col overflow-x-hidden ${
                 item.id === 2
                   ? "lg:w-full"
-                  : "diverseGameplaySection-item-width"
+                  : style.diverseGameplaySectionItemWidth
               } lg:gap-[22px] ${
                 item.id === 0
                   ? style.itemOne

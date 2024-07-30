@@ -10,3 +10,16 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.businessSupportSectionItemWidth {
+  width: calc(100% / 2 - 5px);
+
+  @media (min-width: 744px) {
+    width: calc(100% / 2 - 11px);
+  }
+
+  @media (min-width: 1024px) {
+    width: 436px;
+    height: 252px;
+  }
+}

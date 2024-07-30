@@ -1,0 +1,23 @@
+.footerItemTabletWidth {
+  @media (min-width: 744px) and (max-width: 1511px) {
+    width: calc(50% - 10px);
+  }
+}
+
+.footerInfoTabletBox {
+  @media (min-width: 744px) and (max-width: 1023px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footerInfoWidthBox {
+  @media (min-width: 744px) and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1511px) {
+    width: 460px;
+  }
+}

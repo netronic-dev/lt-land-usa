@@ -8,3 +8,20 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.testDriveNumberText {
+  background: linear-gradient(
+    143deg,
+    #0090ff -15.09%,
+    rgba(0, 144, 255, 0) 101.23%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.testDriveSectionItemWidth {
+  @media (min-width: 744px) {
+    width: calc(100% / 2);
+  }
+}

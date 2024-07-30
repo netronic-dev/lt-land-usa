@@ -81,7 +81,7 @@ const AboutUsSection = () => {
         <ul className="mt-[99px] lg:mt-0 flex items-center flex-wrap justify-center md:mt-[80px] lg:justify-end">
           <li
             ref={itemOneRef}
-            className={`${style.itemOne} aboutUsSection-item-width flex items-center xl:w-[266px] xl:h-[266px] lg:w-[252px] lg:h-[252px] md:w-[360px] md:h-[360px] w-[175px] h-[175px] justify-center rounded-[50%] border-solid border-[1px] border-[#A8A8A8] bg-[transparent]`}
+            className={`${style.itemOne} ${style.aboutUsSectionItemWidth} flex items-center xl:w-[266px] xl:h-[266px] lg:w-[252px] lg:h-[252px] md:w-[360px] md:h-[360px] w-[175px] h-[175px] justify-center rounded-[50%] border-solid border-[1px] border-[#A8A8A8] bg-[transparent]`}
           >
             <Icon
               className="w-[92px] h-[32px] md:w-[188px] md:h-[66px] lg:w-[132px] lg:h-[51px] xl:w-[139px] xl:h-[46px]"

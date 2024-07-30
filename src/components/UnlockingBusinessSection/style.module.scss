@@ -37,3 +37,9 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.unlockingBusinessSectionItemWidth {
+  @media (min-width: 744px) {
+    width: calc(100% / 2 - 10px);
+  }
+}

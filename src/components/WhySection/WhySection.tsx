@@ -82,10 +82,14 @@ const WhySection = () => {
           {t("whySection.title.titleSpan")}
         </span>
       </h2>
-      <ul className="flex whySection-list-height flex-col items-start justify-center gap-[21px] md:gap-x-[27px] xl:gap-[30px] md:gap-y-[20px] px-5 flex-wrap xl:px-0">
+      <ul
+        className={`flex ${style.whySectionListHeight} flex-col items-start justify-center gap-[21px] md:gap-x-[27px] xl:gap-[30px] md:gap-y-[20px] px-5 flex-wrap xl:px-0`}
+      >
         {whySectionList.map((item) => (
           <li
-            className={`transition-all whySection-item-width px-[18px] pt-8 pb-[25px] rounded-[7px] h-[300px] ${
+            className={`transition-all ${
+              style.whySectionItemWidth
+            } px-[18px] pt-8 pb-[25px] rounded-[7px] h-[300px] ${
               item.id % 2 === 0
                 ? "bg-gradient-to-r from-[#0090FF] to-[rgba(0,144,255,0)]"
                 : "bg-[var(--secondary-bg-color)]"

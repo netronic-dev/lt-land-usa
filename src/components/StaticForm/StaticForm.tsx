@@ -212,9 +212,8 @@ const StaticForm: FC<IStaticFormProps> = ({
       router.push(thank_you_page || "/thanks/call");
     } catch (error) {
       const serverError = error as ErrorResponse;
-
-      if (serverError.data) {
-        handleServerErrors(serverError.data);
+      if (serverError) {
+        handleServerErrors(serverError.response.data);
       }
     }
   };

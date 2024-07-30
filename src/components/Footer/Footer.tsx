@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { NetworksList, InfoFooterList } from "@/constants/globalConstants";
 import { Icon } from "../Icon";
 import { useIsDesktop, useIsTablet } from "@/hooks";
+import style from "./style.module.scss";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -29,8 +30,10 @@ const Footer = () => {
             <li
               key={item.id}
               className={`${
-                item.title && "footer-info-width-box"
-              } xl:w-[350px] footer-item-tablet-width pt-[41px] pl-[42px] pr-[23px] pb-[62px] bg-[var(--secondary-bg-color)] rounded-[20px]`}
+                item.title && style.footerInfoWidthBox
+              } xl:w-[350px] ${
+                style.footerItemTabletWidth
+              } pt-[41px] pl-[42px] pr-[23px] pb-[62px] bg-[var(--secondary-bg-color)] rounded-[20px]`}
             >
               <h2 className="text-[var(--accent-color)] text-[14px] font-roboto mb-[18px]">
                 {item.title
@@ -64,7 +67,7 @@ const Footer = () => {
                   </p>
                 </>
               )}
-              <div className={`${item.title && "footer-info-tablet-box"}`}>
+              <div className={`${item.title && style.footerInfoTabletBox}`}>
                 <div>
                   <h3 className="text-[#8E8E8E] mb-[7px] font-roboto text-[12px]">
                     {t("footer.emailTitle")}

@@ -37,3 +37,23 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.whySectionListHeight {
+  @media (min-width: 744px) and (max-width: 1023px) {
+    height: 940px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1511px) {
+    height: 994px;
+  }
+
+  @media (min-width: 1512px) {
+    height: 968px;
+  }
+}
+
+.whySectionItemWidth {
+  @media (min-width: 744px) {
+    width: calc(50% - 15px);
+  }
+}

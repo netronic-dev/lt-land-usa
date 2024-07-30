@@ -103,7 +103,9 @@ const BusinessSupportSection = () => {
               <li
                 key={item.id}
                 className={`${style.listImagesItem} ${
-                  item.id === 2 ? "w-full" : "businessSupportSection-item-width"
+                  item.id === 2
+                    ? "w-full"
+                    : style.businessSupportSectionItemWidth
                 }  ${item.id === 2 ? "h-[216px]" : "h-[105px]"} ${
                   item.id === 2 ? "md:h-[441px]" : "md:h-[213px]"
                 } lg:w-[436px] lg:h-[252px] relative rounded-[7px]`}

@@ -45,7 +45,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex fixed z-20 top-0 left-0">
+    <div className="flex fixed z-20 top-0 left-0" id="main">
       {!isScrolled && (
         <div className="absolute w-full h-[348%] top-[-219%] xl:top-[-138%] left-0 z-[-1]">
           <Image
@@ -62,11 +62,17 @@ const Header = () => {
         `}
       >
         <div className="container flex gap-[19px] items-center justify-between xl:justify-between">
-          <Icon
-            name="icon-logo"
-            size={"0px"}
-            className="xl:w-[96px] xl:h-[35px] w-[122px] h-[45px] md:w-[141px] md:h-[51px] lg:w-[179px] lg:h-[66px]"
-          />
+          <Link
+            href="#main"
+            aria-label="Main"
+            onClick={() => handleActiveSection("#main")}
+          >
+            <Icon
+              name="icon-logo"
+              size={"0px"}
+              className="cursor-pointer xl:w-[96px] xl:h-[35px] w-[122px] h-[45px] md:w-[141px] md:h-[51px] lg:w-[179px] lg:h-[66px]"
+            />
+          </Link>
           <nav className="hidden xl:flex">
             <ul className="flex gap-[15px] flex-row">
               {HeaderNavList.map((item) => (
