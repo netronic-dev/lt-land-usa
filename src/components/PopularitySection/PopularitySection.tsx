@@ -77,7 +77,7 @@ const PopularitySection = () => {
 
   return (
     <section className="pb-[15px] md:pb-[86px] xl:pb-[64px] container">
-      <div className="flex flex-col gap-[30px] md:flex-row items-center md:mb-[38px]">
+      <div className="flex flex-col gap-[30px] md:flex-row items-center md:mb-[38px] overflow-x-hidden">
         <h3 className="text-center md:text-start font-manrope text-[var(--primary-text-color)] text-[23px] font-extrabold">
           {t("popularityAndDemandSection.subtitle")}
         </h3>
@@ -109,9 +109,7 @@ const PopularitySection = () => {
       <ul className="flex gap-[10px] md:gap-[25px] lg:gap-[32px] xl:gap-[27px] overflow-x-hidden mb-[36px] md:mb-[24px]">
         {popularityAndDemandSectionList.map((item) => (
           <li
-            className={`${
-              style.popularityAndDemandSectionItemWidth
-            } flex bg-[transparent] flex-col gap-[16px] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px]`}
+            className={`${style.popularityAndDemandSectionItemWidth} flex bg-[transparent] flex-col gap-[16px] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px] transition-transform duration-500 ease-in-out`}
             key={item.id}
             style={{
               transform: `translateX(-${activeIndex * slideWidth}px)`,

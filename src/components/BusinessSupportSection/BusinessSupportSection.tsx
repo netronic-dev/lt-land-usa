@@ -56,7 +56,7 @@ const BusinessSupportSection = () => {
   return (
     <section
       id="support"
-      className="relative overflow-x-hidden pt-[46px] pb-[19px] md:pb-[46px] lg:pb-[115px]"
+      className="relative overflow-x-hidden pt-[46px] xl:pt-[63px] pb-[19px] md:pb-[46px] lg:pb-[115px]"
     >
       <div className="absolute md:w-[134%] md:h-[60%] md:top-0 md:right-[-100%] lg:h-full xl:w-[124%]">
         <Image src={ellBg} alt="joinEllRight" layout="fill" objectFit="cover" />

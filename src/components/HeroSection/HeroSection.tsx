@@ -28,7 +28,7 @@ const HeroSection = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [HeroSliderImagesList.length]);
+  }, []);
 
   const handleClick = (index: number) => {
     setActiveIndex(index);
@@ -80,7 +80,7 @@ const HeroSection = () => {
         <div className={`relative`}>
           <div
             className={classNames(
-              "rounded-full w-[176px] h-[176px] absolute z-10 transition-all duration-500",
+              "rounded-full w-[176px] h-[176px] absolute z-10 transition-all duration-500 ease-in-out",
               {
                 "top-[-17px] right-[-18%] lg:top-0 lg:right-[-8%] xl:top-[1%] xl:right-[-2%]":
                   activeIndex === 0,
@@ -105,7 +105,7 @@ const HeroSection = () => {
           <div
             className={`bg-[transparent] flex justify-center relative w-[328px] h-[328px] lg:w-[462px] lg:h-[462px] xl:w-[568px] xl:h-[568px] rounded-full border-[1px] border-solid border-[var(--accent-color)] overflow-hidden`}
           >
-            <div className="absolute top-[-44px] xl:top-[-76px] left-[-15%] w-[133%] h-[124%]">
+            <div className="absolute top-[-44px] xl:top-[-76px] left-[-15%] w-[133%] h-[124%] transition-all duration-500 ease-in-out">
               <Image src={imgShadow} alt="img-shadow" layout="fill" />
             </div>
             <ul
@@ -113,7 +113,7 @@ const HeroSection = () => {
             >
               {HeroSliderImagesList.map((item) => (
                 <li
-                  className={`shrink-0 rounded-full relative min-w-[267px] w-[267px] h-[267px] lg:min-w-[398px] lg:w-[398px] lg:h-[398px] md:w-[282px] md:h-[282px] xl:w-[489px] xl:min-w-[489px]  xl:h-[489px]`}
+                  className={`shrink-0 rounded-full relative min-w-[267px] w-[267px] h-[267px] lg:min-w-[398px] lg:w-[398px] lg:h-[398px] md:w-[282px] md:h-[282px] xl:w-[489px] xl:min-w-[489px] transition-all xl:h-[489px]`}
                   key={item.id}
                   style={{
                     transform: `translateX(-${activeIndex * slideWidth}px)`,
@@ -131,7 +131,7 @@ const HeroSection = () => {
             <ul className="flex items-center justify-center gap-2 absolute bottom-[50px] left-[50%] translate-x-[-50%]">
               {HeroSliderBtnsList.map((item) => (
                 <li
-                  className={`w-[9px] h-[9px] rounded-full cursor-pointer 
+                  className={`w-[9px] h-[9px] rounded-full cursor-pointer transition-all
                     ${
                       item.id === activeIndex
                         ? "bg-[var(--accent-color)]"

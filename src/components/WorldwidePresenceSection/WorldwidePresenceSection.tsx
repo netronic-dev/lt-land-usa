@@ -56,7 +56,7 @@ const WorldwidePresenceSection = () => {
 
   return (
     <section>
-      <div className="container">
+      <div className="container overflow-x-hidden">
         <h2 className="text-[var(--primary-text-color)] font-manrope text-[40px] leading-[57px] font-extrabold mb-[58px] md:mb-[38px] text-center md:text-start">
           {t("worldwidePresenceSection.title")}
         </h2>

@@ -85,7 +85,7 @@ const CustomerReviewsSection = () => {
 
   return (
     <section className="md:py-[63px] pb-[48px] pt-[25px]">
-      <div className="container">
+      <div className="container overflow-x-hidden">
         <div className="flex flex-col gap-[30px] md:flex-row md:mb-[42px]">
           <h2 className="text-[var(--primary-text-color)] font-manrope text-[40px] leading-[57px] font-extrabold text-center md:text-start">
             {t("customerReviewsSection.title")}
@@ -119,7 +119,7 @@ const CustomerReviewsSection = () => {
           {CustomerReviewsList.map((item) => (
             <li
               key={item.id}
-              className="group relative min-w-full w-full md:h-[261px] md:min-w-[466px] md:max-w-[466px] md:w-[466px] xl:h-[308px] xl:min-w-[546px] xl:max-w-[546px] xl:w-[546px] h-[209px] rounded-[7px]"
+              className="transition-transform duration-500 ease-in-out group relative min-w-full w-full md:h-[261px] md:min-w-[466px] md:max-w-[466px] md:w-[466px] xl:h-[308px] xl:min-w-[546px] xl:max-w-[546px] xl:w-[546px] h-[209px] rounded-[7px]"
               style={{
                 transform: `translateX(-${activeIndex * slideWidth}px)`,
               }}

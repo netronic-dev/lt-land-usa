@@ -122,8 +122,8 @@ const CheckOutSection = () => {
   }, []);
 
   return (
-    <section id="products" className="pt-[56px] pb-[78px]">
-      <div className="container">
+    <section id="products" className="pt-[56px] xl:pt-[63px] pb-[78px]">
+      <div className="container overflow-x-hidden">
         <div className="flex flex-col gap-[30px] md:flex-row xl:mb-[29px] md:mb-[60px]">
           <h2 className="text-[var(--primary-text-color)] font-manrope text-[40px] leading-[57px] font-extrabold text-center md:text-start">
             {t("checkOutSection.title")}
@@ -157,7 +157,7 @@ const CheckOutSection = () => {
           <ul className="flex gap-[30px] overflow-x-hidden">
             {listTop.map((item) => (
               <li
-                className="overflow-y-hidden relative min-w-full w-full md:w-[458px] md:min-w-[458px] md:max-w-[458px] h-[323px] xl:min-w-[540px] xl:max-w-[540px] xl:w-[540px] group transition-opacity duration-300 hover:opacity-30"
+                className="transition-all duration-500 ease-in-out overflow-y-hidden relative min-w-full w-full md:w-[458px] md:min-w-[458px] md:max-w-[458px] h-[323px] xl:min-w-[540px] xl:max-w-[540px] xl:w-[540px] group hover:opacity-50"
                 key={item.id}
                 style={{
                   transform: `translateX(-${activeIndexTop * slideWidthTop}px)`,
@@ -188,7 +188,7 @@ const CheckOutSection = () => {
           <ul className="flex gap-[30px] overflow-x-hidden mb-[31px]">
             {listBottom.map((item) => (
               <li
-                className="overflow-y-hidden relative md:min-w-[350px] min-w-[300px] w-[300px] md:w-[350px] h-[323px] group transition-opacity duration-300 hover:opacity-30"
+                className="transition-all duration-500 ease-in-out overflow-y-hidden relative md:min-w-[350px] min-w-[300px] w-[300px] md:w-[350px] h-[323px] group hover:opacity-30"
                 key={item.id}
                 style={{
                   transform: `translateX(-${

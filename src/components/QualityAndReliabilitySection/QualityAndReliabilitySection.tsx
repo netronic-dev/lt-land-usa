@@ -78,7 +78,7 @@ const QualityAndReliabilitySection = () => {
 
   return (
     <section id="quality" className="pb-[67px] md:pb-[77px] xl:pb-[67px]">
-      <div className="container">
+      <div className="container overflow-x-hidden">
         <div className="flex flex-col gap-[30px] md:flex-row xl:mb-[29px] md:mb-[60px]">
           <h2 className="text-[var(--primary-text-color)] font-manrope text-[40px] leading-[57px] font-extrabold text-center md:text-start">
             {t("qualityAndReliabilitySection.title")}
@@ -111,7 +111,7 @@ const QualityAndReliabilitySection = () => {
         <ul className="flex gap-[20px] xl:gap-[70px] overflow-x-hidden">
           {cards.map((card, index) => (
             <li
-              className="md:h-[690px] w-full min-w-full md:w-[470px] md:min-w-[470px] xl:min-w-[540px] xl:w-[540px] px-[10px] md:px-[30px] py-[42px] md:py-[60px] flex flex-col gap-[30px] rounded-[7px]"
+              className="transition-transform duration-500 ease-in-out md:h-[690px] w-full min-w-full md:w-[470px] md:min-w-[470px] xl:min-w-[540px] xl:w-[540px] px-[10px] md:px-[30px] py-[42px] md:py-[60px] flex flex-col gap-[30px] rounded-[7px]"
               key={index}
               style={{
                 background:

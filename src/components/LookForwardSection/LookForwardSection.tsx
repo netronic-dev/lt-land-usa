@@ -9,7 +9,7 @@ const LookForwardSection = () => {
 
   return (
     <section className="pt-[150px] pb-[99px] md:pt-[98px] lg:pb-[256px] md:pb-[142px] xl:pb-[48px] xl:pt-[102px] bg-forward-mobile md:bg-bg-forward-tablet lg:bg-forward-desktop bg-cover md:bg-contain xl:bg-cover bg-no-repeat bg-center">
-      <div className="container flex flex-col items-center">
+      <div className="container flex flex-col items-center overflow-x-hidden">
         <h3 className="lg:max-w-[916px] text-[var(--primary-text-color)] font-manrope text-[23px] md:text-[40px] md:leading-[57px] font-extrabold text-center mb-[31px]">
           {t("lookForwardSection.title")} {!isTablet && <br />}
           <span className="text-[var(--accent-color)]">
