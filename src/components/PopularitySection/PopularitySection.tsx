@@ -111,7 +111,7 @@ const PopularitySection = () => {
           <li
             className={`${
               style.popularityAndDemandSectionItemWidth
-            } min-w-full w-full flex bg-[transparent] flex-col gap-[16px] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px]`}
+            }flex bg-[transparent] flex-col gap-[16px] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px]`}
             key={item.id}
             style={{
               transform: `translateX(-${activeIndex * slideWidth}px)`,
