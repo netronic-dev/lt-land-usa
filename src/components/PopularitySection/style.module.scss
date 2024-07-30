@@ -1,6 +1,6 @@
 .popularityAndDemandSectionItemWidth {
   width: 100%;
-  // min-width: 100%;
+  min-width: 100%;
 
   @media (min-width: 744px) {
     width: calc(100% / 2 - 15px);
