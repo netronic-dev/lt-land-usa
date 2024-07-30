@@ -74,7 +74,7 @@ const DiverseGameplaySection = () => {
                 listItemsRefs.current[item.id] = el;
               }}
               data-index={item.id}
-              className={`relative lg:max-h-[645px] rounded-[7px] w-full pb-[59px] pt-[33px]" ${
+              className={`relative lg:max-h-[645px] rounded-[7px] pb-[59px] pt-[33px]" ${
                 item.id !== 1 && "md:pt-[45px]"
               } flex flex-col overflow-x-hidden ${
                 item.id === 2

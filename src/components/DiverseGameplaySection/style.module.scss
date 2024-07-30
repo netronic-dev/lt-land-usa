@@ -28,6 +28,8 @@
 }
 
 .diverseGameplaySectionItemWidth {
+  width: 100%;
+
   @media (min-width: 1024px) {
     width: calc(100% / 2 - 10px);
   }
