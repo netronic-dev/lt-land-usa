@@ -1,0 +1,40 @@
+@keyframes swing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.swing {
+  animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swingDesktop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-680px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.swingDesktop {
+  animation: swingDesktop 15s linear infinite;
+}
+
+.list {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}

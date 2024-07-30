@@ -1,0 +1,53 @@
+.circle {
+  opacity: 0;
+  position: absolute;
+  animation: appear 2s infinite;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.itemOne {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemTwo {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemThree {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemFour {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemOne.appear,
+.itemThree.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.itemTwo.appear,
+.itemFour.appear {
+  opacity: 1;
+  transform: translateX(0);
+}

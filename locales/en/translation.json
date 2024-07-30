@@ -1,0 +1,435 @@
+{
+  "header": {
+    "navList": {
+      "why": "Why laser tag equipment",
+      "about": "About Us",
+      "products": "Products",
+      "quality": "Quality",
+      "support": "Support",
+      "testDrive": "Test drive",
+      "partnership": "Partnership",
+      "contact": "Contact Us"
+    },
+    "textBtn": "Call request"
+  },
+  "heroSection": {
+    "title": {
+      "title": "Welcome to the World",
+      "titleSpan": "of Laser Tag!"
+    },
+    "textBtn": "Order a consultation",
+    "text": "Start Your Own Laser Tag Club with Us!"
+  },
+  "welcomeSection": {
+    "title": {
+      "title": "Welcome to the thrilling world of laser tag,",
+      "titleSpan": "where entertainment meets entrepreneurship"
+    },
+    "text": "In the dynamic landscape of recreational activities, laser tag stands out as not just a game but a lucrative business opportunity. As the demand for unique and immersive experiences continues to rise, investing in a laser tag venture has proven to be a strategic and rewarding decision. Let's delve into why laser tag is not only an exciting pastime but also a fantastic business venture."
+  },
+  "whySection": {
+    "title": {
+      "title": "Why Laser Tag",
+      "titleSpan": "is a Profitable Business:"
+    },
+    "whySectionList": [
+      {
+        "title": "Versatility of Environments",
+        "description": "Laser tag can operate indoors, outdoors, or as a mobile service, catering to diverse preferences"
+      },
+      {
+        "spanTitle": "Repeat Business",
+        "title": "and Events",
+        "description": "Offers an experience that encourages repeat visits and serves as a venue for events like parties and team-building activities"
+      },
+      {
+        "title": "Technology Integration",
+        "description": "Constantly evolving through technological advancements, offering features like realistic recoil and mobile apps for customization"
+      },
+      {
+        "spanTitle": "Appeal Across",
+        "title": "Age Groups",
+        "description": "Attracts both young and older players, ensuring a broad target market"
+      },
+      {
+        "title": "Low Operating Costs",
+        "description": "Relatively low costs compared to other entertainment businesses due to simple equipment and flexible venue options"
+      },
+      {
+        "title": "Community",
+        "description": "Laser tag centers foster community connections, enhancing customer experience and promoting positive word-of-mouth marketing"
+      }
+    ]
+  },
+  "popularityAndDemandSection": {
+    "subtitle": "Popularity and Demand",
+    "list": [
+      {
+        "preDescriptionSpan": "Indoor laser tag in the US generated $389.7 million",
+        "description": "in revenue in 2020, with a 6.2% annual growth projection"
+      },
+      {
+        "description": "Average revenue for US indoor laser tag businesses ranges from",
+        "postDescriptionSpan": "$200,000 to $500,000 annually"
+      },
+      {
+        "preDescriptionSpan": "Profit",
+        "description": "margins typically range",
+        "postDescriptionSpan": "from 30% to 50%"
+      },
+      {
+        "description": "Break-even period averages 1 to 3 years."
+      },
+      {
+        "description": "Average annual revenue per center is around $245,000"
+      },
+      {
+        "description": "Factors such as location, pricing, and cost structure significantly affect profitability."
+      },
+      {
+        "description": "Attention to detail leads to approximately 35% customer return rate."
+      },
+      {
+        "description": "Some US laser tag arenas exceed $1 million in sales."
+      },
+      {
+        "description": "Global popularity increased by 9% from 2015 to 2020"
+      },
+      {
+        "description": "Expected US industry revenue for 2023 is $380 million"
+      }
+    ],
+    "btnText": "Explore our Blog for the latest Lasertag.net news"
+  },
+  "aboutUsSection": {
+    "title": "About Us",
+    "subtitle": "NETRONIC: The game it's just beginning",
+    "description": "LASERTAG.NET, part of the NETRONIC group, boasts 18 years of market leadership, evolving from a paintball club to a renowned laser tag equipment manufacturer. Our products undergo rigorous testing in our own venues, ensuring top-notch quality. Beyond manufacturing, we provide comprehensive business support, from consulting on promoting a laser tag arena to launching your own business. We are more than manufacturers, we are your business partners.",
+    "bottomText": {
+      "text": "Check out our experience and",
+      "textSpan": "reputation in laser tag equipment manufacturing in this video:"
+    }
+  },
+  "worldwidePresenceSection": {
+    "title": "Worldwide presence, local excellence",
+    "list": [
+      {
+        "subtitle": "of market expertise",
+        "subtitleSpan": "18+ years"
+      },
+      {
+        "subtitle": "worldwide",
+        "subtitleSpan": "2000+ laser tag clubs"
+      },
+      {
+        "subtitle": "8",
+        "subtitleSpan": "Road-show -"
+      },
+      {
+        "subtitle": "over the world - 4",
+        "subtitleSpan": "Service centers all"
+      },
+      {
+        "subtitle": "in 80+ countries",
+        "subtitleSpan": "Trusted by clients"
+      },
+      {
+        "subtitle": "the world  - 31",
+        "subtitleSpan": "Dealers all over"
+      },
+      {
+        "subtitle": "40+",
+        "subtitleSpan": "Exhibitions -"
+      }
+    ],
+    "btnText": "Be a part of the world of LASERTAG.NET"
+  },
+  "customerReviewsSection": {
+    "title": "Customer reviews"
+  },
+  "checkOutSection": {
+    "title": "Check out our products",
+    "checkOutTopList": [
+      {
+        "title": "Falcon F1",
+        "description": "A lightweight version with a shortened buttstock designed for a younger audience."
+      },
+      {
+        "title": "Falcon F2",
+        "description": "A full-length body with an extended buttstock — the best solution for adult laser tag enthusiasts."
+      },
+      {
+        "title": "Falcon Lux",
+        "description": "A tagger with an upgraded impulse recoil module that accompanies  each shot with kickback aimed at the player's shoulder. The impulses are much more realistic than the vibration, allowing for a realistic feel of both single and turn-based shots."
+      },
+      {
+        "title": "Galaxy Eclipse",
+        "description": "Galaxy Eclipse is an innovative and cutting-edge indoor laser tag game kit that brings a whole new level of excitement to the world of laser tag. Designed with advanced technology and features, this game kit takes the traditional laser tag experience to a whole new dimension. "
+      }
+    ],
+    "checkOutBottomList": [
+      {
+        "title": "Netronic Headband",
+        "description": "The lightest headband in the laser tag industry, designed to withstand daily use and enabling you to become a zombie or medic without the need for a tagger."
+      },
+      {
+        "title": "Netronic Vest",
+        "description": "The vest with hit sensors has a large hit detection area, which completely eliminates blind spots when shooting at close range."
+      },
+      {
+        "title": "Scorpion shock-band",
+        "description": "A unique device that accompanies each game wound with an electrical impulse, allowing you to feel the hit as vividly as in paintball."
+      },
+      {
+        "title": "Sirius",
+        "description": "A portable scenario device that can be used in any environment. Activation by touch or gunshot increases player interest and immerses them in the game."
+      },
+      {
+        "title": "Multistation",
+        "description": "A device that gives visitors bonuses, and can also act as a domination box, bomb, or team base. The LED panel displays the selected mode in an animated manner, and loudspeakers will notify visitors about game events."
+      },
+      {
+        "title": "Smart Domination box",
+        "description": "The Domination box capture is one of the most popular scenario devices in laser tag. This scenario device is placed in the center of the site or in other places of greatest activity."
+      },
+      {
+        "title": "Supernova Laser Tag Bomb",
+        "description": "A device that gives visitors bonuses, and can also act as a domination box, bomb, or team base. The LED panel displays the selected mode in an animated manner, and loudspeakers will notify visitors about game events."
+      },
+      {
+        "title": "Nebula - Laser Tag Granade",
+        "description": "The Domination box capture is one of the most popular scenario devices in laser tag. This scenario device is placed in the center of the site or in other places of greatest activity."
+      }
+    ],
+    "btnText": "Order a catalog"
+  },
+  "qualityAndReliabilitySection": {
+    "title": "Quality and Reliability",
+    "list": [
+      {
+        "title": "Child-Friendly Equipment",
+        "description": "Our laser tag equipment is designed for children, offering lightweight and comfortable gear."
+      },
+      {
+        "title": "In-house Testing Facility",
+        "description": "Our dedicated laser tag center allows us to thoroughly test our equipment and software, ensuring that the products delivered to our clients are ready for immediate use."
+      },
+      {
+        "title": "Business Startup Cost",
+        "description": "Initiate your venture with as little as $10,000"
+      },
+      {
+        "title": "Patented Innovation",
+        "description": "Our FALCON taggers include impulse recoil sensors, which are not found in any of our competitors. This is a patented development of LASERTAG.NET."
+      },
+      {
+        "title": "Cutting-edge Technology",
+        "description": "Lasertag.net laser tag systems feature advanced sensors ensuring high precision and game reliability"
+      },
+      {
+        "title": "Real-time Online Statistics",
+        "description": "Access live game statistics online for immediate analysis and strategic insights."
+      },
+      {
+        "title": "Durable Construction",
+        "description": "The robust plastic casing ensures the blaster withstands years of intense gameplay."
+      },
+      {
+        "title": "LASERTAG OPERATOR Scenario Editing Software:",
+        "description": "The robust plastic casing ensures the blaster withstands years of intense gameplay."
+      },
+      {
+        "title": "Free TV OUT app",
+        "description": "TV-OUT is an application for displaying detailed game statistics on large screens for spectators and fans."
+      }
+    ]
+  },
+  "businessSupportSection": {
+    "title": {
+      "title": "at Every Stage",
+      "titleSpan": "Business Support"
+    },
+    "list": [
+      {
+        "title": "Support Throughout Business Establishment:",
+        "description": "We provide continuous support at every stage of building your business, ensuring a seamless and successful venture."
+      },
+      {
+        "title": "Open to Partnership at Any Development Phase:",
+        "description": "LASERTAG.NET welcomes partnerships at any stage of your business's development. Whether you are just starting or looking to expand, we are ready to collaborate."
+      },
+      {
+        "title": "Specialized Training for Your Team:",
+        "description": "Our training programs empower your specialists to operate the equipment efficiently, perform equipment setups, and manage equipment connections."
+      },
+      {
+        "title": "Local Technical Support Service:",
+        "description": "Our technical support service operates seven days a week. We are dedicated to ensuring that your laser tag business runs smoothly."
+      }
+    ]
+  },
+  "diverseGameplaySection": {
+    "title": {
+      "title": "Diverse Gameplay with",
+      "titleSpan": "Proven Scenarios"
+    },
+    "list": [
+      {
+        "title": "Quick Arena Launch with Tested Scenarios:",
+        "description": "Benefit from our proven scenarios to swiftly launch your arena. Popular modes like TEAM BATTLE, DEATHMATCH, TIME TO CAPTURE THE FLAG, and TEAM PLAY offer engaging experiences for players."
+      },
+      {
+        "title": "Enhance Game Variety with Additional Scenario Devices:",
+        "description": "Explore a multitude of gaming possibilities with our additional scenario devices. The NEBULA grenade, SMART DOMINATION BOX, SIRIUS, among other devices, adds an extra layer of excitement and variety to the gameplay, ensuring a dynamic and thrilling laser tag experience for your customers."
+      },
+      {
+        "title": "Manage your laser tag business with ease using the free Lasertag Operator and TV OUT apps!",
+        "descriptionTopSpan": "Lasertag Operator",
+        "descriptionTop": "is an application for managing a laser tag arena directly from your mobile phone or tablet. Statistics on the number of games, operating time of additional devices, setting up game modes and much more.",
+        "descriptionBottomSpan": "TV-OUT",
+        "descriptionBottom": "is an application for displaying detailed game statistics on large screens for spectators and fans."
+      }
+    ],
+    "btnText": "order a catalog"
+  },
+  "optimizingReturnsSection": {
+    "title": {
+      "title": "Optimizing Returns:",
+      "titleSpan": "Calculating ROI for Your Laser Tag Business"
+    },
+    "text": "At LASERTAG.NET, we understand that a crucial aspect of any business is ensuring a favorable Return on Investment (ROI). Our team is well-versed in crafting ROI calculations. We delve into the specifics of your business, considering factors such as:",
+    "list": [
+      {
+        "title": "Initial Investment:",
+        "description": "We meticulously evaluate the costs associated with setting up your laser tag venture.",
+        "subtitleTop": "Indoor Laser Tag Business:",
+        "textTop": "$45,000 investment covers equipment, venue renovation, marketing, and staff training.",
+        "subtitleBottom": "Mobile Laser Tag Business:",
+        "textBottom": "$23,000 investment includes mobile equipment, promotional efforts, and necessary training."
+      },
+      {
+        "title": "Operational Expenses",
+        "description": "Thorough consideration is given to ongoing operational expenses, encompassing maintenance, utilities, employee salaries, and other recurrent costs."
+      },
+      {
+        "title": "Revenue Projections",
+        "description": "We work with you to project realistic revenue streams based on factors such as customer traffic, pricing models, and potential ancillary income streams.",
+        "subtitleTop": "Indoor Laser Tag Business:",
+        "textTop": "With the above investments, and an average arena workload of 30%, profitability is achieved within 7 months.",
+        "subtitleBottom": "Mobile Laser Tag Business:",
+        "textBottom": "With the above investments, and an average arena workload of 30%, profitability is achieved within 4 months."
+      }
+    ]
+  },
+  "unlockingBusinessSection": {
+    "title": "Unlocking Business Success",
+    "list": [
+      {
+        "title": "Personalized Offers",
+        "description": "Receive tailored proposals aligned with your business needs"
+      },
+      {
+        "title": "Additional Scenario",
+        "titleSpan": "Devices",
+        "description": "Explore Additional Scenario Devices for customer gameplay experiences."
+      },
+      {
+        "title": "Partnership Opportunities",
+        "description": "Learn about the benefits of LASERTAG.NET partnership."
+      },
+      {
+        "title": "Optimal Equipment",
+        "titleSpan": "Selection",
+        "description": "Get detailed information on the best laser tag equipment for your requirements"
+      },
+      {
+        "title": "ROI Insights",
+        "description": "Understand your business's ROI through detailed calculations."
+      },
+      {
+        "title": "Tailored",
+        "titleSpan": "Solutions",
+        "description": "Get customized advice on venue setup, marketing, and operations."
+      }
+    ]
+  },
+  "testDriveSection": {
+    "title": "Test Drive Option",
+    "subtitle": "Main advantages of a test drive:",
+    "list": [
+      {
+        "title": "Try different game scenarios",
+        "description": "Dive into different game scenarios during the test drive. Explore the versatility of our equipment by trying out various game modes and scenarios, getting a taste of the dynamic experiences it can offer."
+      },
+      {
+        "title": "Venue Adaptability",
+        "description": "Test the adaptability of our equipment to various venues, whether you are considering an indoor arena, an outdoor space, or a mobile setup. See how our equipment seamlessly integrates into different environments."
+      },
+      {
+        "title": "Hands-On Experience",
+        "description": "Engage in a hands-on experience with our state-of-the-art laser tag equipment. Feel the quality, explore the features, and witness the innovation in action."
+      },
+      {
+        "title": "Consultation During Test Drive",
+        "description": "Benefit from a consultation with our experts during the test drive. Our managers will guide you through the equipment features, answer your questions, and provide insights into how it can align with your business goals.",
+        "descriptionSpan": "Put our support to the test in real-world scenarios – schedule your test drive today!"
+      },
+      {
+        "title": "Flexible Trial Period",
+        "description": "We offer a flexible trial period to ensure you have ample time to thoroughly evaluate the equipment's performance. This allows you to make an informed decision based on your specific needs and preferences."
+      },
+      {
+        "title": "Reimbursed deposit",
+        "description": "The TEST-DRIVE option comes with no obligation. It's a risk-free opportunity for you to assess whether LASERTAG.NET's equipment aligns with your vision for a successful laser tag venture."
+      }
+    ],
+    "btnText": "Order a Test Drive"
+  },
+  "partnershipSection": {
+    "title": "Partnership with LASERTAG.NET",
+    "subtitle": "At Lasertag.net, we specialize in the",
+    "subtitleSpan": "development and full production cycle of laser tag equipment.",
+    "description": "Discover the benefits of joining forces with us as a potential dealer. We value strong partnerships and offer exclusive perks to our dealers, including competitive pricing, marketing support, and ongoing collaboration.",
+    "subtext": "becoming a reseller?",
+    "subtextSpan": "Interested in",
+    "text": "Fill out the form below to express your interest, and let's explore the possibilities together!",
+    "btnText": "Fill in the form"
+  },
+  "lookForwardSection": {
+    "title": "We look forward to providing customers the opportunity",
+    "titleSpan": "to discover the world of LASERTAG.NET",
+    "textBtn": "Order a consultation",
+    "titleStaticForm": "Fill out the form",
+    "textStaticForm": "If you have any questions, please contact us using the contact information below.",
+    "namePlaceholder": "Name*",
+    "emailPlaceholder": "Email*",
+    "budgetPlaceholder": "Budget*",
+    "googleAuthBtnText": "Authorization via Google",
+    "googleAuthBtnSpan": "or",
+    "googleAuthClearBtnText": "Clear",
+    "googleAuthChangeBtnText": "Change account",
+    "facebookAuthBtnText": "Authorization via Meta (Facebook)",
+    "agreementText": "I confirm that I have read and agree to the",
+    "agreementLinkSpanText": "terms of the privacy policy"
+  },
+  "footer": {
+    "addressTitle": "Address",
+    "emailTitle": "Email",
+    "phoneTitle": "Phone",
+    "usaInfo": {
+      "country": "USA",
+      "address": "3259 Progress Drive STE 175С Orlando, FL 32826"
+    },
+    "europeInfo": {
+      "country": "EUROPE",
+      "address": "Kaupmehe tn 7-120 Tallinn Harjumaa 10114 Republic of Estonia"
+    },
+    "supportInfo": {
+      "title": "Technical support"
+    },
+    "partOfText": "is a part of",
+    "followUsText": "Follow us on social media for updates and behind-the-scenes content:",
+    "privacyText": "Privacy Policy",
+    "copyrightText": "Copyright © 2024 All Rights Reserved."
+  }
+}

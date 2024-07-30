@@ -1,0 +1,434 @@
+{
+  "header": {
+    "navList": {
+      "why": "",
+      "about": "",
+      "products": "",
+      "quality": "",
+      "support": "",
+      "testDrive": "",
+      "partnership": "",
+      "contact": ""
+    },
+    "textBtn": ""
+  },
+  "heroSection": {
+    "title": {
+      "title": "",
+      "titleSpan": ""
+    },
+    "text": ""
+  },
+  "welcomeSection": {
+    "title": {
+      "title": "",
+      "titleSpan": ""
+    },
+    "text": ""
+  },
+  "whySection": {
+    "title": {
+      "title": "",
+      "titleSpan": ""
+    },
+    "whySectionList": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "spanTitle": "",
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "spanTitle": "",
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      }
+    ]
+  },
+  "popularityAndDemandSection": {
+    "subtitle": "",
+    "list": [
+      {
+        "preDescriptionSpan": "",
+        "description": ""
+      },
+      {
+        "description": "",
+        "postDescriptionSpan": ""
+      },
+      {
+        "preDescriptionSpan": "",
+        "description": "",
+        "postDescriptionSpan": ""
+      },
+      {
+        "description": ""
+      },
+      {
+        "description": ""
+      },
+      {
+        "description": ""
+      },
+      {
+        "description": ""
+      },
+      {
+        "description": ""
+      },
+      {
+        "description": ""
+      },
+      {
+        "description": ""
+      }
+    ],
+    "btnText": ""
+  },
+  "aboutUsSection": {
+    "title": "",
+    "subtitle": "",
+    "description": "",
+    "bottomText": {
+      "text": "",
+      "textSpan": ""
+    }
+  },
+  "worldwidePresenceSection": {
+    "title": "",
+    "list": [
+      {
+        "subtitle": "",
+        "subtitleSpan": ""
+      },
+      {
+        "subtitle": "",
+        "subtitleSpan": ""
+      },
+      {
+        "subtitle": "",
+        "subtitleSpan": ""
+      },
+      {
+        "subtitle": "",
+        "subtitleSpan": ""
+      },
+      {
+        "subtitle": "",
+        "subtitleSpan": ""
+      },
+      {
+        "subtitle": "",
+        "subtitleSpan": ""
+      },
+      {
+        "subtitle": "",
+        "subtitleSpan": ""
+      }
+    ],
+    "btnText": ""
+  },
+  "customerReviewsSection": {
+    "title": ""
+  },
+  "checkOutSection": {
+    "title": "",
+    "checkOutTopList": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      }
+    ],
+    "checkOutBottomList": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      }
+    ],
+    "btnText": ""
+  },
+  "qualityAndReliabilitySection": {
+    "title": "",
+    "list": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      }
+    ]
+  },
+  "businessSupportSection": {
+    "title": {
+      "title": "",
+      "titleSpan": ""
+    },
+    "list": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": "."
+      }
+    ]
+  },
+  "diverseGameplaySection": {
+    "title": {
+      "title": "",
+      "titleSpan": ""
+    },
+    "list": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "descriptionTopSpan": "",
+        "descriptionTop": "",
+        "descriptionBottomSpan": "",
+        "descriptionBottom": ""
+      }
+    ],
+    "btnText": ""
+  },
+  "optimizingReturnsSection": {
+    "title": {
+      "title": "",
+      "titleSpan": ""
+    },
+    "text": "",
+    "list": [
+      {
+        "title": "",
+        "description": "",
+        "subtitleTop": "",
+        "textTop": "",
+        "subtitleBottom": "",
+        "textBottom": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": "",
+        "subtitleTop": "",
+        "textTop": "",
+        "subtitleBottom": "",
+        "textBottom": ""
+      }
+    ]
+  },
+  "unlockingBusinessSection": {
+    "title": "",
+    "list": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "titleSpan": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "titleSpan": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "titleSpan": "",
+        "description": ""
+      }
+    ]
+  },
+  "testDriveSection": {
+    "title": "",
+    "subtitle": "",
+    "list": [
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": "",
+        "descriptionSpan": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      },
+      {
+        "title": "",
+        "description": ""
+      }
+    ],
+    "btnText": ""
+  },
+  "partnershipSection": {
+    "title": "",
+    "subtitle": "",
+    "subtitleSpan": "",
+    "description": "",
+    "subtext": "",
+    "subtextSpan": "",
+    "text": "",
+    "btnText": ""
+  },
+  "lookForwardSection": {
+    "title": "",
+    "titleSpan": "",
+    "textBtn": "",
+    "titleStaticForm": "",
+    "textStaticForm": "",
+    "namePlaceholder": "",
+    "emailPlaceholder": "",
+    "budgetPlaceholder": "",
+    "googleAuthBtnText": "",
+    "googleAuthBtnSpan": "",
+    "googleAuthClearBtnText": "",
+    "googleAuthChangeBtnText": "",
+    "facebookAuthBtnText": "",
+    "agreementText": "",
+    "agreementLinkSpanText": ""
+  },
+  "footer": {
+    "addressTitle": "",
+    "emailTitle": "",
+    "phoneTitle": "",
+    "usaInfo": {
+      "country": "",
+      "address": ""
+    },
+    "europeInfo": {
+      "country": "",
+      "address": ""
+    },
+    "supportInfo": {
+      "title": ""
+    },
+    "partOfText": "",
+    "followUsText": "",
+    "privacyText": "",
+    "copyrightText": ""
+  }
+}

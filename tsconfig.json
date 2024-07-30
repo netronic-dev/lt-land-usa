@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/HeadScripts/pageView.js", "src/components/HeadScripts/HeadScripts.js", "src/components/CookieBanner/CookieBanner.js", "src/components/CookieBanner/storageHelper.js", "src/context/ModalContext.jsx", "src/components/CalendlyButton/CalendlyButton.tsx"],
   "exclude": ["node_modules"]
 }

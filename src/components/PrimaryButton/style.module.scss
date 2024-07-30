@@ -1,0 +1,11 @@
+.button {
+  &:enabled:hover {
+    background-color: var(--primary-text-color);
+    color: var(--secondary-text-color);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #8e8e8e;
+  }
+}

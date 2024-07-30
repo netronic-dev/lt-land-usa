@@ -1,0 +1,1 @@
+export {default as VideoPopUp} from "./VideoPopUp";

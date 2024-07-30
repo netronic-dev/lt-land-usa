@@ -1,0 +1,39 @@
+.itemOne {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemTwo,
+.itemSix {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemThree {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemFour,
+.itemFive {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemOne.appear,
+.itemFour.appear,
+.itemFive.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.itemTwo.appear,
+.itemThree.appear,
+.itemSix.appear {
+  opacity: 1;
+  transform: translateX(0);
+}

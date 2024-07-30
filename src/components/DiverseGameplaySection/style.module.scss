@@ -1,0 +1,28 @@
+.itemOne {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemTwo {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemOne.appear,
+.itemTwo.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.itemThree {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.itemThree.appear {
+  opacity: 1;
+  transform: translateY(0);
+}

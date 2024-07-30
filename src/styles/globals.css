@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --accent-color: #0090FF;
+  --primary-text-color: #FFFFFF;
+  --secondary-text-color: #000000;
+  --primary-bg-color: #050A1B;
+  --secondary-bg-color: #181E30;
+  --error-color: #d22e2e;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -58,18 +57,295 @@
   src: url(../assets/fonts/Manrope-ExtraBold.woff) format('woff');
 }
 
+@font-face {
+  font-family: roboto;
+  font-weight: 400;
+  src: url(../assets/fonts/Roboto-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: roboto;
+  font-weight: 500;
+  src: url(../assets/fonts/Roboto-Medium.woff) format('woff');
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #050A1B;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-text-color);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media (min-width: 744px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: 1512px) {
+    width: 1512px;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+
+.css-1fdsijx-ValueContainer {
+  @media (max-width: 1511px) {
+    justify-content: center;
+  }
+}
+
+.whySection-list-height {
+  @media (min-width: 744px) and (max-width: 1023px) {
+    height: 940px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1511px) {
+    height: 994px;
+  }
+
+  @media (min-width: 1512px) {
+    height: 968px;
+  }
+}
+
+.whySection-item-width {
+  @media (min-width: 744px) {
+    width: calc(50% - 15px);
+  }
+}
+
+.popularityAndDemandSection-item-width {
+  @media (min-width: 744px) {
+    width: calc(100% / 2 - 15px);
+    min-width: calc(100% / 2 - 15px);
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(100% / 3 - 22px);
+    min-width: calc(100% / 3 - 22px);
+  }
+}
+
+.aboutUsSection-item-width {
+  width: calc(100% / 2);
+}
+
+.businessSupportSection-item-width {
+  width: calc(100% / 2 - 5px);
+
+  @media (min-width: 744px) {
+    width: calc(100% / 2 - 11px);
+  }
+}
+
+.diverseGameplaySection-item-width {
+  @media (min-width: 1024px) {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.unlockingBusinessSection-item-width {
+  @media (min-width: 744px) {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.footer-item-tablet-width {
+  @media (min-width: 744px) and (max-width: 1511px) {
+    width: calc(50% - 10px);
+  }
+}
+
+.footer-info-tablet-box {
+  @media (min-width: 744px) and (max-width: 1023px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer-info-width-box {
+  @media (min-width: 744px) and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1511px) {
+    width: 460px;
+  }
+}
+
+.test-drive-number-text {
+  background: linear-gradient(143deg, #0090FF -15.09%, rgba(0, 144, 255, 0.00) 101.23%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.testDriveSection-item-width {
+  @media (min-width: 744px) {
+    width: calc(100% / 2);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background: var(--secondary-text-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.auth_clear_button {
+  @media (hover: hover) {
+    &:hover {
+      transition: all 0.4s ease;
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      transition: all 0.4s ease;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+
+.auth_change_button {
+  @media (hover: hover) {
+    &:hover {
+      transition: all 0.4s ease;
+      color: #000;
+      background: #fff;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      transition: all 0.4s ease;
+      color: #000;
+      background: #fff;
+    }
+  }
+}
+
+.auth_google_button {
+  @media (hover: hover) {
+    &:hover {
+      transition: all 0.4s ease;
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      transition: all 0.4s ease;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+
+.css-1fdsijx-ValueContainer {
+  justify-content: flex-start;
+}
+
+.css-wj2mq7-MuiButtonBase-root-MuiRadio-root {
+  padding: 0;
+}
+
+.auth_facebook_button {
+
+  @media (hover: hover) {
+    &:hover {
+      transition: all 0.4s ease;
+      background: #fff;
+      color: #395498;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      transition: all 0.4s ease;
+      background: #fff;
+      color: #395498;
+    }
   }
 }

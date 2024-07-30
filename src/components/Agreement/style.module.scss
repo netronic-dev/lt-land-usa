@@ -1,0 +1,20 @@
+.checkBox {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkBox_active {
+  .checkBox_inside {
+    width: 11px;
+    height: 11px;
+    background: var(--accent-color);
+    border-radius: 50%;
+  }
+}

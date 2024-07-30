@@ -29,5 +29,5 @@ COPY --from=build /app/public ./public
 COPY --from=build /app/.next ./.next
 COPY --from=build /app/node_modules ./node_modules
 
-EXPOSE 5002
+EXPOSE 3025
 ENTRYPOINT ["npm", "start"]

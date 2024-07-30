@@ -1,0 +1,136 @@
+.section {
+	background-color: #f1f4f6;
+	border-radius: 20px;
+}
+.wrapper {
+	padding: 90px 100px 75px;
+	display: grid;
+	grid-template-columns: 2.5fr 3fr;
+	grid-template-areas: "content video-preview";
+	grid-gap: 50px;
+}
+.content_cell {
+	grid-area: content;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.image_responsive {
+	display: none;
+}
+.title {
+	font-family: var(--font-Manrope);
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 60px;
+	text-transform: uppercase;
+	color: #000000;
+	margin: 0 0 20px;
+	span {
+		color: #0090ff;
+	}
+}
+.text {
+	font-family: var(--font-Manrope);
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 65px;
+	text-transform: uppercase;
+	color: #000000;
+	margin: 0 0 20px;
+}
+.social_media_grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+.social_media_cell {
+	padding: 10px;
+	* {
+		transition: all 0.4s ease-in-out;
+	}
+	&:hover {
+		path {
+			fill: #0090ff;
+		}
+	}
+}
+.video_cell {
+	grid-area: video-preview;
+}
+.play_icon {
+	* {
+		transition: all 0.4s ease-in-out;
+	}
+}
+.video_preview {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	height: 560px;
+	border-radius: 20px;
+	&:hover {
+		opacity: 0.7;
+		.play_icon {
+			circle {
+				r: 60;
+			}
+		}
+	}
+}
+.play_icon_outer {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media (max-width: 1279px) {
+	.title {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	.text {
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.video_preview {
+		height: 381px;
+	}
+}
+@media (max-width: 1000px) {
+	.wrapper {
+		padding: 40px 15px 50px;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"video-preview"
+			"content";
+		grid-gap: 50px;
+	}
+}
+@media (max-width: 500px) {
+	.wrapper {
+		padding: 40px 15px 50px;
+	}
+	.social_media_grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.title {
+		font-size: 30px;
+		line-height: 38px;
+	}
+	.image_desktop {
+		display: none;
+	}
+	.image_responsive {
+		display: block;
+	}
+	.text {
+		font-size: 20px;
+		line-height: 100%;
+	}
+	.video_preview {
+		height: 355px;
+	}
+}
