@@ -62,10 +62,10 @@ const WorldwidePresenceSection = () => {
         </h2>
         <div className="flex flex-col xl:flex-row relative">
           <div>
-            <ul className="flex flex-col xl:gap-[44px] max-h-[396px] md:max-h-[296px] lg:max-h-[266px] xl:max-h-[438px] flex-wrap gap-x-[8px] gap-y-[30px]">
+            <ul className="flex flex-col xl:gap-[44px] max-h-[426px] md:max-h-[296px] lg:max-h-[266px] xl:max-h-[438px] flex-wrap gap-x-[8px] gap-y-[30px]">
               {worldwidePresenceSectionList.map((item, index) => (
                 <li
-                  className={`max-w-[180px] aboutUsSection-item-width ${style.listItem}`}
+                  className={`max-w-[160px] md:max-w-[180px] aboutUsSection-item-width ${style.listItem}`}
                   key={index}
                   ref={(el) => {
                     listItemsRefs.current[index] = el;

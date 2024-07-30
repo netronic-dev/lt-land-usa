@@ -28,7 +28,7 @@ const OptimizingReturnsSection = () => {
 
   return (
     <section className="pt-[63px] pb-[55px] relative overflow-hidden">
-      <div className="absolute xl:h-full xl:w-[77%] top-0 right-[-53%]">
+      <div className="absolute lg:h-[106%] lg:w-[98%] xl:h-full xl:w-[77%] lg:top-[-68px] lg:right-[-53%] xl:top-0 xl:right-[-53%]">
         <Image
           src={optimizingEllBg}
           alt="optimizingEllBg"

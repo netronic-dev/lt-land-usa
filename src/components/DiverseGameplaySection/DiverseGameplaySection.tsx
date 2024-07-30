@@ -119,7 +119,7 @@ const DiverseGameplaySection = () => {
                       : item.id === 1
                       ? "w-[294px] h-[195px] md:w-[450px] md:h-[310px] lg:w-[353px] lg:h-[243px]"
                       : item.id === 2
-                      ? "w-[431px] h-[289px] md:w-[696px] md:h-[453px] lg:w-[570px] lg:h-[327px] xl:h-[368px] xl:right-[-6%]"
+                      ? "w-[331px] h-[189px] md:w-[696px] md:h-[453px] lg:w-[570px] lg:h-[327px] xl:h-[368px] xl:right-[-6%]"
                       : "none"
                   }`}
                   style={{ marginLeft: "auto", marginRight: "auto" }}
