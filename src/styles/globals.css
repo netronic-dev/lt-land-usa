@@ -107,6 +107,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  background-color: yellow;
 
   @media (min-width: 744px) {
     padding-left: 25px;

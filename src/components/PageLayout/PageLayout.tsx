@@ -69,7 +69,7 @@ const PageLayout = (props: any) => {
       <Head>
         <title>{props.title || "Lasertag"}</title>
         <meta name="description" content={props.description || ""} />
-        <link rel="icon" type="image/svg" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <meta name="theme-color" content="#D22E2E" />
         <meta
           name="facebook-domain-verification"

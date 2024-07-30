@@ -76,48 +76,50 @@ const WhySection = () => {
       id="why"
       className="xl:pt-[101px] xl:px-[180px] pt-[101px] pb-[71px] md:pb-[59px] xl:pb-[101px] overflow-hidden"
     >
-      <h2 className="px-[30px] md:mb-[39px] lg:mb-[21px] mb-[54px] xl:px-0 text-[var(--primary-text-color)] font-manrope text-[40px] leading-[57px] font-extrabold text-center md:text-start">
-        {t("whySection.title.title")} <br />
-        <span className="text-[var(--accent-color)]">
-          {t("whySection.title.titleSpan")}
-        </span>
-      </h2>
-      <ul
-        className={`flex ${style.whySectionListHeight} flex-col items-start justify-center gap-[21px] md:gap-x-[27px] xl:gap-[30px] md:gap-y-[20px] px-5 flex-wrap xl:px-0`}
-      >
-        {whySectionList.map((item) => (
-          <li
-            className={`transition-all ${
-              style.whySectionItemWidth
-            } px-[18px] pt-8 pb-[25px] rounded-[7px] h-[300px] ${
-              item.id % 2 === 0
-                ? "bg-gradient-to-r from-[#0090FF] to-[rgba(0,144,255,0)]"
-                : "bg-[var(--secondary-bg-color)]"
-            } ${getClassForItem(item.id)}`}
-            key={item.id}
-            ref={(el) => {
-              listItemsRefs.current[item.id] = el;
-            }}
-            data-index={item.id}
-          >
-            <Icon color="#ffffff" name={item.icon} width={44} height={44} />
-            <h3 className="lg:max-w-[250px] mt-[14px] mb-[9px] text-[var(--primary-text-color)] text-[28px] font-manrope font-extrabold">
-              {item.spanTitle && (
-                <>
-                  <span className="text-[var(--accent-color)]">
-                    {item.spanTitle}
-                  </span>{" "}
-                  <br />
-                </>
-              )}{" "}
-              {item.title}
-            </h3>
-            <p className="lg:max-w-[393px] xl:max-w-[451px] font-manrope text-[var(--primary-text-color)] text-[18px]">
-              {item.description}
-            </p>
-          </li>
-        ))}
-      </ul>
+     <div className="container">
+        <h2 className="px-[30px] md:mb-[39px] lg:mb-[21px] mb-[54px] xl:px-0 text-[var(--primary-text-color)] font-manrope text-[40px] leading-[57px] font-extrabold text-center md:text-start">
+          {t("whySection.title.title")} <br />
+          <span className="text-[var(--accent-color)]">
+            {t("whySection.title.titleSpan")}
+          </span>
+        </h2>
+        <ul
+          className={`flex ${style.whySectionListHeight} flex-col items-start justify-center gap-[21px] md:gap-x-[27px] xl:gap-[30px] md:gap-y-[20px] px-5 flex-wrap xl:px-0`}
+        >
+          {whySectionList.map((item) => (
+            <li
+              className={`transition-all ${
+                style.whySectionItemWidth
+              } px-[18px] pt-8 pb-[25px] rounded-[7px] h-[300px] ${
+                item.id % 2 === 0
+                  ? "bg-gradient-to-r from-[#0090FF] to-[rgba(0,144,255,0)]"
+                  : "bg-[var(--secondary-bg-color)]"
+              } ${getClassForItem(item.id)}`}
+              key={item.id}
+              ref={(el) => {
+                listItemsRefs.current[item.id] = el;
+              }}
+              data-index={item.id}
+            >
+              <Icon color="#ffffff" name={item.icon} width={44} height={44} />
+              <h3 className="lg:max-w-[250px] mt-[14px] mb-[9px] text-[var(--primary-text-color)] text-[28px] font-manrope font-extrabold">
+                {item.spanTitle && (
+                  <>
+                    <span className="text-[var(--accent-color)]">
+                      {item.spanTitle}
+                    </span>{" "}
+                    <br />
+                  </>
+                )}{" "}
+                {item.title}
+              </h3>
+              <p className="lg:max-w-[393px] xl:max-w-[451px] font-manrope text-[var(--primary-text-color)] text-[18px]">
+                {item.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+     </div>
     </section>
   );
 };
