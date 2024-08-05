@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../../styles/globals.css";
+import { ErrorBoundary } from "react-error-boundary";
 import { Icons } from "@/components/Icons";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,6 +8,7 @@ import i18nConfig from "@/app/i18nConfig";
 import initTranslations from "@/app/i18n";
 import TranslationProvider from "@/app/[locale]/TranslationProvider";
 import { StoreProvider } from "@/store/StoreProvider";
+import ErrorFallback from "@/context/ErrorFallback";
 
 export const metadata: Metadata = {
   title: "Lasertag",
@@ -39,7 +41,9 @@ export default async function RootLayout({
           >
             <Icons />
             <Header />
-            <main>{children}</main>
+            <ErrorBoundary FallbackComponent={ErrorFallback}>
+              <main>{children}</main>
+            </ErrorBoundary>
             <Footer />
           </TranslationProvider>
           <div id="__next"></div>

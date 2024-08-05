@@ -18,10 +18,12 @@ const CookieBanner = (props) => {
     if (cookieConsent !== null) {
       const newValue = cookieConsent ? "granted" : "denied";
 
-      window.gtag("consent", "update", {
-        analytics_storage: newValue,
-        ad_storage: newValue,
-      });
+      if (typeof window.gtag === "function") {
+        window.gtag("consent", "update", {
+          analytics_storage: newValue,
+          ad_storage: newValue,
+        });
+      }
 
       setLocalStorage("cookie_consent", cookieConsent);
     }

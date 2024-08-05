@@ -17,7 +17,6 @@ import { debounce } from "lodash";
 import { authentication } from "../../../firebase-config";
 
 import googleLogo from "../../assets/images/google_logo.webp";
-// import facebookLogo from "../../assets/images/facebook_logo.webp";
 import { schema } from "@/constants/validate";
 import { postData } from "@/utils/postData";
 import { sendEventToConversionApi } from "@/utils/sendEventToConversionApi";
@@ -206,6 +205,8 @@ const StaticForm: FC<IStaticFormProps> = ({
         category: "form",
         action: "submit",
       });
+      const ReactPixel = (await import("react-facebook-pixel")).default;
+      ReactPixel.track("Lead");
       sendEventToConversionApi(window.location.href, "Lead");
 
       modals.closeModal();

@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #010307;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.title {
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #ffffff;
+  font-size: 283px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 237px;
+}
+
+.text {
+  font-size: 18px;
+  color: #ffffff;
+  max-width: 484px;
+  text-align: center;
+  margin-bottom: 40px;
+}
