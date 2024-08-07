@@ -36,7 +36,6 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
       <Head>
         <title>LASERTAG.NET – Laser tag equipment for business</title>
         <meta name="theme-color" content="#000" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
         <meta
           name="description"
           content="WORLD LEADER IN MOBILE LASER TAG SOLUTIONS"

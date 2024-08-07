@@ -95,11 +95,9 @@ const TestDriveSection = () => {
                   {item.title}
                 </h3>
                 <p className="text-[var(--primary-text-color)] font-manrope text-[18px]">
-                  {item.description}
+                  {item.description} {" "}
                   {item.descriptionSpan && (
-                    <span className="text-[16px] font-bold">
-                      {item.descriptionSpan}
-                    </span>
+                    <span className="font-bold">{item.descriptionSpan}</span>
                   )}
                 </p>
               </div>

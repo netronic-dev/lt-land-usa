@@ -1,16 +1,16 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useRef } from "react";
 import { Icon } from "../Icon";
 import { PopularityAndDemandList } from "@/constants/globalConstants";
 import { PrimaryButton } from "../PrimaryButton";
-import style from "./style.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const PopularitySection = () => {
   const { t } = useTranslation();
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [slideWidth, setSlideWidth] = useState<number>(100);
 
   const popularityAndDemandSectionListTranslated = t(
     "popularityAndDemandSection.list",
@@ -29,50 +29,43 @@ const PopularitySection = () => {
       ...PopularityAndDemandList[index],
     }));
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) =>
-        prevIndex === popularityAndDemandSectionList.length - 1
-          ? 0
-          : prevIndex + 1
-      );
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [popularityAndDemandSectionList.length]);
-
-  useEffect(() => {
-    const updateSlideWidth = () => {
-      if (window.innerWidth >= 1512) {
-        setSlideWidth(389);
-      } else if (window.innerWidth >= 1024) {
-        setSlideWidth(330);
-      } else if (window.innerWidth >= 744) {
-        setSlideWidth(357);
-      } else {
-        setSlideWidth(355);
-      }
-    };
-
-    updateSlideWidth();
-
-    window.addEventListener("resize", updateSlideWidth);
-
-    return () => window.removeEventListener("resize", updateSlideWidth);
-  }, []);
+  const sliderRef = useRef<Slider | null>(null);
 
   const handleChangePrevImg = () => {
-    setActiveIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + popularityAndDemandSectionList.length) %
-        popularityAndDemandSectionList.length
-    );
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
   };
 
   const handleChangeNextImg = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex + 1) % popularityAndDemandSectionList.length
-    );
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 3,
+    slidersToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 649,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -106,14 +99,12 @@ const PopularitySection = () => {
           </div>
         </div>
       </div>
-      <ul className="flex gap-[10px] md:gap-[25px] lg:gap-[32px] xl:gap-[27px] overflow-x-hidden mb-[36px] md:mb-[24px]">
+      <Slider ref={sliderRef} {...settings}>
         {popularityAndDemandSectionList.map((item) => (
-          <li
-            className={`${style.popularityAndDemandSectionItemWidth} flex bg-[transparent] flex-col gap-[16px] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px] transition-transform duration-500 ease-in-out`}
+          <div
+            id="slider-boxes"
             key={item.id}
-            style={{
-              transform: `translateX(-${activeIndex * slideWidth}px)`,
-            }}
+            className={`bg-[transparent] p-[22px] h-[236px] border-[1px] border-solid border-[var(--primary-text-color)] rounded-[7px]`}
           >
             <Icon
               name={item.icon}
@@ -126,14 +117,16 @@ const PopularitySection = () => {
               {item.description}{" "}
               <span className="font-bold">{item.postDescriptionSpan}</span>
             </p>
-          </li>
+          </div>
         ))}
-      </ul>
-      <a href="https://lasertag.net/blog" target="_blank" rel="noreferrer">
-        <PrimaryButton size="large">
-          {t("popularityAndDemandSection.btnText")}
-        </PrimaryButton>
-      </a>
+      </Slider>
+      <div className="mt-[36px] md:mt-[24px] lg:mt-[44px] xl:mt-[59px]">
+        <a href="https://lasertag.net/blog" target="_blank" rel="noreferrer">
+          <PrimaryButton size="large">
+            {t("popularityAndDemandSection.btnText")}
+          </PrimaryButton>
+        </a>
+      </div>
     </section>
   );
 };

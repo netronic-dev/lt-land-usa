@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "../../styles/globals.css";
 import { ErrorBoundary } from "react-error-boundary";
 import { Icons } from "@/components/Icons";
 import { Header } from "@/components/Header";
@@ -32,23 +31,19 @@ export default async function RootLayout({
 
   return (
     <StoreProvider>
-      <html lang={locale}>
-        <body className="font-manrope">
-          <TranslationProvider
-            locale={locale}
-            resources={resources}
-            namespaces={i18nNamespaces}
-          >
-            <Icons />
-            <Header />
-            <ErrorBoundary FallbackComponent={ErrorFallback}>
-              <main>{children}</main>
-            </ErrorBoundary>
-            <Footer />
-          </TranslationProvider>
-          <div id="__next"></div>
-        </body>
-      </html>
+      <TranslationProvider
+        locale={locale}
+        resources={resources}
+        namespaces={i18nNamespaces}
+      >
+        <Icons />
+        <Header />
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <main>{children}</main>
+        </ErrorBoundary>
+        <Footer />
+      </TranslationProvider>
+      <div id="__next"></div>
     </StoreProvider>
   );
 }

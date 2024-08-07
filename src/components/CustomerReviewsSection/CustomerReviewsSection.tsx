@@ -1,7 +1,10 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { Icon } from "../Icon";
 import {
@@ -26,62 +29,38 @@ const CustomerReviewsSection = () => {
     setSelectedVideo(null);
   };
 
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [slideWidth, setSlideWidth] = useState<number>(100);
-  const sliderInterval = useRef<NodeJS.Timeout | null>(null);
+  const sliderRef = useRef<Slider | null>(null);
 
-  const startSlider = () => {
-    sliderInterval.current = setInterval(() => {
-      setActiveIndex((prevIndex) =>
-        prevIndex === CustomerReviewsList.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 2000);
-  };
-
-  const stopSlider = () => {
-    if (sliderInterval.current) {
-      clearInterval(sliderInterval.current);
+  const handleChangePrevImg = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
     }
   };
 
-  useEffect(() => {
-    startSlider();
-
-    return () => stopSlider();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [CustomerReviewsList.length]);
-
-  const handleChangePrevImg = () => {
-    setActiveIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + CustomerReviewsList.length) %
-        CustomerReviewsList.length
-    );
-  };
-
   const handleChangeNextImg = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % CustomerReviewsList.length);
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
   };
 
-  useEffect(() => {
-    const updateSlideWidth = () => {
-      if (window.innerWidth >= 1512) {
-        setSlideWidth(389);
-      } else if (window.innerWidth >= 1024) {
-        setSlideWidth(330);
-      } else if (window.innerWidth >= 744) {
-        setSlideWidth(357);
-      } else {
-        setSlideWidth(375);
-      }
-    };
-
-    updateSlideWidth();
-
-    window.addEventListener("resize", updateSlideWidth);
-
-    return () => window.removeEventListener("resize", updateSlideWidth);
-  }, []);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 2,
+    slidersToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 649,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <section className="md:py-[63px] pb-[48px] pt-[25px]">
@@ -115,16 +94,13 @@ const CustomerReviewsSection = () => {
             </div>
           </div>
         </div>
-        <ul className="flex gap-[30px] overflow-x-hidden">
+        <Slider ref={sliderRef} {...settings}>
           {CustomerReviewsList.map((item) => (
-            <li
+            <div
               key={item.id}
-              className="transition-transform duration-500 ease-in-out group relative min-w-full w-full md:h-[261px] md:min-w-[466px] md:max-w-[466px] md:w-[466px] xl:h-[308px] xl:min-w-[546px] xl:max-w-[546px] xl:w-[546px] h-[209px] rounded-[7px]"
-              style={{
-                transform: `translateX(-${activeIndex * slideWidth}px)`,
-              }}
-              onMouseEnter={stopSlider}
-              onMouseLeave={startSlider}
+              className="group relative md:h-[261px] xl:h-[308px] h-[209px] rounded-[7px]"
+              onMouseEnter={() => sliderRef.current?.slickPause()}
+              onMouseLeave={() => sliderRef.current?.slickPlay()}
             >
               <div className="group-hover:opacity-100 opacity-50 relative w-full h-full transition-opacity duration-300">
                 <Image
@@ -146,9 +122,9 @@ const CustomerReviewsSection = () => {
                   color="var(--primary-text-color)"
                 />
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
+        </Slider>
         {selectedVideo && (
           <YouTubeModal
             isOpen={isModalOpen}

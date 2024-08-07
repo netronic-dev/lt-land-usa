@@ -1,14 +1,1 @@
-.popularityAndDemandSectionItemWidth {
-  width: 100%;
-  min-width: 100%;
 
-  @media (min-width: 744px) {
-    width: calc(100% / 2 - 15px);
-    min-width: calc(100% / 2 - 15px);
-  }
-
-  @media (min-width: 1024px) {
-    width: calc(100% / 3 - 22px);
-    min-width: calc(100% / 3 - 22px);
-  }
-}

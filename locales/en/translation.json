@@ -1,7 +1,7 @@
 {
   "header": {
     "navList": {
-      "why": "Why laser tag equipment",
+      "why": "Why laser tag",
       "about": "About Us",
       "products": "Products",
       "quality": "Quality",
@@ -18,7 +18,7 @@
       "titleSpan": "of Laser Tag!"
     },
     "textBtn": "Order a consultation",
-    "text": "Start Your Own Laser Tag Club with Us!"
+    "text": "Start Your Own Laser Tag Business with Us!"
   },
   "welcomeSection": {
     "title": {
@@ -78,7 +78,7 @@
         "postDescriptionSpan": "from 30% to 50%"
       },
       {
-        "description": "Break-even period averages 1 to 3 years."
+        "description": "Break-even period averages 6 to 24 months."
       },
       {
         "description": "Average annual revenue per center is around $245,000"
@@ -103,7 +103,7 @@
   },
   "aboutUsSection": {
     "title": "About Us",
-    "subtitle": "NETRONIC: The game it's just beginning",
+    "subtitle": "NETRONIC: The game is just beginning",
     "description": "LASERTAG.NET, part of the NETRONIC group, boasts 18 years of market leadership, evolving from a paintball club to a renowned laser tag equipment manufacturer. Our products undergo rigorous testing in our own venues, ensuring top-notch quality. Beyond manufacturing, we provide comprehensive business support, from consulting on promoting a laser tag arena to launching your own business. We are more than manufacturers, we are your business partners.",
     "bottomText": {
       "text": "Check out our experience and",
@@ -126,23 +126,23 @@
         "subtitleSpan": "Road-show -"
       },
       {
-        "subtitle": "over the world - 4",
-        "subtitleSpan": "Service centers all"
+        "subtitle": "all over the world - 4",
+        "subtitleSpan": "Service centers"
       },
       {
         "subtitle": "in 80+ countries",
         "subtitleSpan": "Trusted by clients"
       },
       {
-        "subtitle": "the world  - 31",
-        "subtitleSpan": "Dealers all over"
+        "subtitle": "all over the world  - 31",
+        "subtitleSpan": "Dealers"
       },
       {
         "subtitle": "40+",
         "subtitleSpan": "Exhibitions -"
       }
     ],
-    "btnText": "Be a part of the world of LASERTAG.NET"
+    "btnText": "Become lasertag.net partner"
   },
   "customerReviewsSection": {
     "title": "Customer reviews"
@@ -207,8 +207,8 @@
     "title": "Quality and Reliability",
     "list": [
       {
-        "title": "Child-Friendly Equipment",
-        "description": "Our laser tag equipment is designed for children, offering lightweight and comfortable gear."
+        "title": "Child-friendly Equipment",
+        "description": "Our laser tag equipment is designed for children as well, offering lightweight and comfortable gear."
       },
       {
         "title": "In-house Testing Facility",
@@ -220,7 +220,7 @@
       },
       {
         "title": "Patented Innovation",
-        "description": "Our FALCON taggers include impulse recoil sensors, which are not found in any of our competitors. This is a patented development of LASERTAG.NET."
+        "description": "Our FALCON taggers include impulse recoil technologies, which are not found in any of our competitors. This is a patented development of LASERTAG.NET."
       },
       {
         "title": "Cutting-edge Technology",
@@ -256,7 +256,7 @@
       },
       {
         "title": "Open to Partnership at Any Development Phase:",
-        "description": "LASERTAG.NET welcomes partnerships at any stage of your business's development. Whether you are just starting or looking to expand, we are ready to collaborate."
+        "description": "LASERTAG.NET welcomes partnerships at any stage of your business development. Whether you are just starting or looking to expand, we are ready to collaborate."
       },
       {
         "title": "Specialized Training for Your Team:",
@@ -276,11 +276,11 @@
     "list": [
       {
         "title": "Quick Arena Launch with Tested Scenarios:",
-        "description": "Benefit from our proven scenarios to swiftly launch your arena. Popular modes like TEAM BATTLE, DEATHMATCH, TIME TO CAPTURE THE FLAG, and TEAM PLAY offer engaging experiences for players."
+        "description": "Benefit from our proven scenarios to swiftly launch your arena. Popular games like TEAM BATTLE, DEATHMATCH, BATTLE ROYALE, BOMB DEFUSION, KIDS GAME, CAPTURE THE FLAG, etc offer engaging experiences for players."
       },
       {
         "title": "Enhance Game Variety with Additional Scenario Devices:",
-        "description": "Explore a multitude of gaming possibilities with our additional scenario devices. The NEBULA grenade, SMART DOMINATION BOX, SIRIUS, among other devices, adds an extra layer of excitement and variety to the gameplay, ensuring a dynamic and thrilling laser tag experience for your customers."
+        "description": "Explore a multitude of gaming possibilities with our additional scenario devices. The NEBULA grenade, SMART DOMINATION BOX, SIRIUS, among other devices, add an extra layer of excitement and variety to the gameplay, ensuring a dynamic and thrilling laser tag experience for your customers."
       },
       {
         "title": "Manage your laser tag business with ease using the free Lasertag Operator and TV OUT apps!",
@@ -303,7 +303,7 @@
         "title": "Initial Investment:",
         "description": "We meticulously evaluate the costs associated with setting up your laser tag venture.",
         "subtitleTop": "Indoor Laser Tag Business:",
-        "textTop": "$45,000 investment covers equipment, venue renovation, marketing, and staff training.",
+        "textTop": "$50,000-80,000 investment covers equipment, venue renovation, marketing, and staff training.",
         "subtitleBottom": "Mobile Laser Tag Business:",
         "textBottom": "$23,000 investment includes mobile equipment, promotional efforts, and necessary training."
       },
@@ -380,7 +380,7 @@
       },
       {
         "title": "Reimbursed deposit",
-        "description": "The TEST-DRIVE option comes with no obligation. It's a risk-free opportunity for you to assess whether LASERTAG.NET's equipment aligns with your vision for a successful laser tag venture."
+        "description": "The TEST DRIVE option comes with no obligation. It's a risk-free opportunity for you to assess whether LASERTAG.NET's equipment aligns with your vision for a successful laser tag venture."
       }
     ],
     "btnText": "Order a Test Drive"

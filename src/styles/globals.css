@@ -71,6 +71,7 @@ html {
 
 body {
   background: #050A1B;
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar {
@@ -254,5 +255,17 @@ body {
       background: #fff;
       color: #395498;
     }
+  }
+}
+
+#slider-boxes {
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.slick-slide>div {
+  @media (min-width: 744px) {
+    margin: 0 10px;
   }
 }

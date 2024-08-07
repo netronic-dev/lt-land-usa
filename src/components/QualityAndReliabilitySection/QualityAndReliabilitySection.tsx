@@ -1,7 +1,11 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import style from "./style.module.scss";
 import { Icon } from "../Icon";
 import {
   IQualityAndReliabilityList,
@@ -10,8 +14,6 @@ import {
 
 const QualityAndReliabilitySection = () => {
   const { t } = useTranslation();
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [slideWidth, setSlideWidth] = useState<number>(100);
   const listTranslated = t("qualityAndReliabilitySection.list", {
     returnObjects: true,
   });
@@ -36,44 +38,37 @@ const QualityAndReliabilitySection = () => {
 
   const cards = splitItemsIntoCards(list, 3);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) =>
-        prevIndex === cards.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [cards.length]);
-
-  useEffect(() => {
-    const updateSlideWidth = () => {
-      if (window.innerWidth >= 1512) {
-        setSlideWidth(389);
-      } else if (window.innerWidth >= 1024) {
-        setSlideWidth(330);
-      } else if (window.innerWidth >= 744) {
-        setSlideWidth(357);
-      } else {
-        setSlideWidth(360);
-      }
-    };
-
-    updateSlideWidth();
-
-    window.addEventListener("resize", updateSlideWidth);
-
-    return () => window.removeEventListener("resize", updateSlideWidth);
-  }, []);
+  const sliderRef = useRef<Slider | null>(null);
 
   const handleChangePrevImg = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex - 1 + cards.length) % cards.length
-    );
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
   };
 
   const handleChangeNextImg = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 2,
+    slidersToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -108,22 +103,13 @@ const QualityAndReliabilitySection = () => {
             </div>
           </div>
         </div>
-        <ul className="flex gap-[20px] xl:gap-[70px] overflow-x-hidden">
+        <Slider ref={sliderRef} {...settings}>
           {cards.map((card, index) => (
-            <li
-              className="transition-transform duration-500 ease-in-out md:h-[690px] w-full min-w-full md:w-[470px] md:min-w-[470px] xl:min-w-[540px] xl:w-[540px] px-[10px] md:px-[30px] py-[42px] md:py-[60px] flex flex-col gap-[30px] rounded-[7px]"
+            <div
+              className={`${
+                style["custom-slide-bg-" + index]
+              } md:h-[690px] px-[10px] md:px-[30px] py-[42px] md:py-[60px] flex flex-col gap-[30px] rounded-[7px]`}
               key={index}
-              style={{
-                background:
-                  index === 0
-                    ? "linear-gradient(328deg, #0090FF 4.09%, rgba(0, 144, 255, 0.00) 97.73%)"
-                    : index === 1
-                    ? "#181E30"
-                    : index === 2
-                    ? "linear-gradient(143deg, #0090FF -15.09%, rgba(0, 144, 255, 0.00) 101.23%)"
-                    : "none",
-                transform: `translateX(-${activeIndex * slideWidth}px)`,
-              }}
             >
               <ul className="flex flex-col gap-[30px] md:gap-[55px]">
                 {card.map((item) => (
@@ -143,9 +129,9 @@ const QualityAndReliabilitySection = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </div>
           ))}
-        </ul>
+        </Slider>
       </div>
     </section>
   );
