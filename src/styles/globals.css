@@ -124,6 +124,12 @@ body {
     padding-left: 180px;
     padding-right: 180px;
   }
+
+  @media (min-width: 1800px) {
+    width: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .css-1fdsijx-ValueContainer {
