@@ -290,6 +290,32 @@
         "descriptionBottom": "is an application for displaying detailed game statistics on large screens for spectators and fans."
       }
     ],
+    "listInside": [
+      {
+        "title": "Team game"
+      },
+      {
+        "title": "Capture the flag"
+      },
+      {
+        "title": "Standard Scenario"
+      },
+      {
+        "title": "CTF: Capture all Profi flags"
+      },
+      {
+        "title": "CTF: Capture all flags"
+      },
+      {
+        "title": "Battle Royal"
+      },
+      {
+        "title": "Base Capture"
+      },
+      {
+        "title": "CTF: Race against time"
+      }
+    ],
     "btnText": "order a catalog"
   },
   "optimizingReturnsSection": {

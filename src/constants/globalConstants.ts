@@ -23,7 +23,6 @@ import checkOutImgBottomEight from "../assets/images/nebulaLaserTagGranade.webp"
 import comprehensiveBusinessImgOne from "../assets/images/businessSupport-three.webp";
 import comprehensiveBusinessImgTwo from "../assets/images/businessSupport-two.webp";
 import comprehensiveBusinessImgThree from "../assets/images/businessSupport-one.webp";
-import diverseGameplayImgOne from "../assets/images/diverseGameplay-one.webp";
 import diverseGameplayImgTwo from "../assets/images/diverseGameplay-two.webp";
 import diverseGameplayImgThree from "../assets/images/diverseGameplay-three.webp";
 import partnershipImgOne from "../assets/images/project-one.webp";
@@ -98,8 +97,8 @@ interface ICheckOutList {
 
 interface IDiverseGameplayList {
   id: number;
-  image: StaticImageData;
-  alt: string;
+  image?: StaticImageData;
+  alt?: string;
 }
 
 export interface IQualityAndReliabilityList {
@@ -124,6 +123,11 @@ interface IPartnershipImagesList {
   id: number;
   image: StaticImageData;
   alt: string;
+}
+
+interface IDiverseGameplayListInside {
+  id: number;
+  icon: string;
 }
 
 export const LANGUAGES: ILanguages[] = [
@@ -501,8 +505,6 @@ export const BusinessSupportSectionImgList: IBusinessSupportSectionImgList[] = [
 export const DiverseGameplayList: IDiverseGameplayList[] = [
   {
     id: 0,
-    image: diverseGameplayImgOne,
-    alt: "Diverse Gameplay Img One",
   },
   {
     id: 1,
@@ -513,6 +515,41 @@ export const DiverseGameplayList: IDiverseGameplayList[] = [
     id: 2,
     image: diverseGameplayImgThree,
     alt: "Diverse Gameplay Img Three",
+  },
+];
+
+export const DiverseGameplayListInside: IDiverseGameplayListInside[] = [
+  {
+    id: 0,
+    icon: "icon-team-game",
+  },
+  {
+    id: 1,
+    icon: "icon-capture-the-flag",
+  },
+  {
+    id: 2,
+    icon: "icon-standard-scenario",
+  },
+  {
+    id: 3,
+    icon: "icon-ctf-capture-all",
+  },
+  {
+    id: 4,
+    icon: "icon-ctf-capture-all-two",
+  },
+  {
+    id: 5,
+    icon: "icon-battle-royal",
+  },
+  {
+    id: 6,
+    icon: "icon-base-capture",
+  },
+  {
+    id: 7,
+    icon: "icon-ctf-race-against-time",
   },
 ];
 

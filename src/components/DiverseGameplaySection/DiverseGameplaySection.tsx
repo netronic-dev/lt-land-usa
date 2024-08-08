@@ -4,10 +4,14 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { PrimaryButton } from "../PrimaryButton";
-import { DiverseGameplayList } from "@/constants/globalConstants";
+import {
+  DiverseGameplayList,
+  DiverseGameplayListInside,
+} from "@/constants/globalConstants";
 import ellItemBg from "../../assets/images/bg/ellipseItemDiverseGameplayBg.webp";
 import style from "./style.module.scss";
 import { useModals } from "@/context/ModalsProvider";
+import { Icon } from "../Icon";
 
 const DiverseGameplaySection = () => {
   const { t } = useTranslation();
@@ -17,11 +21,21 @@ const DiverseGameplaySection = () => {
     returnObjects: true,
   });
 
+  const listInsideTranslated = t("diverseGameplaySection.listInside", {
+    returnObjects: true,
+  });
+
   const listTranslatedArray = Object.values(listTranslated);
+  const listTranslatedInsideArray = Object.values(listInsideTranslated);
 
   const list = listTranslatedArray.map((item, index) => ({
     ...item,
     ...DiverseGameplayList[index],
+  }));
+
+  const listInside = listTranslatedInsideArray.map((item, index) => ({
+    ...item,
+    ...DiverseGameplayListInside[index],
   }));
 
   const listItemsRefs = useRef<(HTMLLIElement | null)[]>([]);
@@ -124,15 +138,35 @@ const DiverseGameplaySection = () => {
                   }`}
                   style={{ marginLeft: "auto", marginRight: "auto" }}
                 >
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    layout="fill"
-                    objectFit="cover"
-                  />
+                  {item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  ) : (
+                    <ul className="pt-[20px] md:pb-0 flex flex-col gap-y-[25px] gap-x-[45px] flex-wrap h-[199px] md:h-[220px]">
+                      {listInside.map((item) => (
+                        <li
+                          key={item.id}
+                          className="flex items-center gap-[8px] md:gap-[19px]"
+                        >
+                          <Icon
+                            name={item.icon}
+                            className="w-[16px] h-[15px] md:w-[28px] md:h-[27px]"
+                            size={"0px"}
+                          />
+                          <h3 className="max-w-[141px] font-manrope text-[#BEC2CE] text-[10px] md:text-[14px] leading-[16px] font-medium">
+                            {item.title}
+                          </h3>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
                 <div className="lg:max-w-[460px]">
-                  <h3 className="px-[23px] xl:pr-0 md:pl-[30px] md:pr-[60px] font-manrope text-[var(--primary-text-color)] text-[23px] font-extrabold mb-[31px]">
+                  <h3 className="mt-[55px] md:mt-0 px-[23px] xl:pr-0 md:pl-[30px] md:pr-[60px] font-manrope text-[var(--primary-text-color)] text-[23px] font-extrabold mb-[31px]">
                     {item.title}
                   </h3>
                   <p className="px-[23px] xl:pr-0 md:pl-[30px] lg:px-[36px] xl:w-[511px] md:pr-[60px] font-manrope text-[var(--primary-text-color)] text-[18px]">

@@ -1,9 +1,8 @@
-"use client";
-
 import Head from "next/head";
 import Script from "next/script";
 import ReactGA from "react-ga4";
 import { usePathname, useSearchParams } from "next/navigation";
+import ReactPixel from "react-facebook-pixel";
 import { pageView } from "./pageView";
 import { useEffect } from "react";
 
@@ -18,18 +17,8 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
 
   useEffect(() => {
     const url = pathname + searchParams.toString();
-    if (typeof window !== "undefined") {
-      pageView(GA_MEASUREMENT_ID, url);
-    }
+    pageView(GA_MEASUREMENT_ID, url);
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const ReactPixel = require("react-facebook-pixel").default;
-      ReactPixel.init("1815249061859086", {}, options);
-      ReactPixel.pageView();
-    }
-  }, []);
 
   return (
     <>
@@ -85,6 +74,9 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
       {/* End Google Analytics */}
 
       {/* FACEBOOK PIXEL */}
+      <Script id="pixel" strategy="afterInteractive">
+        {ReactPixel.init("1815249061859086", {}, options)}
+      </Script>
       <Script
         id="pixel"
         strategy="afterInteractive"
