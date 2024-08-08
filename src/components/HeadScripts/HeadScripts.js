@@ -5,6 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import ReactPixel from "react-facebook-pixel";
 import { pageView } from "./pageView";
 import { useEffect } from "react";
+import { sendEventToConversionApi } from "@/utils/sendEventToConversionApi";
 
 const options = {
   autoConfig: true,
@@ -18,6 +19,11 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
   useEffect(() => {
     const url = pathname + searchParams.toString();
     pageView(GA_MEASUREMENT_ID, url);
+
+    if (typeof window !== "undefined") {
+      window.ReactPixel = ReactPixel;
+      window.sendEventToConversionApi = sendEventToConversionApi;
+    }
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
   return (
@@ -123,7 +129,17 @@ s1.src='https://embed.tawk.to/664f1e379a809f19fb340a47/1huikqsf8';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
-})();`,
+})();
+            Tawk_API.onChatStarted = function() {
+            ReactPixel.track("Lead");
+            sendEventToConversionApi(window.location.href, "Lead");
+            };
+
+            Tawk_API.onOfflineSubmit = function(data) {
+            ReactPixel.track("Lead");
+            sendEventToConversionApi(window.location.href, "Lead");
+            };
+`,
         }}
       />
       {/* <!--End of Tawk.to Script--> */}
