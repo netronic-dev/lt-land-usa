@@ -205,9 +205,9 @@ export const InfoFooterList = [
     id: 0,
     country: "USA",
     address: "3259 Progress Drive STE 175С Orlando, FL 32826",
-    phone: "+1-407-633-77-46",
+    phone: "+1-561-765-75-46",
     whatsappLink:
-      "https://api.whatsapp.com/send/?phone=14076337746&text&type=phone_number&app_absent=0",
+      "https://api.whatsapp.com/send/?phone=15617657546&text&type=phone_number&app_absent=0",
   },
   {
     id: 1,

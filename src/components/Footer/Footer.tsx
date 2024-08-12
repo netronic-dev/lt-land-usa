@@ -117,7 +117,7 @@ const Footer = () => {
             <Icon
               name="icon-logo"
               size={"0px"}
-              className=" w-[147px] h-[61px] md:w-[287px] md:h-[118px]"
+              className=" w-[147px] h-[61px] md:w-[169px] md:h-[69px]"
             />
             <p className="text-[var(--primary-text-color)] font-manrope text-[10px] uppercase md:text-[16px]">
               {t("footer.partOfText")}
