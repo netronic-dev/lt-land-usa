@@ -1,7 +1,13 @@
 "use client";
 
 import { useIsDesktop } from "@/hooks";
-import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  signOut,
+  linkWithCredential,
+} from "firebase/auth";
 import { FC, useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -28,6 +34,7 @@ import { Input } from "../Input";
 import { ChangeBudgetOptions } from "../ChangeBudgetOptions";
 import { Agreement } from "../Agreement";
 import { useModals } from "@/context/ModalsProvider";
+import { Icon } from "../Icon";
 
 interface IStaticFormProps {
   titleForm?: string;
@@ -145,8 +152,6 @@ const StaticForm: FC<IStaticFormProps> = ({
     });
   };
 
-  const facebookAuth = async () => {};
-
   const clearAuth = async () => {
     await signOut(authentication);
     setLoggedSocials("");
@@ -154,6 +159,42 @@ const StaticForm: FC<IStaticFormProps> = ({
       email: "",
       name: "",
     });
+  };
+
+  const facebookAuth = async () => {
+    try {
+      const provider = new FacebookAuthProvider();
+      const { user } = await signInWithPopup(authentication, provider);
+
+      setLoggedSocials("Facebook");
+      reset({
+        email: user.email
+          ? user.email
+          : user.reloadUserInfo.providerUserInfo[0].email,
+        name: user.displayName ? user.displayName : "",
+      });
+    } catch (error: any) {
+      if (error.code === "auth/popup-blocked") {
+        alert("Please allow pop-ups for this site.");
+      } else if (
+        error.code === "auth/account-exists-with-different-credential"
+      ) {
+        const pendingCred = FacebookAuthProvider.credentialFromError(error);
+        const googleProvider = new GoogleAuthProvider();
+        const googleUser = await signInWithPopup(
+          authentication,
+          googleProvider
+        );
+        const user = await linkWithCredential(googleUser.user, pendingCred);
+        reset({
+          email: user._tokenResponse.email,
+          name: user._tokenResponse.displayName,
+        });
+        setLoggedSocials("Facebook");
+      } else {
+        alert("Try again, please!");
+      }
+    }
   };
 
   const handleAgreementChange = () => {
@@ -276,20 +317,21 @@ const StaticForm: FC<IStaticFormProps> = ({
                     ? googleAuthBtnText
                     : "Authorization via Google"}
                 </button>
-                {/* <button
+
+                <button
                   className="auth_facebook_button flex w-full items-center justify-center gap-[5px] cursor-pointer rounded-[8px] bg-[#395498] py-[16.5px] text-[#fff] border-solid border-[1px] border-[#395498] font-manrope text-[16px] font-extrabold leading-[23px] transition-all md:w-[418px]"
                   onClick={facebookAuth}
                 >
-                  <Image
-                    src={googleLogo}
-                    alt="google logo"
+                  <Icon
+                    name="icon-facebook_logo"
+                    className="facebook_icon"
                     height={15}
                     width={15}
                   />{" "}
                   {facebookAuthBtnText
                     ? facebookAuthBtnText
                     : "Authorization via Meta (Facebook)"}
-                </button> */}
+                </button>
               </>
             )}
           </div>

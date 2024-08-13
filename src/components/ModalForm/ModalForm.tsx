@@ -70,7 +70,7 @@ const ModalForm: FC<IModalForm> = ({
             height={15}
           />
         </div>
-        <div className="w-full md:w-[560px] px-[18px]">
+        <div className="w-full md:w-[680px] px-[18px]">
           <StaticForm
             titleForm={titleForm}
             titleSpanForm={titleSpanForm}
