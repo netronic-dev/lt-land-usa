@@ -170,7 +170,7 @@ const StaticForm: FC<IStaticFormProps> = ({
       reset({
         email: user.email
           ? user.email
-          : user.reloadUserInfo.providerUserInfo[0].email,
+          : (user as any).reloadUserInfo.providerUserInfo[0].email,
         name: user.displayName ? user.displayName : "",
       });
     } catch (error: any) {
@@ -180,17 +180,25 @@ const StaticForm: FC<IStaticFormProps> = ({
         error.code === "auth/account-exists-with-different-credential"
       ) {
         const pendingCred = FacebookAuthProvider.credentialFromError(error);
-        const googleProvider = new GoogleAuthProvider();
-        const googleUser = await signInWithPopup(
-          authentication,
-          googleProvider
-        );
-        const user = await linkWithCredential(googleUser.user, pendingCred);
-        reset({
-          email: user._tokenResponse.email,
-          name: user._tokenResponse.displayName,
-        });
-        setLoggedSocials("Facebook");
+
+        if (pendingCred) {
+          const googleProvider = new GoogleAuthProvider();
+          const googleUser = await signInWithPopup(
+            authentication,
+            googleProvider
+          );
+          const linkedUser = await linkWithCredential(
+            googleUser.user,
+            pendingCred
+          );
+          reset({
+            email: (linkedUser as any)._tokenResponse.email,
+            name: (linkedUser as any)._tokenResponse.displayName,
+          });
+          setLoggedSocials("Facebook");
+        } else {
+          alert("Failed to retrieve Facebook credentials.");
+        }
       } else {
         alert("Try again, please!");
       }
