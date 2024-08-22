@@ -6,6 +6,8 @@ import ReactPixel from "react-facebook-pixel";
 import { pageView } from "./pageView";
 import { useEffect } from "react";
 import { sendEventToConversionApi } from "@/utils/sendEventToConversionApi";
+import { useSelector } from "react-redux";
+import { searchParams as searchParamsSelector } from "@/store/searchParamsSlice";
 
 const options = {
   autoConfig: true,
@@ -15,6 +17,24 @@ const options = {
 const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  const queryParams = useSelector(searchParamsSelector);
+  const allQuery = useSearchParams();
+  const routerQuery = queryParams || allQuery;
+
+  const queryLength = Object.keys(routerQuery).length;
+  const query =
+    queryLength > 0
+      ? {
+          utm_campaign: routerQuery.utm_campaign || "",
+          utm_medium: routerQuery.utm_medium || "referral",
+          utm_source: routerQuery.utm_source || "google",
+          utm_term: routerQuery.utm_term || "",
+        }
+      : {
+          utm_source: "google",
+          utm_medium: "referral",
+        };
 
   useEffect(() => {
     const url = pathname + searchParams.toString();
@@ -122,24 +142,44 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/664f1e379a809f19fb340a47/1huikqsf8';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-            Tawk_API.onChatStarted = function() {
-            ReactPixel.track("Lead");
-            sendEventToConversionApi(window.location.href, "Lead");
-            };
+          (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/664f1e379a809f19fb340a47/1huikqsf8';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+          })();
 
-            Tawk_API.onOfflineSubmit = function(data) {
+          Tawk_API.onLoad = function() {
+            Tawk_API.addTags(["Website: " + window.location.hostname]);
+
+            ${
+              query.utm_campaign
+                ? `Tawk_API.addTags(["utm_campaign: " + "${query.utm_campaign}"]);`
+                : ""
+            }
+            ${
+              query.utm_medium
+                ? `Tawk_API.addTags(["utm_medium: " + "${query.utm_medium}"]);`
+                : ""
+            }
+            ${
+              query.utm_source
+                ? `Tawk_API.addTags(["utm_source: " + "${query.utm_source}"]);`
+                : ""
+            }
+            ${
+              query.utm_term
+                ? `Tawk_API.addTags(["utm_term: " + "${query.utm_term}"]);`
+                : ""
+            }
+          };
+
+          Tawk_API.onOfflineSubmit = function(data) {
             ReactPixel.track("Lead");
             sendEventToConversionApi(window.location.href, "Lead");
-            };
-`,
+          };`,
         }}
       />
       {/* <!--End of Tawk.to Script--> */}
