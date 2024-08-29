@@ -47,7 +47,7 @@ export async function postData(
     budget: values.budget || "",
     phoneNumber: values.phoneNumber || "",
     chatPhone: values.chatPhone || "",
-    countryCode,
+    countryCode: countryCode || "",
     query,
     cookies: storedCookieConsent,
     geoInfo: {

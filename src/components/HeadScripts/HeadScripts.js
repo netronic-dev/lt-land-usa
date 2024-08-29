@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { sendEventToConversionApi } from "@/utils/sendEventToConversionApi";
 import { useSelector } from "react-redux";
 import { searchParams as searchParamsSelector } from "@/store/searchParamsSlice";
+import { postData } from "@/utils/postData";
 
 const options = {
   autoConfig: true,
@@ -43,6 +44,8 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
     if (typeof window !== "undefined") {
       window.ReactPixel = ReactPixel;
       window.sendEventToConversionApi = sendEventToConversionApi;
+      window.postData = postData;
+      window.ReactGA = ReactGA;
     }
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
@@ -175,6 +178,52 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
                 : ""
             }
           };
+
+          window.Tawk_API.onPrechatSubmit = function(data) {
+ const values = {};
+
+    const keyMap = {
+        'name': 'name',
+        'email': 'email',
+        'phone': 'phone'
+    };
+
+    data.forEach(item => {
+        const key = item.label.toLowerCase();
+        
+        if (keyMap[key]) {
+            values[keyMap[key]] = item.answer;
+        }
+    });
+
+    if (values.phone) {
+    values.chatPhone = values.phone; 
+    delete values.phone;
+}
+
+        const routerQuery = ${JSON.stringify(routerQuery)
+          .replace(/</g, "\\u003c")
+          .replace(/>/g, "\\u003e")
+          .replace(/&/g, "\\u0026")
+          .replace(/'/g, "\\u0027")};
+      
+  postData(
+    values,
+    "https://back.netronic.net/forms",
+    "Tawk.to | LT NET",
+    window.location.href,
+    window.location.hostname,
+    routerQuery
+  )
+  .then(() => {
+          ReactGA.event("generate_lead", {
+            category: "form",
+            action: "submit",
+          });
+          ReactPixel.track("Lead");
+          sendEventToConversionApi(window.location.href, "Lead");
+        })
+}
 
           Tawk_API.onOfflineSubmit = function(data) {
             ReactPixel.track("Lead");

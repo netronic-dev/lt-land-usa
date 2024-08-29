@@ -15,6 +15,8 @@ export const sendEventToConversionApi = async (
   const userLocationData = await getLocationData();
   const userAgent = navigator.userAgent;
 
+  console.log(siteName, eventName);
+
   const hashedCity = createHash("sha256")
     .update(userLocationData.city)
     .digest("hex");
