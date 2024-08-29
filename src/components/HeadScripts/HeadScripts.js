@@ -213,7 +213,8 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
     "Tawk.to | LT NET",
     window.location.href,
     window.location.hostname,
-    routerQuery
+    routerQuery,
+    "Чат на сайті"
   )
   .then(() => {
           ReactGA.event("generate_lead", {
