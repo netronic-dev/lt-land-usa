@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import axios from "axios";
 import { useState } from "react";
 import { useCalendlyEventListener } from "react-calendly";
 import ReactGA from "react-ga4";
@@ -104,10 +105,22 @@ const CalendlyButton = (props: any) => {
 
             router.push("/thanks/call");
           } catch (error) {
-            console.log(error);
+            await axios.post(
+              "https://back.netronic.net/telegram/send-error-message",
+              {
+                message: `frontend error: calendly ❌ ${window.location.hostname}: ${error}`,
+              }
+            );
           }
         })
-        .catch((error) => console.log(error));
+        .catch(async (error) => {
+          await axios.post(
+            "https://back.netronic.net/telegram/send-error-message",
+            {
+              message: `frontend error: calendly ❌ ${window.location.hostname}: ${error}`,
+            }
+          );
+        });
     }
   }, [eventData, dispatch, props.lang, queryParams, query, router]);
 

@@ -174,6 +174,14 @@ const StaticForm: FC<IStaticFormProps> = ({
         name: user.displayName ? user.displayName : "",
       });
     } catch (error: any) {
+      await axios.post(
+        "https://back.netronic.net/telegram/send-error-message",
+        {
+          message: `frontend error: facebookAuth ❌ ${
+            window.location.hostname
+          }: ${error.code ? error.code : error}`,
+        }
+      );
       if (error.code === "auth/popup-blocked") {
         alert("Please allow pop-ups for this site.");
       } else if (
@@ -201,6 +209,12 @@ const StaticForm: FC<IStaticFormProps> = ({
         }
       } else {
         alert("Try again, please!");
+        await axios.post(
+          "https://back.netronic.net/telegram/send-error-message",
+          {
+            message: `frontend error: facebookAuth ❌ ${window.location.hostname}: Try again, please!`,
+          }
+        );
       }
     }
   };
