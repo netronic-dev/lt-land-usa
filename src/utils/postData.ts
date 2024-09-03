@@ -114,12 +114,6 @@ export async function getLocationData() {
             };
           })
           .catch(console.log);
-        await axios.post(
-          "https://back.netronic.net/telegram/send-error-message",
-          {
-            message: `frontend error: postData ❌ ${window.location.hostname}: ${error}`,
-          }
-        );
       });
 
     let date = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
