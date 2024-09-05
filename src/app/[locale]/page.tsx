@@ -1,5 +1,3 @@
-"use client";
-
 import { AboutUsSection } from "@/components/AboutUsSection";
 import { CheckOutSection } from "@/components/CheckOutSection";
 import { BusinessSupportSection } from "@/components/BusinessSupportSection";

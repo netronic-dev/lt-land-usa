@@ -5,12 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "../Icon";
 import { HeaderNavList } from "@/constants/globalConstants";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { BurgerMenu } from "../BurgerMenu";
 import bgEllipse from "../../assets/images/bg/ellipseHeader.webp";
 import { CalendlyButton } from "../CalendlyButton";
 
-const Header = () => {
+interface IHeaderProps {
+  locale: string
+}
+
+const Header: FC<IHeaderProps> = ({locale}) => {
   const { t } = useTranslation();
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);

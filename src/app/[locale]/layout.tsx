@@ -37,7 +37,7 @@ export default async function RootLayout({
         namespaces={i18nNamespaces}
       >
         <Icons />
-        <Header />
+        <Header locale={locale} />
         <ErrorBoundary FallbackComponent={ErrorFallback}>
           <main>{children}</main>
         </ErrorBoundary>

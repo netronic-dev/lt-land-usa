@@ -9,7 +9,7 @@ const WelcomeSection = () => {
   const { t } = useTranslation();
   return (
     <section className="pt-[48px] flex flex-col items-center xl:bg-welcome-hero-desktop md:bg-welcome-hero-mobile-big lg:bg-welcome-hero-tablet bg-welcome-hero-mobile bg-center bg-cover">
-     <div className="container flex flex-col items-center overflow-x-hidden">
+      <div className="container flex flex-col items-center overflow-x-hidden">
         <h2 className="lg:max-w-[771px] lg:px-0 lg:mb-[27px] xl:mb-[21px] lg:text-[40px] xl:text-[45px] font-manrope text-[var(--primary-text-color)] mb-[21px] md:mb-[32px] text-[25px] md:text-[35px] md:leading-[44px] text-center px-[20px] md:px-[40px]">
           {t("welcomeSection.title.title")}{" "}
           <span className="text-[var(--accent-color)]">
@@ -37,7 +37,7 @@ const WelcomeSection = () => {
             />
           </div>
         </div>
-     </div>
+      </div>
     </section>
   );
 };

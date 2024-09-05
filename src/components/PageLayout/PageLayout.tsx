@@ -1,7 +1,9 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useModals } from "../../context/ModalsProvider";
 import { getLocationData } from "../../utils/postData";
