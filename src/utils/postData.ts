@@ -56,6 +56,7 @@ export async function postData(
       city: locationInfo.city,
     },
     source: source || "",
+    language: "Англійська"
   };
   return await axios.post(url, data);
 }
