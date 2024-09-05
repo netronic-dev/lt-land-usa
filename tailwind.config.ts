@@ -27,7 +27,10 @@ const config: Config = {
         blueTwo: "0px 0px 20px 0px #0090FF",
         bigCircle:
           "0px 0px 250px 0px rgba(0, 144, 255, 0.80), 0px 0px 50px 0px #000 inset",
+      },
+      boxShadow: {
         headerShadow: "0px 10px 10px 0px rgba(0, 144, 255, 0.30)",
+        optimizingSectionShadow: "0px 0px 10px 0px #0090FF",
       },
       backgroundImage: {
         "welcome-hero-mobile": "url('/bg/welcomeBgMobile.webp')",

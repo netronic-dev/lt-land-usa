@@ -323,14 +323,19 @@
       "titleSpan": ""
     },
     "text": "",
+    "subtitle": "",
     "list": [
       {
-        "title": "",
-        "description": "",
-        "subtitleTop": "",
-        "textTop": "",
-        "subtitleBottom": "",
-        "textBottom": ""
+        "title": ""
+      },
+      {
+        "title": ""
+      },
+      {
+        "title": ""
+      },
+      {
+        "title": ""
       },
       {
         "title": "",
@@ -338,13 +343,18 @@
       },
       {
         "title": "",
-        "description": "",
-        "subtitleTop": "",
-        "textTop": "",
-        "subtitleBottom": "",
-        "textBottom": ""
+        "description": ""
+      },
+      {
+        "title": ""
       }
-    ]
+    ],
+    "chartText1": "",
+    "chartText2": "",
+    "chartText3": "",
+    "chartText4": "",
+    "roiTitle": "",
+    "roiText": ""
   },
   "unlockingBusinessSection": {
     "title": "",

@@ -58,7 +58,7 @@ const Header = () => {
       )}
       <header
         className={`py-[27px] md:pt-[33px] md:pb-[41px] lg:py-[18px] xl:py-[15px] w-[100vw]
-           ${isScrolled ? "bg-[#050A1B] headerShadow" : ""}
+           ${isScrolled ? "bg-[#050A1B] shadow-headerShadow" : ""}
         `}
       >
         <div className="container flex gap-[19px] items-center justify-between xl:justify-between">

@@ -2,15 +2,24 @@
 
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
+import { useEffect, useRef } from "react";
 import { OptimizingReturnsList } from "@/constants/globalConstants";
-import { Icon } from "../Icon";
 import optimizingEllBg from "../../assets/images/bg/optimizingEllBg.webp";
+import optimizingChartOne from "../../assets/images/optimizingChart.webp";
+import optimizingChartOneTablet from "../../assets/images/optimizingChartTablet.webp";
+import optimizingChartOneBigDesktop from "../../assets/images/optimizingChartBigDesktop.webp";
+import optimizingChartTwo from "../../assets/images/optimizingChartTwo.webp";
 import style from "./style.module.scss";
-import { useIntersectionObserver } from "@/hooks";
+import { useIsTablet, useIntersectionObserver } from "@/hooks";
 
 const OptimizingReturnsSection = () => {
   const { t } = useTranslation();
+  const isBigDesktop = useIsTablet(1512);
+  const isTablet = useMediaQuery({
+    query: "(min-width: 744px) and (max-width: 1511px)",
+  });
+  const isDesktop = useIsTablet(1024);
   const listTranslated = t("optimizingReturnsSection.list", {
     returnObjects: true,
   });
@@ -22,13 +31,20 @@ const OptimizingReturnsSection = () => {
     ...OptimizingReturnsList[index],
   }));
 
-  const divRef = useRef<HTMLDivElement>(null);
+  const titleDivRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const listItemsRefs = useRef(null);
+  const chartsDiv = useRef(null);
 
-  useIntersectionObserver([divRef], { threshold: 0.1 }, style.appear);
+  useIntersectionObserver(
+    [titleDivRef, subtitleRef, listItemsRefs, chartsDiv],
+    { threshold: 0.1 },
+    style.appear
+  );
 
   return (
-    <section className="pt-[63px] pb-[55px] relative overflow-hidden">
-      <div className="absolute lg:h-[106%] lg:w-[98%] xl:h-full xl:w-[77%] lg:top-[-68px] lg:right-[-53%] xl:top-0 xl:right-[-53%]">
+    <section className="pt-[63px] pb-[41px] relative overflow-hidden">
+      <div className="absolute lg:h-[106%] lg:w-[98%] xl:h-full xl:w-[77%] lg:top-[-68px] lg:right-[-67%] xl:top-0 xl:right-[-53%] z-[-1]">
         <Image
           src={optimizingEllBg}
           alt="optimizingEllBg"
@@ -37,97 +53,94 @@ const OptimizingReturnsSection = () => {
         />
       </div>
       <div className="container">
-        <h2 className="xl:max-w-[541px] xl:mb-[33px] mb-[38px] md:mb-[30px] text-[var(--primary-text-color)] lg:max-w-[473px] lg:mb-[29px] font-manrope text-[40px] leading-[57px] font-extrabold text-start">
-          {t("optimizingReturnsSection.title.title")}{" "}
-          <span className="text-[var(--accent-color)]">
-            {t("optimizingReturnsSection.title.titleSpan")}
-          </span>
-        </h2>
-        <p className="text-[var(--primary-text-color)] font-manrope text-[18px] xl:max-w-[631px] md:max-w-[571px] xl:mb-[55px] mb-[49px] md:mb-[30px] lg:max-w-[477px] lg:mb-[41px]">
-          {t("optimizingReturnsSection.text")}
-        </p>
         <div
-          ref={divRef}
-          className={`${style.animateDiv} flex gap-[27px] flex-col lg:flex-row transition-all`}
+          ref={titleDivRef}
+          className={`${style.titleDiv} lg:flex lg:justify-between lg:mb-[43px]`}
         >
-          <ul className="flex flex-col gap-[30px] lg:flex-wrap lg:w-[85%]">
-            {list.map(
-              (item) =>
-                item.subtitleTop && (
-                  <li
-                    key={item.id}
-                    className={`px-[20px] py-[29px] xl:px-[22px] rounded-[7px] border-solid border-[1px] ${
-                      item.id === 2
-                        ? "bg-[#181E30] border-[#181E30]"
-                        : "border-[#757575]"
-                    } md:flex md:justify-between w-full lg:h-[345px] xl:h-[316px]`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-center w-[58px] h-[58px] rounded-[50%] border-[1px] border-solid border-[#565656] mb-[28px]">
-                        {" "}
-                        <Icon
-                          color="var(--primary-text-color)"
-                          name={item.icon}
-                          width={24}
-                          height={24}
-                        />
-                      </div>
-                      <h3 className="text-[var(--primary-text-color)] font-manrope text-[16px] font-extrabold xl:mb-[12px] mb-[24px] lg:mb-[14px]">
-                        {item.title}
-                      </h3>
-                      <p className="text-[var(--primary-text-color)] font-manrope text-[18px] mb-[24px] lg:mb-0 md:max-w-[230px] lg:max-w-[250px] xl:max-w-[316px]">
-                        {" "}
-                        {item.description}
-                      </p>
-                    </div>
-                    <div className="md:max-w-[350px]">
-                      <h3 className="text-[var(--accent-color)] font-manrope text-[18px] font-bold">
-                        {item.subtitleTop}
-                      </h3>
-                      <p className="text-[var(--primary-text-color)] font-manrope text-[18px] mb-[30px]">
-                        {item.textTop}
-                      </p>
-                      <h3 className="text-[var(--accent-color)] font-manrope text-[18px] font-bold">
-                        {item.subtitleBottom}
-                      </h3>
-                      <p className="text-[var(--primary-text-color)] font-manrope text-[18px]">
-                        {item.textBottom}
-                      </p>
-                    </div>
-                  </li>
-                )
+          <h2 className="xl:max-w-[541px] xl:mb-[33px] mb-[16px] md:mb-[32px] lg:mb-0 text-[var(--primary-text-color)] lg:max-w-[473px] font-manrope text-[40px] leading-[57px] font-extrabold text-start">
+            {t("optimizingReturnsSection.title.title")}{" "}
+            <span className="text-[var(--accent-color)]">
+              {t("optimizingReturnsSection.title.titleSpan")}
+            </span>
+          </h2>
+          {isDesktop && (
+            <div className="h-[163px] w-[2px] bg-[var(--primary-text-color)]"></div>
+          )}
+          <p className="text-[var(--primary-text-color)] font-manrope text-[23px] font-extrabold xl:max-w-[505px] md:max-w-[671px] xl:mb-[55px] mb-[28px] md:mb-[30px] lg:max-w-[383px] lg:mb-0">
+            {t("optimizingReturnsSection.text")}
+          </p>
+        </div>
+        <h3
+          ref={subtitleRef}
+          className={`${style.subtitle} text-[var(--accent-color)] mb-[28px] font-manrope text-[24px] font-extrabold`}
+        >
+          {" "}
+          {t("optimizingReturnsSection.subtitle")}
+        </h3>
+        <ul
+          ref={listItemsRefs}
+          className="flex flex-col gap-[15px] md:gap-x-[9px] lg:gap-x-[23px] xl:gap-x-[11px] md:gap-y-[15px] md:flex-row md:flex-wrap"
+        >
+          {list.map((item, index) => (
+            <li
+              key={index}
+              className={`px-[10px] py-[16px] rounded-[7px] border-solid border-[1px] border-[var(--primary-text-color)] ${style.item}`}
+            >
+              <h4 className="text-[var(--primary-text-color)] font-manrope text-[18px]">
+                {item.title}
+              </h4>
+              {item.description && (
+                <p className="text-[var(--primary-text-color)] font-manrope text-[12px]">
+                  {item.description}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+        <div
+          ref={chartsDiv}
+          className={`${style.chartsDiv} lg:flex lg:justify-between lg:items-center lg:mt-[20px]`}
+        >
+          <div className="relative w-[365px] h-[256px] md:w-[608px] md:h-[402px] lg:w-[751px] lg:h-[418px] mb-[45px] mx-auto mt-[40px] xl:ml-[6px]">
+            {isBigDesktop ? (
+              <Image
+                src={optimizingChartOneBigDesktop}
+                alt="optimizingChartOne"
+              />
+            ) : (
+              <Image
+                src={isTablet ? optimizingChartOneTablet : optimizingChartOne}
+                alt="optimizingChartOne"
+              />
             )}
-          </ul>
-          <ul>
-            {list.map(
-              (item) =>
-                !item.subtitleTop && (
-                  <li
-                    key={item.id}
-                    className={`w-full px-[20px] py-[29px] xl:px-[22px] rounded-[7px] border-solid border-[1px] border-[#757575] md:flex md:justify-between lg:flex-col`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-center w-[58px] h-[58px] rounded-[50%] border-[1px] border-solid border-[#565656] mb-[28px]">
-                        {" "}
-                        <Icon
-                          color="var(--primary-text-color)"
-                          name={item.icon}
-                          width={24}
-                          height={24}
-                        />
-                      </div>
-                      <h3 className="max-w-[97px] lg:max-w-[173px] text-[var(--primary-text-color)] font-manrope text-[16px] font-extrabold xl:mb-[12px] mb-[24px] lg:mb-[14px]">
-                        {item.title}
-                      </h3>
-                    </div>
-                    <p className="md:max-w-[350px] text-[var(--primary-text-color)] font-manrope text-[18px]">
-                      {" "}
-                      {item.description}
-                    </p>
-                  </li>
-                )
-            )}
-          </ul>
+            <h5 className="text-[var(--primary-text-color)] text-[14px] md:text-[16px] xl:text-[23px] font-medium md:font-extrabold absolute top-[20px] right-[11%] md:top-[16px] md:right-[68%] xl:top-[3px] xl:right-[24%]">
+              {t("optimizingReturnsSection.chartText1")}
+            </h5>
+            <h5 className="text-[var(--primary-text-color)] text-[14px] md:text-[16px] xl:text-[23px] font-medium md:font-extrabold absolute top-[62px] left-[2%] md:top-[95px] xl:top-[66px] md:left-0 max-w-[177px] xl:max-w-[238px]">
+              {t("optimizingReturnsSection.chartText2")}
+            </h5>
+            <h5 className="text-[var(--primary-text-color)] text-[14px] md:text-[16px] xl:text-[23px] font-medium md:font-extrabold absolute top-[62px] right-[7%] md:top-[155px] md:right-[5%] xl:top-[126px] xl:right-[1%] max-w-[89px] md:max-w-[195px] xl:max-w-[280px]">
+              {t("optimizingReturnsSection.chartText3")}
+            </h5>
+            <h5 className="text-[var(--primary-text-color)] text-[14px] md:text-[16px] xl:text-[23px] font-medium md:font-extrabold absolute top-[210px] left-[6%] md:top-[316px] md:left-[1%] xl:top-[301px]">
+              {t("optimizingReturnsSection.chartText4")}
+            </h5>
+          </div>
+          <div className="md:flex md:justify-between md:items-center lg:flex-col">
+            <div className="mb-[28px] pt-[47px] pb-[23px] pl-[32px] rounded-[7px] border-solid border-[1px] border-[var(--primary-text-color)] md:w-[320px]">
+              <div className="w-[143px] h-[57px] mt-[-78px] ml-[-17px] flex items-center justify-center rounded-[10px] bg-[var(--accent-color)] shadow-optimizingSectionShadow">
+                <h3 className="text-[var(--primary-text-color)] font-manrope text-[23px] font-extrabold">
+                  {t("optimizingReturnsSection.roiTitle")}
+                </h3>
+              </div>
+              <p className="mt-[18px] max-w-[226px] font-manrope text-[18px] text-[var(--primary-text-color)]">
+                {t("optimizingReturnsSection.roiText")}
+              </p>
+            </div>
+            <div className="relative mx-auto w-[319px] h-[278px]">
+              <Image src={optimizingChartTwo} alt="optimizingChartTwo" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

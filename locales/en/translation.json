@@ -323,29 +323,39 @@
       "title": "Optimizing Returns:",
       "titleSpan": "Calculating ROI for Your Laser Tag Business"
     },
-    "text": "At LASERTAG.NET, we understand that a crucial aspect of any business is ensuring a favorable Return on Investment (ROI). Our team is well-versed in crafting ROI calculations. We delve into the specifics of your business, considering factors such as:",
+    "text": "At LASERTAG.NET, we help you maximize your Return on Investment (ROI). Our team conducts a thorough analysis of your business, including:",
+    "subtitle": "Example",
     "list": [
       {
-        "title": "Initial Investment:",
-        "description": "We meticulously evaluate the costs associated with setting up your laser tag venture.",
-        "subtitleTop": "Indoor Laser Tag Business:",
-        "textTop": "$50,000-80,000 investment covers equipment, venue renovation, marketing, and staff training.",
-        "subtitleBottom": "Mobile Laser Tag Business:",
-        "textBottom": "$23,000 investment includes mobile equipment, promotional efforts, and necessary training."
+        "title": "Number of working days per month: 26"
       },
       {
-        "title": "Operational Expenses",
-        "description": "Thorough consideration is given to ongoing operational expenses, encompassing maintenance, utilities, employee salaries, and other recurrent costs."
+        "title": "Employee salary: $1,500"
       },
       {
-        "title": "Revenue Projections",
-        "description": "We work with you to project realistic revenue streams based on factors such as customer traffic, pricing models, and potential ancillary income streams.",
-        "subtitleTop": "Indoor Laser Tag Business:",
-        "textTop": "With the above investments, and an average arena workload of 30%, profitability is achieved within 7 months.",
-        "subtitleBottom": "Mobile Laser Tag Business:",
-        "textBottom": "With the above investments, and an average arena workload of 30%, profitability is achieved within 4 months."
+        "title": "Monthly rental expenses: $ 2,500"
+      },
+      {
+        "title": "Number of operating hours per day: 9"
+      },
+      {
+        "title": "Monthly advertising expenses: 15%",
+        "description": "(social media advertising, Google Ads)"
+      },
+      {
+        "title": "Other expenses: $1000",
+        "description": "(communication, utilities, cleaning, security)"
+      },
+      {
+        "title": "Income tax: 15%"
       }
-    ]
+    ],
+    "chartText1": "Income taxes 15%",
+    "chartText2": "Monthly advertising expenses: 15%",
+    "chartText3": "Expenses per month 15%",
+    "chartText4": "Profit 40%",
+    "roiTitle": "ROI",
+    "roiText": "ROI at 30% load - 8 months ROI at 40% load - 4 months ROI at 50% load - 3 months"
   },
   "unlockingBusinessSection": {
     "title": "Unlocking Business Success",

@@ -1,12 +1,30 @@
-.animateDiv {
+.item {
+  width: 100%;
+
+  @media (min-width: 744px) {
+    width: calc(100% / 2 - 7px);
+  }
+
   @media (min-width: 1024px) {
-    align-items: flex-start;
-    transition: align-items 2.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: calc(100% / 2 - 12px);
+  }
+
+  @media (min-width: 1512px) {
+    width: calc(100% / 3 - 12px);
   }
 }
 
-.animateDiv.appear {
- @media (min-width: 1024px) {
-    align-items: flex-end;
-  }
+.titleDiv,
+.subtitle,
+.chartsDiv {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.titleDiv.appear,
+.subtitle.appear,
+.chartsDiv.appear {
+  opacity: 1;
+  transform: translateY(0);
 }
