@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import style from "./style.module.scss";
 import { Icon } from "../Icon";
 import {
-  IQualityAndReliabilityList,
+  IQualityAndReliabilityList, 
   QualityAndReliabilityList,
 } from "@/constants/globalConstants";
 

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "react-responsive";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { OptimizingReturnsList } from "@/constants/globalConstants";
 import optimizingEllBg from "../../assets/images/bg/optimizingEllBg.webp";
 import optimizingChartOne from "../../assets/images/optimizingChart.webp";

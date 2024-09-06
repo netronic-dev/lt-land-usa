@@ -109,7 +109,6 @@ const PageLayout = (props: any) => {
       )}
       {modals.demoFormVisibility ? (
         <ModalForm
-          // formName="demo"
           isOpen={modals.demoFormVisibility}
           closeModal={modals.formDemoChangeVisibility}
           titleForm="Request a personal demo!"
@@ -155,14 +154,12 @@ const PageLayout = (props: any) => {
       )}
       {modals.testDriveFormVisibility ? (
         <ModalForm
-          // formName="test-drive"
           isOpen={modals.testDriveFormVisibility}
           closeModal={modals.formTestDriveChangeVisibility}
           titleForm="Would you like to book a test drive? "
           textForm="Fill out the form below to express your interest."
           orderOldName={`Test-drive order ${orderText} | LT NET USA`}
           destinationURL="https://back.netronic.net/forms"
-          // lang="en"
           letterId={3433769}
           fromName="Lasertag"
           thank_you_page="/thanks/test-drive"

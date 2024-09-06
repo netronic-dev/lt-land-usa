@@ -1,12 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import WelcomeFirstImg from "../../assets/images/welcome-one.webp";
 import WelcomeSecondImg from "../../assets/images/welcome-two.webp";
 
-const WelcomeSection = () => {
-  const { t } = useTranslation();
+const WelcomeSection = ({ t }: { t: (key: string) => string }) => {
   return (
     <section className="pt-[48px] flex flex-col items-center xl:bg-welcome-hero-desktop md:bg-welcome-hero-mobile-big lg:bg-welcome-hero-tablet bg-welcome-hero-mobile bg-center bg-cover">
       <div className="container flex flex-col items-center overflow-x-hidden">

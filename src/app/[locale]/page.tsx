@@ -1,29 +1,79 @@
-import { AboutUsSection } from "@/components/AboutUsSection";
-import { CheckOutSection } from "@/components/CheckOutSection";
-import { BusinessSupportSection } from "@/components/BusinessSupportSection";
-import { CustomerReviewsSection } from "@/components/CustomerReviewsSection";
-import { HeroSection } from "@/components/HeroSection";
-import { PopularitySection } from "@/components/PopularitySection";
-import { QualityAndReliabilitySection } from "@/components/QualityAndReliabilitySection";
-import { WelcomeSection } from "@/components/WelcomeSection";
-import { WhySection } from "@/components/WhySection";
-import { WorldwidePresenceSection } from "@/components/WorldwidePresenceSection";
-import { DiverseGameplaySection } from "@/components/DiverseGameplaySection";
-import { OptimizingReturnsSection } from "@/components/OptimizingReturnsSection";
-import { UnlockingBusinessSection } from "@/components/UnlockingBusinessSection";
-import { TestDriveSection } from "@/components/TestDriveSection";
-import { PartnershipSection } from "@/components/PartnershipSection";
-import { LookForwardSection } from "@/components/LookForwardSection";
-import PageLayout from "@/components/PageLayout/PageLayout";
+import dynamic from "next/dynamic";
+import initTranslations from "../i18n";
 
-export default function Home() {
+const PageLayout = dynamic(() => import("@/components/PageLayout/PageLayout"));
+
+const HeroSection = dynamic(
+  () => import("@/components/HeroSection/HeroSection")
+);
+const WelcomeSection = dynamic(
+  () => import("@/components/WelcomeSection/WelcomeSection")
+);
+const WhySection = dynamic(() => import("@/components/WhySection/WhySection"));
+
+const AboutUsSection = dynamic(
+  () => import("@/components/AboutUsSection/AboutUsSection")
+);
+const CheckOutSection = dynamic(
+  () => import("@/components/CheckOutSection/CheckOutSection")
+);
+const BusinessSupportSection = dynamic(
+  () => import("@/components/BusinessSupportSection/BusinessSupportSection")
+);
+const CustomerReviewsSection = dynamic(
+  () => import("@/components/CustomerReviewsSection/CustomerReviewsSection")
+);
+const PopularitySection = dynamic(
+  () => import("@/components/PopularitySection/PopularitySection")
+);
+const QualityAndReliabilitySection = dynamic(
+  () =>
+    import(
+      "@/components/QualityAndReliabilitySection/QualityAndReliabilitySection"
+    )
+);
+const WorldwidePresenceSection = dynamic(
+  () => import("@/components/WorldwidePresenceSection/WorldwidePresenceSection")
+);
+
+const DiverseGameplaySection = dynamic(
+  () => import("@/components/DiverseGameplaySection/DiverseGameplaySection")
+);
+
+const OptimizingReturnsSection = dynamic(
+  () => import("@/components/OptimizingReturnsSection/OptimizingReturnsSection")
+);
+
+const UnlockingBusinessSection = dynamic(
+  () => import("@/components/UnlockingBusinessSection/UnlockingBusinessSection")
+);
+
+const TestDriveSection = dynamic(
+  () => import("@/components/TestDriveSection/TestDriveSection")
+);
+
+const PartnershipSection = dynamic(
+  () => import("@/components/PartnershipSection/PartnershipSection")
+);
+
+const LookForwardSection = dynamic(
+  () => import("@/components/LookForwardSection/LookForwardSection")
+);
+
+export default async function Home({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  const { t } = await initTranslations(locale, ["translation"]);
+
   return (
     <PageLayout>
-      <HeroSection />
-      <WelcomeSection />
-      <WhySection />
+      {/* <HeroSection /> */}
+      {/* <WelcomeSection t={t} />
+      <WhySection t={t} />
       <PopularitySection />
-      <AboutUsSection />
+      <AboutUsSection t={t} />
       <WorldwidePresenceSection />
       <CustomerReviewsSection />
       <CheckOutSection />
@@ -34,7 +84,7 @@ export default function Home() {
       <UnlockingBusinessSection />
       <TestDriveSection />
       <PartnershipSection />
-      <LookForwardSection />
+      <LookForwardSection /> */}
     </PageLayout>
   );
 }

@@ -1,11 +1,12 @@
 "use client";
-import { useTranslation } from "react-i18next";
-import { StaticForm } from "../StaticForm";
+
 import { useIsTablet } from "@/hooks";
+import { StaticForm } from "../StaticForm";
+import { useTranslation } from "react-i18next";
 
 const LookForwardSection = () => {
-  const { t } = useTranslation();
   const isTablet = useIsTablet();
+  const { t } = useTranslation();
 
   return (
     <section className="pt-[150px] pb-[99px] md:pt-[98px] lg:pb-[256px] md:pb-[142px] xl:pb-[48px] xl:pt-[102px] bg-forward-mobile md:bg-bg-forward-tablet lg:bg-forward-desktop bg-cover md:bg-contain xl:bg-cover bg-no-repeat bg-center">

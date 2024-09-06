@@ -223,7 +223,7 @@ const Icons = () => {
             viewBox="0 0 159 101"
             fill="none"
           >
-            <g clip-path="url(#clip0_288_5092)">
+            <g clipPath="url(#clip0_288_5092)">
               <path
                 d="M15.1504 48.4194L12.386 51.2127H4.03212V58.1146H10.9532V55.9562H8.37615L5.84466 53.4169H14.7049V58.1146L11.9202 60.9079H3.10053L0.275391 58.1146V51.2686L3.10053 48.4194H15.1504Z"
                 fill="white"
@@ -266,13 +266,13 @@ const Icons = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(107.84 52.2145) rotate(133.611) scale(64.2461 4.13787)"
               >
-                <stop stop-color="#0090FF" />
+                <stop stopColor="#0090FF" />
                 <stop
                   offset="0.139"
-                  stop-color="#0090FF"
+                  stopColor="#0090FF"
                   stop-opacity="0.861"
                 />
-                <stop offset="1" stop-color="#0090FF" stop-opacity="0" />
+                <stop offset="1" stopColor="#0090FF" stop-opacity="0" />
               </radialGradient>
               <radialGradient
                 id="paint1_radial_288_5092"
@@ -282,43 +282,43 @@ const Icons = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(107.279 52.3253) rotate(-46.8895) scale(29.6106 1.27351)"
               >
-                <stop stop-color="#91FBF1" />
+                <stop stopColor="#91FBF1" />
                 <stop
                   offset="0.0189"
-                  stop-color="#88F4F2"
+                  stopColor="#88F4F2"
                   stop-opacity="0.9811"
                 />
                 <stop
                   offset="0.1045"
-                  stop-color="#64DAF5"
+                  stopColor="#64DAF5"
                   stop-opacity="0.8955"
                 />
                 <stop
                   offset="0.198"
-                  stop-color="#45C3F8"
+                  stopColor="#45C3F8"
                   stop-opacity="0.802"
                 />
                 <stop
                   offset="0.2995"
-                  stop-color="#2CB0FB"
+                  stopColor="#2CB0FB"
                   stop-opacity="0.7005"
                 />
                 <stop
                   offset="0.4121"
-                  stop-color="#18A2FD"
+                  stopColor="#18A2FD"
                   stop-opacity="0.5879"
                 />
                 <stop
                   offset="0.5418"
-                  stop-color="#0A98FE"
+                  stopColor="#0A98FE"
                   stop-opacity="0.4582"
                 />
                 <stop
                   offset="0.7039"
-                  stop-color="#0292FF"
+                  stopColor="#0292FF"
                   stop-opacity="0.2961"
                 />
-                <stop offset="1" stop-color="#0090FF" stop-opacity="0" />
+                <stop offset="1" stopColor="#0090FF" stop-opacity="0" />
               </radialGradient>
               <clipPath id="clip0_288_5092">
                 <rect

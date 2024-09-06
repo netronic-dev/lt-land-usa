@@ -11,10 +11,10 @@ import bgEllipse from "../../assets/images/bg/ellipseHeader.webp";
 import { CalendlyButton } from "../CalendlyButton";
 
 interface IHeaderProps {
-  locale: string
+  locale: string;
 }
 
-const Header: FC<IHeaderProps> = ({locale}) => {
+const Header: FC<IHeaderProps> = ({ locale }) => {
   const { t } = useTranslation();
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
