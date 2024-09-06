@@ -366,7 +366,7 @@ const StaticForm: FC<IStaticFormProps> = ({
         </div>
       ) : null}
       <form
-        className="flex flex-col gap-[15px] w-full max-w-[762px] mx-auto"
+        className="flex flex-col gap-[15px] w-full mx-auto"
         onSubmit={handleSubmit(onSubmit)}
       >
         <Input
