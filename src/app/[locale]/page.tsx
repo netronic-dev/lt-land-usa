@@ -69,8 +69,8 @@ export default async function Home({
 
   return (
     <PageLayout>
-      {/* <HeroSection /> */}
-      {/* <WelcomeSection t={t} />
+      <HeroSection />
+      <WelcomeSection t={t} />
       <WhySection t={t} />
       <PopularitySection />
       <AboutUsSection t={t} />
@@ -84,7 +84,7 @@ export default async function Home({
       <UnlockingBusinessSection />
       <TestDriveSection />
       <PartnershipSection />
-      <LookForwardSection /> */}
+      <LookForwardSection />
     </PageLayout>
   );
 }
