@@ -305,7 +305,7 @@ const StaticForm: FC<IStaticFormProps> = ({
       )}
       {isDesktop ? (
         <div className="flex flex-col gap-[15px] w-full">
-          <div className="flex flex-col md:flex-row gap-[9px] justify-center items-center md:gap-[32px] w-full ">
+          <div className="flex flex-col md:flex-row gap-[9px] justify-center items-center md:gap-[32px] w-full">
             {loggedViaSocials ? (
               <>
                 <button
@@ -339,7 +339,6 @@ const StaticForm: FC<IStaticFormProps> = ({
                     ? googleAuthBtnText
                     : "Authorization via Google"}
                 </button>
-
                 <button
                   className="auth_facebook_button flex w-full items-center justify-center gap-[5px] cursor-pointer rounded-[8px] bg-[#395498] py-[16.5px] text-[#fff] border-solid border-[1px] border-[#395498] font-manrope text-[16px] font-extrabold leading-[23px] transition-all md:w-[418px]"
                   onClick={facebookAuth}
@@ -347,8 +346,8 @@ const StaticForm: FC<IStaticFormProps> = ({
                   <Icon
                     name="icon-facebook_logo"
                     className="facebook_icon"
-                    height={15}
                     width={15}
+                    height={15}
                   />{" "}
                   {facebookAuthBtnText
                     ? facebookAuthBtnText
@@ -362,58 +361,10 @@ const StaticForm: FC<IStaticFormProps> = ({
             <span className="text-[#fff] text-center font-manrope text-[16px] font-extrabold leading-[120%] md:leading-[268.75%]">
               {googleAuthBtnSpan ? googleAuthBtnSpan : "or"}
             </span>
-            <span className="w-full h-[1px] bg-[#fff] "></span>
+            <span className="w-full h-[1px] bg-[#fff]"></span>
           </div>
         </div>
-      ) : (
-        <div className="flex flex-col gap-[15px] w-full">
-          <div className="flex flex-col gap-[9px] justify-center items-center w-full ">
-            {loggedViaSocials ? (
-              <>
-                <button
-                  className="auth_clear_button cursor-pointer rounded-[8px] border-solid border-[1px] border-[#000] bg-[#fff] h-[56px] w-full text-[#000] font-manrope text-[16px] font-extrabold leading-[143.75%]"
-                  onClick={clearAuth}
-                >
-                  {googleAuthClearBtnText ? googleAuthClearBtnText : "Clear"}
-                </button>
-                <button
-                  className="auth_change_button cursor-pointer rounded-[8px] border-solid border-[1px] border-[#000] bg-[#000] h-[56px] w-full text-[#fff] font-manrope text-[16px] font-extrabold leading-[143.75%]"
-                  onClick={
-                    loggedViaSocials === "Google" ? googleAuth : facebookAuth
-                  }
-                >
-                  {googleAuthChangeBtnText
-                    ? googleAuthChangeBtnText
-                    : "Change account"}
-                </button>
-              </>
-            ) : (
-              <>
-                <button
-                  className="auth_google_button flex w-full items-center justify-center gap-[5px] cursor-pointer rounded-[8px] bg-[#e0e0e0] py-[16.5px] text-[#000] font-manrope text-[16px] font-extrabold leading-[23px] transition-all md:w-[418px]"
-                  onClick={googleAuth}
-                >
-                  <Image
-                    src={googleLogo}
-                    alt="google logo"
-                    height={15}
-                    width={15}
-                  />{" "}
-                  {googleAuthBtnText}
-                </button>
-              </>
-            )}
-          </div>
-          <div className="flex items-center gap-[25px] w-full">
-            <span className="w-full h-[1px] bg-[#fff] "></span>
-            <span className="text-[#fff] text-center font-manrope text-[16px] font-extrabold leading-[120%] md:leading-[268.75%]">
-              {googleAuthBtnSpan}
-            </span>
-            <span className="w-full h-[1px] bg-[#fff] "></span>
-          </div>
-        </div>
-      )}
-
+      ) : null}
       <form
         className="flex flex-col gap-[15px] w-full max-w-[762px] mx-auto"
         onSubmit={handleSubmit(onSubmit)}
