@@ -15,7 +15,7 @@ const WorldwidePresenceSection = () => {
     {
       returnObjects: true,
     }
-  );
+  )
 
   const worldwidePresenceSectionList = Object.values(
     worldwidePresenceSectionListTranslated

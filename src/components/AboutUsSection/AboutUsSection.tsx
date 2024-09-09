@@ -15,7 +15,6 @@ const AboutUsSection = ({ t }: { t: (key: string) => string }) => {
           src={ellipseBgAboutUs}
           alt="ellipseBg"
           layout="fill"
-          objectFit="cover"
         />
       </div>
       <div className="container lg:flex lg:items-center lg:justify-between">

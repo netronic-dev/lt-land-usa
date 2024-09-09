@@ -43,13 +43,6 @@ export default function ThankYouPage() {
           </>
         }
         text="A catalog will be sent to your email within 2 minutes. If you do not receive the catalog, please check all mail and contact us via phone or Facebook messenger."
-        // link="https://lasertag.net/black-friday-2022/usd"
-        // image="/thank-you/banner.png"
-        // objectFit="cover"
-        // objectPosition="10% 50%"
-        // imageResponsive="/thank-you/banner-mobile.png"
-        // objectFitResponsive="cover"
-        // objectPositionResponsive="45% 50%"
       />
       <Video
         title={

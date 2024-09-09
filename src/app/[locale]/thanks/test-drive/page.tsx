@@ -43,13 +43,6 @@ export default function ThankYouPage() {
           </>
         }
         text="Our manager will contact you as soon as business hours  to discuss the terms of the test drive."
-        // link="https://lasertag.net/black-friday-2022/usd"
-        // image="/thank-you/banner.png"
-        // objectFit="cover"
-        // objectPosition="10% 50%"
-        // imageResponsive="/thank-you/banner-mobile.png"
-        // objectFitResponsive="cover"
-        // objectPositionResponsive="45% 50%"
       />
       <Video
         title={

@@ -28,18 +28,18 @@ const styles: Record<
     mt: "md:mt-[-42px] lg:mt-[-88px]",
   },
   1: {
-    width: "md:w-[407px] lg:w-[611px]",
-    minWidth: "md:min-w-[407px] lg:max-w-[611px]",
-    height: "md:h-[229px] lg:h-[344px]",
-    minHeight: "md:min-h-[229px] lg:min-h-[344px]",
-    mt: "md:mt-[-76px] lg:mt-[-111px]",
+    width: "w-[397px] md:w-[407px] lg:w-[611px]",
+    minWidth: "min-w-[397px] md:min-w-[407px] lg:max-w-[611px]",
+    height: "h-[233px] md:h-[229px] lg:h-[344px]",
+    minHeight: "min-h-[233px] md:min-h-[229px] lg:min-h-[344px]",
+    mt: "mt-[-56px] md:mt-[-76px] lg:mt-[-111px]",
   },
   2: {
     width: "md:w-[254px] lg:w-[444px]",
     minWidth: "md:min-w-[254px] lg:max-w-[444px]",
     height: "md:h-[196px] lg:h-[295px]",
     minHeight: "md:min-h-[196px] lg:min-h-[295px]",
-    mt: "md:mt-[-69px] lg:mt-[-105px]",
+    mt: "mt-[-49px] md:mt-[-69px] lg:mt-[-105px]",
   },
   3: {
     width: "md:w-[230px] lg:w-[399px]",
@@ -111,8 +111,8 @@ const PartnershipSection = () => {
             {PartnershipImagesList.map((item) => (
               <li
                 key={item.id}
-                className={`${item.id === 3 ? "w-[60%]" : "w-full"} ${
-                  item.id === 3 ? "min-w-[60%]" : "min-w-full"
+                className={`${item.id === 3 ? "w-[50%]" : "w-full"} ${
+                  item.id === 3 ? "min-w-[50%]" : "min-w-full"
                 } h-[265px] relative ${
                   item.id in styles
                     ? `${styles[item.id].width} ${styles[item.id].minWidth} ${
