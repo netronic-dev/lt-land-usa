@@ -111,8 +111,12 @@ const PartnershipSection = () => {
             {PartnershipImagesList.map((item) => (
               <li
                 key={item.id}
-                className={`${item.id === 3 ? "w-[50%]" : "w-full"} ${
-                  item.id === 3 ? "min-w-[50%]" : "min-w-full"
+                className={`${
+                  item.id === 3
+                    ? "w-[50%] min-w-[50%]"
+                    : item.id === 1
+                    ? "w-[397px] min-w-[397px]"
+                    : "w-full min-w-full"
                 } h-[265px] relative ${
                   item.id in styles
                     ? `${styles[item.id].width} ${styles[item.id].minWidth} ${
