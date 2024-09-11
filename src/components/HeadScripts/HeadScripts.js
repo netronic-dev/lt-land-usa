@@ -179,6 +179,8 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
             }
           };
 
+       let chatId = null;
+
           window.Tawk_API.onPrechatSubmit = function(data) {
  const values = {};
 
@@ -207,24 +209,37 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
           .replace(/&/g, "\\u0026")
           .replace(/'/g, "\\u0027")};
       
-  postData(
-    values,
-    "https://back.netronic.net/forms",
-    "Tawk.to | LT NET USA",
-    window.location.href,
-    window.location.hostname,
-    routerQuery,
-    "Чат на сайті"
-  )
-  .then(() => {
-          ReactGA.event("generate_lead", {
-            category: "form",
-            action: "submit",
-          });
-          ReactPixel.track("Lead");
-          sendEventToConversionApi(window.location.href, "Lead");
-        })
-}
+  document.addEventListener('chatIdReady', () => {
+    values.chatId = chatId;
+
+    postData(
+      values,
+      "https://back.netronic.net/forms",
+      "Tawk.to | LT NET USA",
+      window.location.href,
+      window.location.hostname,
+      routerQuery,
+      "Чат на сайті"
+    )
+    .then(() => {
+      ReactGA.event("generate_lead", {
+        category: "form",
+        action: "submit",
+      });
+      ReactPixel.track("Lead");
+      sendEventToConversionApi(window.location.href, "Lead");
+    });
+  });
+};
+
+window.Tawk_API.onChatStarted = function(data) {
+  if (data && data.chatId) {
+    chatId = data.chatId;
+    
+    const event = new Event('chatIdReady');
+    document.dispatchEvent(event);
+  }
+};
 
           Tawk_API.onOfflineSubmit = function(data) {
             ReactPixel.track("Lead");

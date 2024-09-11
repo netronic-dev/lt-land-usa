@@ -56,7 +56,8 @@ export async function postData(
       city: locationInfo.city,
     },
     source: source || "",
-    language: "Англійська"
+    language: "Англійська",
+    chatId: values.chatId || "",
   };
   return await axios.post(url, data);
 }
