@@ -13,9 +13,11 @@ import {
 } from "@/constants/globalConstants";
 import { PrimaryButton } from "../PrimaryButton";
 import { useModals } from "@/context/ModalsProvider";
+import { useIsTablet } from "@/hooks";
 
 const CheckOutSection = () => {
   const { t } = useTranslation();
+  const isTablet = useIsTablet(1024);
   const listTopTranslated = t("checkOutSection.checkOutTopList", {
     returnObjects: true,
   });
@@ -144,7 +146,7 @@ const CheckOutSection = () => {
               >
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src={item.image}
+                    src={isTablet ? item.image : item.imageMobile}
                     alt={item.title}
                     layout="fill"
                     objectFit="cover"

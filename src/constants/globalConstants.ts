@@ -9,9 +9,13 @@ import reviewImgTwo from "../assets/images/review-two.webp";
 import reviewImgThree from "../assets/images/review-three.webp";
 import reviewImgFour from "../assets/images/review-four.webp";
 import checkOutImgTopOne from "../assets/images/falconF1.webp";
+import checkOutImgTopOneMobile from "../assets/images/falconF1Mobile.webp";
 import checkOutImgTopTwo from "../assets/images/falconF2.webp";
+import checkOutImgTopTwoMobile from "../assets/images/falconF2Mobile.webp";
 import checkOutImgTopThree from "../assets/images/falconLux.webp";
+import checkOutImgTopThreeMobile from "../assets/images/falconLuxMobile.webp";
 import checkOutImgTopFour from "../assets/images/galaxyEclipse.webp";
+import checkOutImgTopFourMobile from "../assets/images/galaxyEclipseMobile.webp";
 import checkOutImgBottomOne from "../assets/images/netronicHeadband.webp";
 import checkOutImgBottomTwo from "../assets/images/netronicVest.webp";
 import checkOutImgBottomThree from "../assets/images/scorpionShockBand.webp";
@@ -92,6 +96,7 @@ export interface ICustomerReviewsList {
 interface ICheckOutList {
   id: number;
   image: StaticImageData;
+  imageMobile?: StaticImageData;
   alt: string;
 }
 
@@ -383,21 +388,25 @@ export const CheckOutTopList: ICheckOutList[] = [
   {
     id: 0,
     image: checkOutImgTopOne,
+    imageMobile: checkOutImgTopOneMobile,
     alt: "CheckOutImgTopOne",
   },
   {
     id: 1,
     image: checkOutImgTopTwo,
+    imageMobile: checkOutImgTopTwoMobile,
     alt: "CheckOutImgTopTwo",
   },
   {
     id: 2,
     image: checkOutImgTopThree,
+    imageMobile: checkOutImgTopThreeMobile,
     alt: "CheckOutImgTopThree",
   },
   {
     id: 3,
     image: checkOutImgTopFour,
+    imageMobile: checkOutImgTopFourMobile,
     alt: "CheckOutImgTopFour",
   },
 ];
