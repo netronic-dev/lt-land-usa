@@ -42,8 +42,11 @@ const DiverseGameplaySection = dynamic(
   () => import("@/components/DiverseGameplaySection/DiverseGameplaySection")
 );
 
-const OptimizingReturnsSection = dynamic(
-  () => import("@/components/OptimizingReturnsSection/OptimizingReturnsSection")
+const LasertagProfitabilitySection = dynamic(
+  () =>
+    import(
+      "@/components/LasertagProfitabilitySection/LasertagProfitabilitySection"
+    )
 );
 
 const UnlockingBusinessSection = dynamic(
@@ -77,7 +80,7 @@ export default async function Home({
       {/* <PopularitySection /> */}
       <AboutUsSection t={t} />
       <WorldwidePresenceSection />
-      <OptimizingReturnsSection />
+      <LasertagProfitabilitySection />
       <CustomerReviewsSection />
       <CheckOutSection />
       <QualityAndReliabilitySection />

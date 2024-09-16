@@ -155,17 +155,23 @@ export const LANGUAGES: ILanguages[] = [
 ];
 
 export const HeaderNavList: IHeaderNavList[] = [
-  {
-    name: "Why laser tag equipment",
-    value: "why",
-    id: 0,
-    ref: "#why",
-  },
+  // {
+  //   name: "Why laser tag equipment",
+  //   value: "why",
+  //   id: 0,
+  //   ref: "#why",
+  // },
   {
     name: "About Us",
     value: "about",
-    id: 1,
+    id: 0,
     ref: "#about",
+  },
+  {
+    name: "Profitability",
+    value: "profitability",
+    id: 1,
+    ref: "#profitability",
   },
   {
     name: "Products",

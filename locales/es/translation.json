@@ -1,11 +1,10 @@
 {
   "header": {
     "navList": {
-      "why": "",
       "about": "",
+      "profitability": "",
       "products": "",
       "quality": "",
-      "support": "",
       "testDrive": "",
       "partnership": "",
       "contact": ""
@@ -317,7 +316,7 @@
     ],
     "btnText": ""
   },
-  "optimizingReturnsSection": {
+  "lasertagProfitabilitySection": {
     "title": {
       "title": "",
       "titleSpan": ""

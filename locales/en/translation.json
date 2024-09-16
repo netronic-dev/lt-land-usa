@@ -1,11 +1,10 @@
 {
   "header": {
     "navList": {
-      "why": "Why laser tag",
       "about": "About Us",
+      "profitability": "Profitability",
       "products": "Products",
       "quality": "Quality",
-      "support": "Support",
       "testDrive": "Test drive",
       "partnership": "Partnership",
       "contact": "Contact Us"
@@ -318,7 +317,7 @@
     ],
     "btnText": "order a catalog"
   },
-  "optimizingReturnsSection": {
+  "lasertagProfitabilitySection": {
     "title": {
       "title": "Lasertag’s profitability",
       "titleSpan": "Calculating ROI for Your Laser Tag Business"
