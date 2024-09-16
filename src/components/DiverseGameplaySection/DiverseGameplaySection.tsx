@@ -192,7 +192,7 @@ const DiverseGameplaySection = () => {
             </li>
           ))}
         </ul>
-        <div className="flex justify-center mt-[60px] md:mt-[54px] lg:mt-[60px]">
+        {/* <div className="flex justify-center mt-[60px] md:mt-[54px] lg:mt-[60px]">
           {" "}
           <PrimaryButton
             size="large"
@@ -200,7 +200,7 @@ const DiverseGameplaySection = () => {
           >
             {t("diverseGameplaySection.btnText")}
           </PrimaryButton>
-        </div>
+        </div> */}
       </div>
     </section>
   );

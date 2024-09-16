@@ -6,10 +6,12 @@ const PageLayout = dynamic(() => import("@/components/PageLayout/PageLayout"));
 const HeroSection = dynamic(
   () => import("@/components/HeroSection/HeroSection")
 );
-const WelcomeSection = dynamic(
-  () => import("@/components/WelcomeSection/WelcomeSection")
-);
-const WhySection = dynamic(() => import("@/components/WhySection/WhySection"));
+
+// const WelcomeSection = dynamic(
+//   () => import("@/components/WelcomeSection/WelcomeSection")
+// );
+
+// const WhySection = dynamic(() => import("@/components/WhySection/WhySection"));
 
 const AboutUsSection = dynamic(
   () => import("@/components/AboutUsSection/AboutUsSection")
@@ -17,15 +19,15 @@ const AboutUsSection = dynamic(
 const CheckOutSection = dynamic(
   () => import("@/components/CheckOutSection/CheckOutSection")
 );
-const BusinessSupportSection = dynamic(
-  () => import("@/components/BusinessSupportSection/BusinessSupportSection")
-);
+// const BusinessSupportSection = dynamic(
+//   () => import("@/components/BusinessSupportSection/BusinessSupportSection")
+// );
 const CustomerReviewsSection = dynamic(
   () => import("@/components/CustomerReviewsSection/CustomerReviewsSection")
 );
-const PopularitySection = dynamic(
-  () => import("@/components/PopularitySection/PopularitySection")
-);
+// const PopularitySection = dynamic(
+//   () => import("@/components/PopularitySection/PopularitySection")
+// );
 const QualityAndReliabilitySection = dynamic(
   () =>
     import(
@@ -70,18 +72,18 @@ export default async function Home({
   return (
     <PageLayout>
       <HeroSection />
-      <WelcomeSection t={t} />
-      <WhySection t={t} />
-      <PopularitySection />
+      {/* <WelcomeSection t={t} /> */}
+      {/* <WhySection t={t} /> */}
+      {/* <PopularitySection /> */}
       <AboutUsSection t={t} />
       <WorldwidePresenceSection />
+      <OptimizingReturnsSection />
       <CustomerReviewsSection />
       <CheckOutSection />
       <QualityAndReliabilitySection />
-      <BusinessSupportSection />
+      {/* <BusinessSupportSection /> */}
       <DiverseGameplaySection />
-      <OptimizingReturnsSection />
-      <UnlockingBusinessSection />
+      {/* <UnlockingBusinessSection /> */}
       <TestDriveSection />
       <PartnershipSection />
       <LookForwardSection />

@@ -179,28 +179,28 @@ export const HeaderNavList: IHeaderNavList[] = [
     id: 3,
     ref: "#quality",
   },
-  {
-    name: "Support",
-    value: "support",
-    id: 4,
-    ref: "#support",
-  },
+  // {
+  //   name: "Support",
+  //   value: "support",
+  //   id: 4,
+  //   ref: "#support",
+  // },
   {
     name: "Test drive",
     value: "testDrive",
-    id: 5,
+    id: 4,
     ref: "#test-drive",
   },
   {
     name: "Partnership",
     value: "partnership",
-    id: 6,
+    id: 5,
     ref: "#partnership",
   },
   {
     name: "Contact Us",
     value: "contact",
-    id: 7,
+    id: 6,
     ref: "#contact",
   },
 ];
