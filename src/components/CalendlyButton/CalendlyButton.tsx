@@ -78,7 +78,7 @@ const CalendlyButton = (props: any) => {
     };
 
     if (eventData) {
-      fetch("https://api.netronic.net/calendly", {
+      fetch("https://back.netronic.net/calendly", {
         method: "POST",
         body: JSON.stringify(obj),
         headers: {
