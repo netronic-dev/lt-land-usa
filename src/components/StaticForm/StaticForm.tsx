@@ -35,6 +35,7 @@ import { ChangeBudgetOptions } from "../ChangeBudgetOptions";
 import { Agreement } from "../Agreement";
 import { useModals } from "@/context/ModalsProvider";
 import { Icon } from "../Icon";
+import { getCookieByKey } from "@/utils/getCookieByKey";
 
 interface IStaticFormProps {
   titleForm?: string;
@@ -230,6 +231,10 @@ const StaticForm: FC<IStaticFormProps> = ({
 
   const onSubmit = async (values: IFormInputs) => {
     modals?.setUserName(values.name);
+
+    const abTestValue = getCookieByKey("ab_test");
+    console.log(abTestValue, "abTestValue");
+
     const data = {
       ...values,
       phoneNumber: `+${values.phoneNumber}`,
@@ -261,7 +266,18 @@ const StaticForm: FC<IStaticFormProps> = ({
         queryParams || query
       );
 
-      await Promise.all([sendEmailResponse, postToCRMResponse]);
+      const trackVersionResponse = await axios.post(
+        "https://back.netronic.net/track-form-version",
+        {
+          version: abTestValue,
+        }
+      );
+
+      await Promise.all([
+        sendEmailResponse,
+        postToCRMResponse,
+        trackVersionResponse,
+      ]);
 
       reset();
       ReactGA.event("generate_lead", {

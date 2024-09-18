@@ -2,15 +2,7 @@ import axios from "axios";
 import { getName } from "country-list";
 import { getCountryCode } from "./getCountryCode";
 import { getLocalStorage } from "@/components/CookieBanner/storageHelper";
-
-const getCookieByKey = (key: string) => {
-  if (typeof window !== "undefined") {
-    return document.cookie
-      .split("; ")
-      .find((row) => row.startsWith(`${key}=`))
-      ?.split("=")[1];
-  }
-};
+import { getCookieByKey } from "./getCookieByKey";
 
 export async function postData(
   values: any,

@@ -5,11 +5,13 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 import { useModals } from "../../context/ModalsProvider";
 import { getLocationData } from "../../utils/postData";
 import { sendEventToConversionApi } from "../../utils/sendEventToConversionApi";
 import { addSearchParamsData } from "../../store/searchParamsSlice";
 import { ModalForm } from "../ModalForm";
+import { getCookieByKey } from "@/utils/getCookieByKey";
 
 const HeadScripts = dynamic(
   () => import("../../components/HeadScripts/HeadScripts"),
@@ -56,6 +58,16 @@ const PageLayout = (props: any) => {
 
   useEffect(() => {
     sendEventToConversionApi(window.location.href, "PageView");
+
+    const abTestValue = getCookieByKey("ab_test");
+
+    console.log(abTestValue, "abTestValue");
+
+    if (abTestValue) {
+      axios.post("https://back.netronic.net/track-visit", {
+        version: abTestValue,
+      });
+    }
   }, []);
 
   useEffect(() => {

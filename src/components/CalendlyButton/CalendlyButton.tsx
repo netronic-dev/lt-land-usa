@@ -12,6 +12,7 @@ import { searchParams } from "../../store/searchParamsSlice";
 import { postData } from "@/utils/postData";
 import { PrimaryButton } from "../PrimaryButton";
 import dynamic from "next/dynamic";
+import { getCookieByKey } from "@/utils/getCookieByKey";
 
 const PopupModal = dynamic(
   () => import("react-calendly").then((mod) => mod.PopupModal),
@@ -98,6 +99,12 @@ const CalendlyButton = (props: any) => {
               window.location.hostname,
               queryParams || query
             );
+
+            const abTestValue = getCookieByKey("ab_test");
+
+            await axios.post("https://back.netronic.net/track-form-version", {
+              version: abTestValue,
+            });
 
             ReactGA.event("generate_lead", {
               event_category: "button",
