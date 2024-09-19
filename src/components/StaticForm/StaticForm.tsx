@@ -266,7 +266,7 @@ const StaticForm: FC<IStaticFormProps> = ({
       );
 
       const trackVersionResponse = axios.post(
-        "https://back.netronic.net/track-visit",
+        "https://back.netronic.net/track-form-version",
         {
           version: abTestValue,
         }
