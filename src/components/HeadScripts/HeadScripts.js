@@ -9,6 +9,7 @@ import { sendEventToConversionApi } from "@/utils/sendEventToConversionApi";
 import { useSelector } from "react-redux";
 import { searchParams as searchParamsSelector } from "@/store/searchParamsSlice";
 import { postData } from "@/utils/postData";
+import { getCookieByKey } from "@/utils/getCookieByKey";
 
 const options = {
   autoConfig: true,
@@ -46,6 +47,7 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
       window.sendEventToConversionApi = sendEventToConversionApi;
       window.postData = postData;
       window.ReactGA = ReactGA;
+      window.getCookieByKey = getCookieByKey;
     }
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
@@ -221,7 +223,17 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
       routerQuery,
       "Чат на сайті"
     )
-    .then(() => {
+    .then(async () => {
+        const abTestValue = getCookieByKey("ab_test");
+
+      await fetch("https://back.netronic.net/track-form-version", {
+        method: "POST",
+        body: JSON.stringify({ version: abTestValue }),
+        headers: {
+        "Content-Type": "application/json",
+          },
+        });
+        
       ReactGA.event("generate_lead", {
         category: "form",
         action: "submit",

@@ -35,6 +35,7 @@ import { ChangeBudgetOptions } from "../ChangeBudgetOptions";
 import { Agreement } from "../Agreement";
 import { useModals } from "@/context/ModalsProvider";
 import { Icon } from "../Icon";
+import { getCookieByKey } from "@/utils/getCookieByKey";
 
 interface IStaticFormProps {
   titleForm?: string;
@@ -237,6 +238,8 @@ const StaticForm: FC<IStaticFormProps> = ({
       budget: values?.budget?.value || "",
     };
 
+    const abTestValue = getCookieByKey("ab_test");
+
     const options = {
       method: "POST",
       url: `https://back.netronic.net/send-email`,
@@ -262,9 +265,17 @@ const StaticForm: FC<IStaticFormProps> = ({
         queryParams || query
       );
 
+      const trackVersionResponse = axios.post(
+        "https://back.netronic.net/track-visit",
+        {
+          version: abTestValue,
+        }
+      );
+
       await Promise.all([
         sendEmailResponse,
         postToCRMResponse,
+        trackVersionResponse,
       ]);
 
       reset();
