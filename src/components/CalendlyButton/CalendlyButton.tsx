@@ -60,8 +60,8 @@ const CalendlyButton = (props: any) => {
     setIsOpen(true);
   };
 
-  const ClientID = "CggGW-NVNybjZRwnaEPRVjYccPYZ1XPu2i4Xcgwgerc";
-  const ClientSecret = "GyWlPMZ1bTh1UwCVY5F_Zoqqxbd19AbwyFUuuv9rNCk";
+  const ClientID = "IHz8TRdbzitSVHClLy2MTeP0qRJF3gnAxWo75AFxaqg";
+  const ClientSecret = "ivrNQs2Iv8yKwj31Zuzs6ktctULhTk_Bn9CheXpiCYk";
 
   useEffect(() => {
     import("react-facebook-pixel")
