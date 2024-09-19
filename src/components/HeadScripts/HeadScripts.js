@@ -215,7 +215,7 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
     postData(
       values,
       "https://back.netronic.net/forms",
-      "Tawk.to | LT NET USA",
+      "Tawk.to | LT NET USA (versionB)",
       window.location.href,
       window.location.hostname,
       routerQuery,

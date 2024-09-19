@@ -93,7 +93,7 @@ const CalendlyButton = (props: any) => {
             await postData(
               data,
               "https://back.netronic.net/forms",
-              `Call order (Calendly) | LT NET USA (Call ${data.time})`,
+              `Call order (Calendly) | LT NET USA (Call ${data.time}) (versionB)`,
               window.location.href,
               window.location.hostname,
               queryParams || query
