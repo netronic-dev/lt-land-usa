@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import getConfig from "next/config";
 import { useTranslation } from "react-i18next";
 import { PrimaryButton } from "../PrimaryButton";
 import { PartnershipImagesList } from "@/constants/globalConstants";
@@ -9,6 +10,7 @@ import bg from "../../assets/images/partnershipBg.webp";
 import style from "./style.module.scss";
 import { useIsTablet } from "@/hooks";
 import { useModals } from "@/context/ModalsProvider";
+const { publicRuntimeConfig } = getConfig() || { assetPrefix: "" };
 
 const styles: Record<
   number,
@@ -54,8 +56,8 @@ const PartnershipSection = () => {
   const { t } = useTranslation();
   const isTablet = useIsTablet();
   const modals = useModals();
-
   const [tabletStyles, setTabletStyles] = useState<boolean>(false);
+  const assetPrefix = publicRuntimeConfig.assetPrefix || "";
 
   useEffect(() => {
     setTabletStyles(isTablet);
@@ -125,7 +127,11 @@ const PartnershipSection = () => {
                     : ""
                 } ${tabletStyles ? style.swingDesktop : style.swing}`}
               >
-                <Image src={item.image} alt={item.alt} layout="fill" />
+                <Image
+                  src={`${assetPrefix}${item.image}`}
+                  alt={item.alt}
+                  layout="fill"
+                />
               </li>
             ))}
           </ul>
