@@ -55,6 +55,7 @@ const PartnershipSection = () => {
   const isTablet = useIsTablet();
   const modals = useModals();
   const [tabletStyles, setTabletStyles] = useState<boolean>(false);
+  const isProd = process.env.NODE_ENV === "production";
 
   useEffect(() => {
     setTabletStyles(isTablet);
@@ -125,7 +126,7 @@ const PartnershipSection = () => {
                 } ${tabletStyles ? style.swingDesktop : style.swing}`}
               >
                 <Image
-                  src={item.image}
+                  src={isProd ? `/version-b${item.image}` : item.image}
                   alt={item.alt}
                   layout="fill"
                 />
