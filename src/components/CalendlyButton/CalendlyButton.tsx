@@ -64,14 +64,6 @@ const CalendlyButton = (props: any) => {
   const ClientSecret = "ivrNQs2Iv8yKwj31Zuzs6ktctULhTk_Bn9CheXpiCYk";
 
   useEffect(() => {
-    import("react-facebook-pixel")
-      .then((x) => x.default)
-      .then((ReactPixel) => {
-        ReactPixel.track("Lead");
-      });
-  }, []);
-
-  useEffect(() => {
     const obj = {
       ClientID,
       ClientSecret,
@@ -110,6 +102,8 @@ const CalendlyButton = (props: any) => {
               event_category: "button",
               event_label: "generate_lead",
             });
+            const ReactPixel = (await import("react-facebook-pixel")).default;
+            ReactPixel.track("Lead");
 
             router.push("/thanks/call");
           } catch (error) {
@@ -144,7 +138,6 @@ const CalendlyButton = (props: any) => {
         prefill={props.prefill}
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
-        // rootElement={document.getElementById("__next")}
         rootElement={rootElement}
       />
     </div>

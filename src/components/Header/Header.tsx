@@ -9,6 +9,7 @@ import { FC, useEffect, useState } from "react";
 import { BurgerMenu } from "../BurgerMenu";
 import bgEllipse from "../../assets/images/bg/ellipseHeader.webp";
 import { CalendlyButton } from "../CalendlyButton";
+import { useIsDesktop } from "@/hooks";
 
 interface IHeaderProps {
   locale: string;
@@ -20,6 +21,7 @@ const Header: FC<IHeaderProps> = ({ locale }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [buttonCalendly, setButtonCalendly] = useState<boolean>(false);
+  const isDesktop = useIsDesktop(1512);
 
   useEffect(() => {
     setButtonCalendly(true);
@@ -104,14 +106,16 @@ const Header: FC<IHeaderProps> = ({ locale }) => {
           {/* <div className="hidden xl:flex">
             <ChangeLanguage />
           </div> */}
-          <div className="hidden xl:flex">
-            {buttonCalendly && (
-              <CalendlyButton
-                url="https://calendly.com/lasertag_net/30min"
-                btnText={t("header.textBtn")}
-              />
-            )}
-          </div>
+          {isDesktop && (
+            <div className="hidden xl:flex">
+              {buttonCalendly && (
+                <CalendlyButton
+                  url="https://calendly.com/lasertag_net/30min"
+                  btnText={t("header.textBtn")}
+                />
+              )}
+            </div>
+          )}
           <Icon
             name="icon-burger"
             width={38}
