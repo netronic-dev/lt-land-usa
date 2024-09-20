@@ -1,11 +1,5 @@
-const isProd = process.env.NODE_ENV === "production";
-console.log(isProd, "isProd");
-
 module.exports = {
   assetPrefix: process.env.ASSET_PREFIX || "",
-  publicRuntimeConfig: {
-    assetPrefix: isProd ? "/version-b" : "",
-  },
   images: {
     domains: ["i.ytimg.com", "lasertag.net"],
     deviceSizes: [
