@@ -56,11 +56,6 @@ const PageLayout = (props: any) => {
     }
   };
 
-  console.log(
-    process.env.NEXT_PUBLIC_ASSET_PREFIX,
-    "process.env.NEXT_PUBLIC_ASSET_PREFIX"
-  );
-
   useEffect(() => {
     sendEventToConversionApi(window.location.href, "PageView");
 
