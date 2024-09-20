@@ -1,10 +1,5 @@
-// /** @type {import('next').NextConfig} */
-
-// const nextConfig = {};
-
-// module.exports = nextConfig;
-
 module.exports = {
+  assetPrefix: process.env.ASSET_PREFIX || "",
   images: {
     domains: ["i.ytimg.com", "lasertag.net"],
     deviceSizes: [
