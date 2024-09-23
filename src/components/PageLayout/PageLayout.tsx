@@ -61,26 +61,26 @@ const PageLayout = (props: any) => {
 
     const abTestValue = getCookieByKey("ab_test");
 
-    if (abTestValue) {
-      axios.post("https://back.netronic.net/track-visit", {
-        version: abTestValue,
-      });
-    }
-
-    // if (typeof window !== "undefined") {
-    //   if (!abTestValue) {
-    //     const version = Math.random() < 0.5 ? "A" : "B";
-    //     document.cookie = `ab_test=${version}; path=/`;
-    //     window.location.href = `https://us.lasertag.net/?version=${version}`;
-    //     axios.post("https://back.netronic.net/track-visit", {
-    //       version: version,
-    //     });
-    //   } else {
-    //     axios.post("https://back.netronic.net/track-visit", {
-    //       version: abTestValue,
-    //     });
-    //   }
+    // if (abTestValue) {
+    //   axios.post("https://back.netronic.net/track-visit", {
+    //     version: abTestValue,
+    //   });
     // }
+
+    if (typeof window !== "undefined") {
+      if (!abTestValue) {
+        const version = Math.random() < 0.5 ? "A" : "B";
+        document.cookie = `ab_test=${version}; path=/`;
+        window.location.href = `https://us.lasertag.net/?version=${version}`;
+        axios.post("https://back.netronic.net/track-visit", {
+          version: version,
+        });
+      } else {
+        axios.post("https://back.netronic.net/track-visit", {
+          version: abTestValue,
+        });
+      }
+    }
   }, []);
 
   useEffect(() => {
