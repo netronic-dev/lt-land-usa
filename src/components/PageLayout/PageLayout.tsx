@@ -70,6 +70,7 @@ const PageLayout = (props: any) => {
     if (!abTestValue) {
       const version = Math.random() < 0.5 ? "A" : "B";
       document.cookie = `ab_test=${version}; path=/;`;
+      window.location.href = `https://us.lasertag.net/?version=${version}`;
       window.location.reload();
     } else {
       axios.post("https://back.netronic.net/track-visit", {
