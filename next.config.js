@@ -1,5 +1,5 @@
 module.exports = {
-  assetPrefix: process.env.ASSET_PREFIX || "",
+  // assetPrefix: process.env.ASSET_PREFIX || "",
   images: {
     domains: ["i.ytimg.com", "lasertag.net"],
     deviceSizes: [
