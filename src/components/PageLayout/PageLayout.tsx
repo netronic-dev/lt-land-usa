@@ -61,7 +61,17 @@ const PageLayout = (props: any) => {
 
     const abTestValue = getCookieByKey("ab_test");
 
-    if (abTestValue) {
+    // if (abTestValue) {
+    //   axios.post("https://back.netronic.net/track-visit", {
+    //     version: abTestValue,
+    //   });
+    // }
+
+    if (!abTestValue) {
+      const version = Math.random() < 0.5 ? "A" : "B";
+      document.cookie = `ab_test=${version}; path=/;`;
+      window.location.reload();
+    } else {
       axios.post("https://back.netronic.net/track-visit", {
         version: abTestValue,
       });
