@@ -104,7 +104,12 @@ const CustomerReviewsSection = () => {
             >
               <div className="group-hover:opacity-100 opacity-50 relative w-full h-full transition-opacity duration-300">
                 <Image
-                  src={item.image}
+                  // src={item.image}
+                  src={`${
+                    process.env.NODE_ENV === "production"
+                      ? process.env.ASSET_PREFIX
+                      : ""
+                  }${item.image}`}
                   alt={item.alt}
                   objectFit="cover"
                   layout="fill"

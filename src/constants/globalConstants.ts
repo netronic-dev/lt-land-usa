@@ -27,8 +27,8 @@ import checkOutImgBottomEight from "../assets/images/nebulaLaserTagGranade.webp"
 import comprehensiveBusinessImgOne from "../assets/images/businessSupport-three.webp";
 import comprehensiveBusinessImgTwo from "../assets/images/businessSupport-two.webp";
 import comprehensiveBusinessImgThree from "../assets/images/businessSupport-one.webp";
-// import diverseGameplayImgTwo from "../assets/images/diverseGameplay-two.webp";
-// import diverseGameplayImgThree from "../assets/images/diverseGameplay-three.webp";
+import diverseGameplayImgTwo from "../assets/images/diverseGameplay-two.webp";
+import diverseGameplayImgThree from "../assets/images/diverseGameplay-three.webp";
 import partnershipImgOne from "../assets/images/project-one.webp";
 import partnershipImgTwo from "../assets/images/project-two.webp";
 import partnershipImgThree from "../assets/images/project-three.webp";
@@ -88,7 +88,8 @@ interface IPopularityAndDemandList {
 
 export interface ICustomerReviewsList {
   id: number;
-  image: StaticImageData;
+  // image: StaticImageData;
+  image: string;
   url: string;
   alt: string;
 }
@@ -102,8 +103,7 @@ interface ICheckOutList {
 
 interface IDiverseGameplayList {
   id: number;
-  // image?: StaticImageData;
-  image?: string;
+  image?: StaticImageData;
   alt?: string;
 }
 
@@ -367,25 +367,29 @@ export const PopularityAndDemandList: IPopularityAndDemandList[] = [
 export const CustomerReviewsList: ICustomerReviewsList[] = [
   {
     id: 0,
-    image: reviewImgOne,
+    // image: reviewImgOne,
+    image: "/public/review-one.webp",
     url: "https://www.youtube.com/watch?v=SCeoOnjKmMY&t=2s",
     alt: "Customer Review One",
   },
   {
     id: 1,
-    image: reviewImgTwo,
+    // image: reviewImgTwo,
+    image: "/public/review-two.webp",
     url: "https://www.youtube.com/watch?v=Fd9_F5lmOYg",
     alt: "Customer Review Two",
   },
   {
     id: 2,
-    image: reviewImgThree,
+    // image: reviewImgThree,
+    image: "/public/review-three.webp",
     url: "https://www.youtube.com/watch?v=VGkBFgFQ8aw&t=185s",
     alt: "Customer Review Three",
   },
   {
     id: 3,
-    image: reviewImgFour,
+    // image: reviewImgFour,
+    image: "/public/review-four.webp",
     url: "https://www.youtube.com/watch?v=_rDLoxRwkRg",
     alt: "Customer Review Four",
   },
@@ -524,13 +528,12 @@ export const DiverseGameplayList: IDiverseGameplayList[] = [
   },
   {
     id: 1,
-    image: "../assets/images/diverseGameplay-two.webp",
+    image: diverseGameplayImgTwo,
     alt: "Diverse Gameplay Img Two",
   },
   {
     id: 2,
-    // image: diverseGameplayImgThree,
-    image: "../assets/images/diverseGameplay-three.webp",
+    image: diverseGameplayImgThree,
     alt: "Diverse Gameplay Img Three",
   },
 ];
