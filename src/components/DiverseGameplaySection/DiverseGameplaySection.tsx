@@ -12,9 +12,6 @@ import ellItemBg from "../../assets/images/bg/ellipseItemDiverseGameplayBg.webp"
 import style from "./style.module.scss";
 import { useModals } from "@/context/ModalsProvider";
 import { Icon } from "../Icon";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
-const { assetPrefix } = publicRuntimeConfig;
 
 const DiverseGameplaySection = () => {
   const { t } = useTranslation();
@@ -143,8 +140,7 @@ const DiverseGameplaySection = () => {
                 >
                   {item.image ? (
                     <Image
-                      // src={item.image}
-                      src={`${assetPrefix}${item.image}`}
+                      src={item.image}
                       alt={item.alt}
                       layout="fill"
                       objectFit="cover"
