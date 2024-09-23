@@ -88,8 +88,7 @@ interface IPopularityAndDemandList {
 
 export interface ICustomerReviewsList {
   id: number;
-  // image: StaticImageData;
-  image: string;
+  image: StaticImageData;
   url: string;
   alt: string;
 }
@@ -367,29 +366,25 @@ export const PopularityAndDemandList: IPopularityAndDemandList[] = [
 export const CustomerReviewsList: ICustomerReviewsList[] = [
   {
     id: 0,
-    // image: reviewImgOne,
-    image: "/review-one.webp",
+    image: reviewImgOne,
     url: "https://www.youtube.com/watch?v=SCeoOnjKmMY&t=2s",
     alt: "Customer Review One",
   },
   {
     id: 1,
-    // image: reviewImgTwo,
-    image: "/review-two.webp",
+    image: reviewImgTwo,
     url: "https://www.youtube.com/watch?v=Fd9_F5lmOYg",
     alt: "Customer Review Two",
   },
   {
     id: 2,
-    // image: reviewImgThree,
-    image: "/review-three.webp",
+    image: reviewImgThree,
     url: "https://www.youtube.com/watch?v=VGkBFgFQ8aw&t=185s",
     alt: "Customer Review Three",
   },
   {
     id: 3,
-    // image: reviewImgFour,
-    image: "/review-four.webp",
+    image: reviewImgFour,
     url: "https://www.youtube.com/watch?v=_rDLoxRwkRg",
     alt: "Customer Review Four",
   },
