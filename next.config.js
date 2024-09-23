@@ -1,5 +1,5 @@
 module.exports = {
-  assetPrefix: "/version-b",
+  // assetPrefix: "/version-b",
   images: {
     domains: ["i.ytimg.com", "lasertag.net"],
     deviceSizes: [
