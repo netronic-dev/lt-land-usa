@@ -31,6 +31,11 @@ const CookieBanner = (props) => {
 
   const handleAllow = () => {
     setCookieConsent(true);
+    const currentABTest = getCookieByKey("ab_test");
+
+    if (currentABTest) {
+      document.cookie = `ab_test=${currentABTest}; Max-Age=31536000; Path=/`;
+    }
     window.location.reload();
   };
 
