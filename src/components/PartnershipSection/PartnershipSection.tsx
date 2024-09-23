@@ -124,11 +124,7 @@ const PartnershipSection = () => {
                     : ""
                 } ${tabletStyles ? style.swingDesktop : style.swing}`}
               >
-                <Image
-                  src={`/version-b${item.image}`}
-                  alt={item.alt}
-                  layout="fill"
-                />
+                <Image src={item.image} alt={item.alt} layout="fill" />
               </li>
             ))}
           </ul>

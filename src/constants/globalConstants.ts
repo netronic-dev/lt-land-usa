@@ -27,8 +27,8 @@ import checkOutImgBottomEight from "../assets/images/nebulaLaserTagGranade.webp"
 import comprehensiveBusinessImgOne from "../assets/images/businessSupport-three.webp";
 import comprehensiveBusinessImgTwo from "../assets/images/businessSupport-two.webp";
 import comprehensiveBusinessImgThree from "../assets/images/businessSupport-one.webp";
-import diverseGameplayImgTwo from "../assets/images/diverseGameplay-two.webp";
-import diverseGameplayImgThree from "../assets/images/diverseGameplay-three.webp";
+// import diverseGameplayImgTwo from "../assets/images/diverseGameplay-two.webp";
+// import diverseGameplayImgThree from "../assets/images/diverseGameplay-three.webp";
 import partnershipImgOne from "../assets/images/project-one.webp";
 import partnershipImgTwo from "../assets/images/project-two.webp";
 import partnershipImgThree from "../assets/images/project-three.webp";
@@ -102,7 +102,8 @@ interface ICheckOutList {
 
 interface IDiverseGameplayList {
   id: number;
-  image?: StaticImageData;
+  // image?: StaticImageData;
+  image?: string;
   alt?: string;
 }
 
@@ -523,12 +524,13 @@ export const DiverseGameplayList: IDiverseGameplayList[] = [
   },
   {
     id: 1,
-    image: diverseGameplayImgTwo,
+    image: "../assets/images/diverseGameplay-two.webp",
     alt: "Diverse Gameplay Img Two",
   },
   {
     id: 2,
-    image: diverseGameplayImgThree,
+    // image: diverseGameplayImgThree,
+    image: "../assets/images/diverseGameplay-three.webp",
     alt: "Diverse Gameplay Img Three",
   },
 ];
