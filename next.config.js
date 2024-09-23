@@ -1,4 +1,5 @@
 module.exports = {
+  assetPrefix: "/version-b",
   publicRuntimeConfig: {
     assetPrefix: process.env.NODE_ENV === "production" ? "/version-b" : "",
   },
