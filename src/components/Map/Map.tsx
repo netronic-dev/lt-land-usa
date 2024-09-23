@@ -5,7 +5,7 @@ import { csv } from "d3-fetch";
 import style from "./style.module.scss";
 
 const assetPrefix = process.env.NODE_ENV === "production" ? "/version-b" : "";
-const geoUrl = "/map/map.json";
+const geoUrl = `${assetPrefix}/map/map.json`;
 
 type Data = {
   id: number;
@@ -19,7 +19,7 @@ const Map = () => {
   const [tooltipContent, setTooltipContent] = useState<string | null>(null);
 
   useEffect(() => {
-    csv<any>("/map/countries.csv").then((csvData) => {
+    csv<any>(`${assetPrefix}/map/countries.csv`).then((csvData) => {
       const transformedData = csvData as unknown as Data[];
       setData(transformedData);
     });
