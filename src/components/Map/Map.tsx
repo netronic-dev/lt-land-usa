@@ -19,8 +19,15 @@ const Map = () => {
   const [data, setData] = useState<Data[]>([]);
   const [tooltipContent, setTooltipContent] = useState<string | null>(null);
 
+  // useEffect(() => {
+  //   csv<any>("/map/countries.csv").then((csvData) => {
+  //     const transformedData = csvData as unknown as Data[];
+  //     setData(transformedData);
+  //   });
+  // }, []);
+
   useEffect(() => {
-    csv<any>("/map/countries.csv").then((csvData) => {
+    csv(`${assetPrefix}/map/countries.csv`).then((csvData) => {
       const transformedData = csvData as unknown as Data[];
       setData(transformedData);
     });
