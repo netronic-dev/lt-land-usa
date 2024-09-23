@@ -1,5 +1,4 @@
 module.exports = {
-  assetPrefix: "/version-b",
   assetPrefix: process.env.NODE_ENV === "production" ? "/version-b" : "",
   images: {
     domains: ["i.ytimg.com", "lasertag.net"],
