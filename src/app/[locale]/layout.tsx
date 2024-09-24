@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import { ErrorBoundary } from "react-error-boundary";
+import dynamic from "next/dynamic";
 import { Icons } from "@/components/Icons";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+// import { Header } from "@/components/Header";
+// import { Footer } from "@/components/Footer";
 import i18nConfig from "@/app/i18nConfig";
 import initTranslations from "@/app/i18n";
 import TranslationProvider from "@/app/[locale]/TranslationProvider";
 import { StoreProvider } from "@/store/StoreProvider";
 import ErrorFallback from "@/context/ErrorFallback";
+
+const Header = dynamic(() => import("@/components/Header/Header"), {
+  ssr: false,
+});
+
+const Footer = dynamic(() => import("@/components/Footer/Footer"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "Lasertag",

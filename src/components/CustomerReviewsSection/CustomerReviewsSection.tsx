@@ -107,7 +107,8 @@ const CustomerReviewsSection = () => {
                   src={item.image}
                   alt={item.alt}
                   objectFit="cover"
-                  layout="fill"
+                  layout="responsive"
+                  priority
                   className="rounded-[7px]"
                 />
               </div>

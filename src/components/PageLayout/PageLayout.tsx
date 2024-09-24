@@ -10,7 +10,6 @@ import { useModals } from "../../context/ModalsProvider";
 import { getLocationData } from "../../utils/postData";
 import { sendEventToConversionApi } from "../../utils/sendEventToConversionApi";
 import { addSearchParamsData } from "../../store/searchParamsSlice";
-import { ModalForm } from "../ModalForm";
 import { getCookieByKey } from "@/utils/getCookieByKey";
 
 const HeadScripts = dynamic(
@@ -25,6 +24,10 @@ const CookieBanner = dynamic(
     ssr: false,
   }
 );
+
+const ModalForm = dynamic(() => import("../ModalForm/ModalForm"), {
+  ssr: false,
+});
 
 const PageLayout = (props: any) => {
   const modals = useModals();

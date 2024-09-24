@@ -57,7 +57,8 @@ const Header: FC<IHeaderProps> = ({ locale }) => {
           <Image
             src={bgEllipse}
             alt="ellipse header"
-            layout="fill"
+            layout="responsive"
+            priority
             objectFit="cover"
           />
         </div>

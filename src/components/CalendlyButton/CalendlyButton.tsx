@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import axios from "axios";
-import { useState } from "react";
 import { useCalendlyEventListener } from "react-calendly";
 import ReactGA from "react-ga4";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -11,7 +11,6 @@ import { addUserData } from "../../store/UserDataSlice";
 import { searchParams } from "../../store/searchParamsSlice";
 import { postData } from "@/utils/postData";
 import { PrimaryButton } from "../PrimaryButton";
-import dynamic from "next/dynamic";
 import { getCookieByKey } from "@/utils/getCookieByKey";
 
 const PopupModal = dynamic(

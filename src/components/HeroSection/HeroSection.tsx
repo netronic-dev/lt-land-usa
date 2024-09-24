@@ -98,7 +98,8 @@ const HeroSection = () => {
             <Image
               src={animationCircleImg}
               alt="Animation-circle"
-              layout="fill"
+              layout="responsive"
+              priority
               objectFit="cover"
             />
           </div>
@@ -106,7 +107,12 @@ const HeroSection = () => {
             className={`bg-[transparent] flex justify-center relative w-[328px] h-[328px] lg:w-[462px] lg:h-[462px] xl:w-[568px] xl:h-[568px] rounded-full border-[1px] border-solid border-[var(--accent-color)] overflow-hidden`}
           >
             <div className="absolute top-[-44px] xl:top-[-76px] left-[-15%] w-[133%] h-[124%] transition-all duration-500 ease-in-out">
-              <Image src={imgShadow} alt="img-shadow" layout="fill" />
+              <Image
+                src={imgShadow}
+                alt="img-shadow"
+                layout="responsive"
+                priority
+              />
             </div>
             <ul
               className={`rounded-full flex items-center justify-start gap-[38px] transition-transform duration-500 ml-[374%] md:ml-[393%] lg:ml-[379%] xl:ml-[374%]`}
@@ -122,7 +128,8 @@ const HeroSection = () => {
                   <Image
                     src={item.url}
                     alt={item.alt}
-                    layout="fill"
+                    layout="responsive"
+                    priority
                     objectFit="cover"
                   />
                 </li>

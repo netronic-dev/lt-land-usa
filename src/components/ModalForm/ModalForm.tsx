@@ -1,8 +1,12 @@
 import { Modal } from "@mui/material";
 import { FC } from "react";
-import { StaticForm } from "../StaticForm";
+import dynamic from "next/dynamic";
 import { Icon } from "../Icon";
 import { useModals } from "@/context/ModalsProvider";
+
+const StaticForm = dynamic(() => import("../StaticForm/StaticForm"), {
+  ssr: false,
+});
 
 interface IModalForm {
   isOpen: boolean;

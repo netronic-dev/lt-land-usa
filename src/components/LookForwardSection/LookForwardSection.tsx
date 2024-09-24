@@ -1,9 +1,13 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { useIsTablet } from "@/hooks";
-import { StaticForm } from "../StaticForm";
 import { useTranslation } from "react-i18next";
+
+const StaticForm = dynamic(() => import("../StaticForm/StaticForm"), {
+  ssr: false,
+});
 
 const LookForwardSection = () => {
   const isTablet = useIsTablet();
