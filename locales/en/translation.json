@@ -19,87 +19,6 @@
     "textBtn": "Order a consultation",
     "text": "Start Your Own Laser Tag Business with Us!"
   },
-  "welcomeSection": {
-    "title": {
-      "title": "Welcome to the thrilling world of laser tag,",
-      "titleSpan": "where entertainment meets entrepreneurship"
-    },
-    "text": "In the dynamic landscape of recreational activities, laser tag stands out as not just a game but a lucrative business opportunity. As the demand for unique and immersive experiences continues to rise, investing in a laser tag venture has proven to be a strategic and rewarding decision. Let's delve into why laser tag is not only an exciting pastime but also a fantastic business venture."
-  },
-  "whySection": {
-    "title": {
-      "title": "Why Laser Tag",
-      "titleSpan": "is a Profitable Business:"
-    },
-    "whySectionList": [
-      {
-        "title": "Versatility of Environments",
-        "description": "Laser tag can operate indoors, outdoors, or as a mobile service, catering to diverse preferences"
-      },
-      {
-        "spanTitle": "Repeat Business",
-        "title": "and Events",
-        "description": "Offers an experience that encourages repeat visits and serves as a venue for events like parties and team-building activities"
-      },
-      {
-        "title": "Technology Integration",
-        "description": "Constantly evolving through technological advancements, offering features like realistic recoil and mobile apps for customization"
-      },
-      {
-        "spanTitle": "Appeal Across",
-        "title": "Age Groups",
-        "description": "Attracts both young and older players, ensuring a broad target market"
-      },
-      {
-        "title": "Low Operating Costs",
-        "description": "Relatively low costs compared to other entertainment businesses due to simple equipment and flexible venue options"
-      },
-      {
-        "title": "Community",
-        "description": "Laser tag centers foster community connections, enhancing customer experience and promoting positive word-of-mouth marketing"
-      }
-    ]
-  },
-  "popularityAndDemandSection": {
-    "subtitle": "Popularity and Demand",
-    "list": [
-      {
-        "preDescriptionSpan": "Indoor laser tag in the US generated $389.7 million",
-        "description": "in revenue in 2020, with a 6.2% annual growth projection"
-      },
-      {
-        "description": "Average revenue for US indoor laser tag businesses ranges from",
-        "postDescriptionSpan": "$200,000 to $500,000 annually"
-      },
-      {
-        "preDescriptionSpan": "Profit",
-        "description": "margins typically range",
-        "postDescriptionSpan": "from 30% to 50%"
-      },
-      {
-        "description": "Break-even period averages 6 to 24 months."
-      },
-      {
-        "description": "Average annual revenue per center is around $245,000"
-      },
-      {
-        "description": "Factors such as location, pricing, and cost structure significantly affect profitability."
-      },
-      {
-        "description": "Attention to detail leads to approximately 35% customer return rate."
-      },
-      {
-        "description": "Some US laser tag arenas exceed $1 million in sales."
-      },
-      {
-        "description": "Global popularity increased by 9% from 2015 to 2020"
-      },
-      {
-        "description": "Expected US industry revenue for 2023 is $380 million"
-      }
-    ],
-    "btnText": "Explore our Blog for the latest Lasertag.net news"
-  },
   "aboutUsSection": {
     "title": "About Us",
     "subtitle": "NETRONIC: The game is just beginning",
@@ -243,30 +162,6 @@
       }
     ]
   },
-  "businessSupportSection": {
-    "title": {
-      "title": "at Every Stage",
-      "titleSpan": "Business Support"
-    },
-    "list": [
-      {
-        "title": "Support Throughout Business Establishment:",
-        "description": "We provide continuous support at every stage of building your business, ensuring a seamless and successful venture."
-      },
-      {
-        "title": "Open to Partnership at Any Development Phase:",
-        "description": "LASERTAG.NET welcomes partnerships at any stage of your business development. Whether you are just starting or looking to expand, we are ready to collaborate."
-      },
-      {
-        "title": "Specialized Training for Your Team:",
-        "description": "Our training programs empower your specialists to operate the equipment efficiently, perform equipment setups, and manage equipment connections."
-      },
-      {
-        "title": "Local Technical Support Service:",
-        "description": "Our technical support service operates seven days a week. We are dedicated to ensuring that your laser tag business runs smoothly."
-      }
-    ]
-  },
   "diverseGameplaySection": {
     "title": {
       "title": "Diverse Gameplay with",
@@ -355,38 +250,6 @@
     "chartText4": "Profit 40%",
     "roiTitle": "ROI",
     "roiText": "ROI at 30% load - 8 months ROI at 40% load - 4 months ROI at 50% load - 3 months"
-  },
-  "unlockingBusinessSection": {
-    "title": "Unlocking Business Success",
-    "list": [
-      {
-        "title": "Personalized Offers",
-        "description": "Receive tailored proposals aligned with your business needs"
-      },
-      {
-        "title": "Additional Scenario",
-        "titleSpan": "Devices",
-        "description": "Explore Additional Scenario Devices for customer gameplay experiences."
-      },
-      {
-        "title": "Partnership Opportunities",
-        "description": "Learn about the benefits of LASERTAG.NET partnership."
-      },
-      {
-        "title": "Optimal Equipment",
-        "titleSpan": "Selection",
-        "description": "Get detailed information on the best laser tag equipment for your requirements"
-      },
-      {
-        "title": "ROI Insights",
-        "description": "Understand your business's ROI through detailed calculations."
-      },
-      {
-        "title": "Tailored",
-        "titleSpan": "Solutions",
-        "description": "Get customized advice on venue setup, marketing, and operations."
-      }
-    ]
   },
   "testDriveSection": {
     "title": "Test Drive Option",

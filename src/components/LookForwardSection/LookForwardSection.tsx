@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState, useEffect } from "react";
 import { useIsTablet } from "@/hooks";
 import { StaticForm } from "../StaticForm";
 import { useTranslation } from "react-i18next";
@@ -7,9 +8,41 @@ import { useTranslation } from "react-i18next";
 const LookForwardSection = () => {
   const isTablet = useIsTablet();
   const { t } = useTranslation();
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
+  const lookForwardSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setBackgroundLoaded(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0.1,
+      }
+    );
+
+    if (lookForwardSectionRef.current) {
+      observer.observe(lookForwardSectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
-    <section className="pt-[150px] pb-[99px] md:pt-[98px] lg:pb-[256px] md:pb-[142px] xl:pb-[48px] xl:pt-[102px] bg-forward-mobile md:bg-bg-forward-tablet lg:bg-forward-desktop bg-cover md:bg-contain xl:bg-cover bg-no-repeat bg-center">
+    <section
+      ref={lookForwardSectionRef}
+      className={`pt-[150px] pb-[99px] md:pt-[98px] lg:pb-[256px] md:pb-[142px] xl:pb-[48px] xl:pt-[102px] ${
+        backgroundLoaded
+          ? "bg-forward-mobile md:bg-bg-forward-tablet lg:bg-forward-desktop bg-cover md:bg-contain xl:bg-cover bg-no-repeat bg-center"
+          : ""
+      }`}
+    >
       <div className="container flex flex-col items-center overflow-x-hidden">
         <h3 className="lg:max-w-[916px] text-[var(--primary-text-color)] font-manrope text-[23px] md:text-[40px] md:leading-[57px] font-extrabold text-center mb-[31px]">
           {t("lookForwardSection.title")} {!isTablet && <br />}

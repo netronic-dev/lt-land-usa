@@ -7,27 +7,17 @@ const HeroSection = dynamic(
   () => import("@/components/HeroSection/HeroSection")
 );
 
-// const WelcomeSection = dynamic(
-//   () => import("@/components/WelcomeSection/WelcomeSection")
-// );
-
-// const WhySection = dynamic(() => import("@/components/WhySection/WhySection"));
-
 const AboutUsSection = dynamic(
   () => import("@/components/AboutUsSection/AboutUsSection")
 );
 const CheckOutSection = dynamic(
   () => import("@/components/CheckOutSection/CheckOutSection")
 );
-// const BusinessSupportSection = dynamic(
-//   () => import("@/components/BusinessSupportSection/BusinessSupportSection")
-// );
+
 const CustomerReviewsSection = dynamic(
   () => import("@/components/CustomerReviewsSection/CustomerReviewsSection")
 );
-// const PopularitySection = dynamic(
-//   () => import("@/components/PopularitySection/PopularitySection")
-// );
+
 const QualityAndReliabilitySection = dynamic(
   () =>
     import(
@@ -47,10 +37,6 @@ const LasertagProfitabilitySection = dynamic(
     import(
       "@/components/LasertagProfitabilitySection/LasertagProfitabilitySection"
     )
-);
-
-const UnlockingBusinessSection = dynamic(
-  () => import("@/components/UnlockingBusinessSection/UnlockingBusinessSection")
 );
 
 const TestDriveSection = dynamic(
@@ -75,18 +61,13 @@ export default async function Home({
   return (
     <PageLayout>
       <HeroSection />
-      {/* <WelcomeSection t={t} /> */}
-      {/* <WhySection t={t} /> */}
-      {/* <PopularitySection /> */}
       <AboutUsSection t={t} />
       <WorldwidePresenceSection />
       <LasertagProfitabilitySection />
       <CustomerReviewsSection />
       <CheckOutSection />
       <QualityAndReliabilitySection />
-      {/* <BusinessSupportSection /> */}
       <DiverseGameplaySection />
-      {/* <UnlockingBusinessSection /> */}
       <TestDriveSection />
       <PartnershipSection />
       <LookForwardSection />

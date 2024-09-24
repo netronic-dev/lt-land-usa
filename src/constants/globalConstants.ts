@@ -72,14 +72,6 @@ interface IHeroSliderImagesList {
   alt: string;
 }
 
-interface IWhySectionList {
-  id: number;
-  icon: string;
-  title?: string;
-  spanTitle?: string;
-  description?: string;
-}
-
 interface IPopularityAndDemandList {
   id: number;
   icon: string;
@@ -111,12 +103,6 @@ export interface IQualityAndReliabilityList {
   iconName: string;
   title?: string;
   description?: string;
-}
-
-interface IBusinessSupportSectionImgList {
-  id: number;
-  image: StaticImageData;
-  alt: string;
 }
 
 interface IOptimizingReturnsList {
@@ -290,33 +276,6 @@ export const HeroSliderImagesList: IHeroSliderImagesList[] = [
     id: 4,
     url: heroSliderImageFive,
     alt: "heroSliderImageFive",
-  },
-];
-
-export const WhySectionListMeta: IWhySectionList[] = [
-  {
-    id: 0,
-    icon: "icon-versatility",
-  },
-  {
-    id: 1,
-    icon: "icon-repeat",
-  },
-  {
-    id: 2,
-    icon: "icon-technology-integration",
-  },
-  {
-    id: 3,
-    icon: "icon-groups",
-  },
-  {
-    id: 4,
-    icon: "icon-low-costs",
-  },
-  {
-    id: 5,
-    icon: "icon-community",
   },
 ];
 
@@ -496,24 +455,6 @@ export const QualityAndReliabilityList: IQualityAndReliabilityList[] = [
   {
     id: 8,
     iconName: "icon-durable-construction",
-  },
-];
-
-export const BusinessSupportSectionImgList: IBusinessSupportSectionImgList[] = [
-  {
-    id: 0,
-    image: comprehensiveBusinessImgOne,
-    alt: "Comprehensive Business Img One",
-  },
-  {
-    id: 1,
-    image: comprehensiveBusinessImgTwo,
-    alt: "Comprehensive Business Img Two",
-  },
-  {
-    id: 2,
-    image: comprehensiveBusinessImgThree,
-    alt: "Comprehensive Business Img Three",
   },
 ];
 

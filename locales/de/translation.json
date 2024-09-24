@@ -18,87 +18,6 @@
     },
     "text": ""
   },
-  "welcomeSection": {
-    "title": {
-      "title": "",
-      "titleSpan": ""
-    },
-    "text": ""
-  },
-  "whySection": {
-    "title": {
-      "title": "",
-      "titleSpan": ""
-    },
-    "whySectionList": [
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "spanTitle": "",
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "spanTitle": "",
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": ""
-      }
-    ]
-  },
-  "popularityAndDemandSection": {
-    "subtitle": "",
-    "list": [
-      {
-        "preDescriptionSpan": "",
-        "description": ""
-      },
-      {
-        "description": "",
-        "postDescriptionSpan": ""
-      },
-      {
-        "preDescriptionSpan": "",
-        "description": "",
-        "postDescriptionSpan": ""
-      },
-      {
-        "description": ""
-      },
-      {
-        "description": ""
-      },
-      {
-        "description": ""
-      },
-      {
-        "description": ""
-      },
-      {
-        "description": ""
-      },
-      {
-        "description": ""
-      },
-      {
-        "description": ""
-      }
-    ],
-    "btnText": ""
-  },
   "aboutUsSection": {
     "title": "",
     "subtitle": "",
@@ -242,30 +161,6 @@
       }
     ]
   },
-  "businessSupportSection": {
-    "title": {
-      "title": "",
-      "titleSpan": ""
-    },
-    "list": [
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": "."
-      }
-    ]
-  },
   "diverseGameplaySection": {
     "title": {
       "title": "",
@@ -354,38 +249,6 @@
     "chartText4": "",
     "roiTitle": "",
     "roiText": ""
-  },
-  "unlockingBusinessSection": {
-    "title": "",
-    "list": [
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "titleSpan": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "titleSpan": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "description": ""
-      },
-      {
-        "title": "",
-        "titleSpan": "",
-        "description": ""
-      }
-    ]
   },
   "testDriveSection": {
     "title": "",

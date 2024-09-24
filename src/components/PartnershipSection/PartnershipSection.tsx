@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { PrimaryButton } from "../PrimaryButton";
 import { PartnershipImagesList } from "@/constants/globalConstants";
@@ -55,17 +55,49 @@ const PartnershipSection = () => {
   const isTablet = useIsTablet();
   const modals = useModals();
   const [tabletStyles, setTabletStyles] = useState<boolean>(false);
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
+  const partnershipSectionRef = useRef(null);
 
   useEffect(() => {
     setTabletStyles(isTablet);
   }, [isTablet]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setBackgroundLoaded(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0.1,
+      }
+    );
+
+    if (partnershipSectionRef.current) {
+      observer.observe(partnershipSectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section
+      ref={partnershipSectionRef}
       id="partnership"
       className="pt-[63px] xl:pt-[95px] overflow-hidden"
     >
-      <div className="relative pt-[49px] md:pt-[66px] md:pb-[59px] pb-[38px] bg-partnership-mobile md:bg-partnership-tablet lg:bg-partnership-tablet-big xl:bg-partnership-desktop bg-center bg-contain md:bg-cover xl:bg-cover bg-no-repeat">
+      <div
+        className={`relative pt-[49px] md:pt-[66px] md:pb-[59px] pb-[38px] ${
+          backgroundLoaded
+            ? "bg-partnership-mobile md:bg-partnership-tablet lg:bg-partnership-tablet-big xl:bg-partnership-desktop bg-center bg-contain md:bg-cover xl:bg-cover bg-no-repeat"
+            : ""
+        }`}
+      >
         <div className="z-10 absolute w-full h-[14%] md:h-[60%] bottom-[55px] lg:bottom-[5px] xl:bottom-0 right-0">
           <Image src={bg} alt="partnership-bg" layout="fill" />
         </div>
