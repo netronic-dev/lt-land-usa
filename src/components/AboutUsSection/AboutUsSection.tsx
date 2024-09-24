@@ -15,7 +15,7 @@ const AboutUsSection = ({ t }: { t: (key: string) => string }) => {
           src={ellipseBgAboutUs}
           alt="ellipseBg"
           layout="responsive"
-          priority
+          priority={false}
         />
       </div>
       <div className="container lg:flex lg:items-center lg:justify-between">

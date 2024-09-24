@@ -108,7 +108,7 @@ const CustomerReviewsSection = () => {
                   alt={item.alt}
                   objectFit="cover"
                   layout="responsive"
-                  priority
+                  priority={false}
                   className="rounded-[7px]"
                 />
               </div>

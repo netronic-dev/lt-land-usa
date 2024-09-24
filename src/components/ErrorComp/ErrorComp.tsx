@@ -29,7 +29,13 @@ const ErrorComp: FC<IErrorComp> = ({
   return (
     <div className={style.container}>
       <div className={style.bg}>
-        <Image src={bg} alt="bg" layout="fill" objectFit="cover"/>
+        <Image
+          src={bg}
+          alt="bg"
+          layout="fill"
+          priority={false}
+          objectFit="cover"
+        />
       </div>
       <div className={style.insideContentBox}>
         <h2 className={`${style.subtitle} font-manrope`}>

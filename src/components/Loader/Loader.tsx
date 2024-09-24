@@ -17,6 +17,7 @@ const Loader = () => {
             alt="circleImg"
             layout="fill"
             objectFit="cover"
+            priority={false}
           />
         </div>
         <div
@@ -27,6 +28,7 @@ const Loader = () => {
             alt="loaderImg"
             layout="fill"
             objectFit="cover"
+            priority={false}
           />
         </div>
       </div>

@@ -62,6 +62,7 @@ const BurgerMenu: FC<IBurger> = ({ isOpenMenu, handleOpenMenu }) => {
             alt="ellipse header"
             layout="fill"
             objectFit="cover"
+            priority={false}
           />
         </div>
         {tabletStyles ? (

@@ -38,4 +38,5 @@ export const manropeFont = localFont({
       style: "normal",
     },
   ],
+  display: "swap",
 });

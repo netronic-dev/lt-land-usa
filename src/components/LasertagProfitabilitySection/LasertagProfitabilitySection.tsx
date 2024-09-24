@@ -53,6 +53,7 @@ const LasertagProfitabilitySection = () => {
           alt="optimizingEllBg"
           layout="fill"
           objectFit="cover"
+          priority={false}
         />
       </div>
       <div className="container">
@@ -109,11 +110,13 @@ const LasertagProfitabilitySection = () => {
               <Image
                 src={optimizingChartOneBigDesktop}
                 alt="optimizingChartOne"
+                priority={false}
               />
             ) : (
               <Image
                 src={isTablet ? optimizingChartOneTablet : optimizingChartOne}
                 alt="optimizingChartOne"
+                priority={false}
               />
             )}
             <h5 className="text-[var(--primary-text-color)] text-[14px] md:text-[16px] xl:text-[23px] font-medium md:font-extrabold absolute top-[20px] right-[11%] md:top-[16px] md:right-[68%] xl:top-[3px] xl:right-[24%]">
@@ -141,7 +144,11 @@ const LasertagProfitabilitySection = () => {
               </p>
             </div>
             <div className="relative mx-auto w-[319px] h-[278px]">
-              <Image src={optimizingChartTwo} alt="optimizingChartTwo" />
+              <Image
+                src={optimizingChartTwo}
+                alt="optimizingChartTwo"
+                priority={false}
+              />
             </div>
           </div>
         </div>

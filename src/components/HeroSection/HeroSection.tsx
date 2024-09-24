@@ -111,7 +111,7 @@ const HeroSection = () => {
                 src={imgShadow}
                 alt="img-shadow"
                 layout="responsive"
-                priority
+                priority={false}
               />
             </div>
             <ul

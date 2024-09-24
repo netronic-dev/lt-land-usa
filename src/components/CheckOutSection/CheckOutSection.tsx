@@ -150,6 +150,7 @@ const CheckOutSection = () => {
                     alt={item.title}
                     layout="fill"
                     objectFit="cover"
+                    priority={false}
                     className="rounded-[7px] transition-opacity duration-300 group-hover:opacity-30"
                   />
                   <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-20"></div>
@@ -179,6 +180,7 @@ const CheckOutSection = () => {
                     alt={item.title}
                     layout="fill"
                     objectFit="cover"
+                    priority={false}
                     className="rounded-[7px] transition-opacity duration-300 group-hover:opacity-30"
                   />
                   <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-20"></div>

@@ -349,6 +349,7 @@ const StaticForm: FC<IStaticFormProps> = ({
                     alt="google logo"
                     height={15}
                     width={15}
+                    priority={false}
                   />{" "}
                   {googleAuthBtnText
                     ? googleAuthBtnText

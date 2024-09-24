@@ -60,7 +60,8 @@ const NewVideo = (props: any) => {
               width: "100%",
               height: "auto",
             }}
-            alt=""
+            alt="Video_image"
+            priority={false}
           />
           <div
             onClick={onFrameViewChange}

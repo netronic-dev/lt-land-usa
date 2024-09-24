@@ -15,6 +15,7 @@ const Text = (props: any) => {
                 src={props.image}
                 fill
                 sizes="100vw"
+                priority={false}
                 style={{
                   objectFit: props.objectFit,
                   objectPosition: `${props.objectPosition}`,
@@ -28,6 +29,7 @@ const Text = (props: any) => {
                   src={props.imageResponsive}
                   fill
                   sizes="100vw"
+                  priority={false}
                   style={{
                     objectFit: props.objectFitResponsive,
                     objectPosition: `${props.objectPositionResponsive}`,

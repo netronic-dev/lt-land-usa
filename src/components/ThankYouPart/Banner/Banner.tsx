@@ -32,11 +32,12 @@ const Banner = (props: any) => {
             <Image
               src={props.image_2}
               fill
+              priority
               sizes="100vw"
               style={{
                 objectFit: "contain",
               }}
-              alt=""
+              alt="image_banner_two"
             />
           </animated.div>
           <animated.div
@@ -47,10 +48,11 @@ const Banner = (props: any) => {
               src={props.image_1}
               fill
               sizes="100vw"
+              priority
               style={{
                 objectFit: "contain",
               }}
-              alt=""
+              alt="image_banner_one"
             />
           </animated.div>
         </div>
