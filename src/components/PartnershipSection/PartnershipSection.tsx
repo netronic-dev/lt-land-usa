@@ -99,7 +99,14 @@ const PartnershipSection = () => {
         }`}
       >
         <div className="z-10 absolute w-full h-[14%] md:h-[60%] bottom-[55px] lg:bottom-[5px] xl:bottom-0 right-0">
-          <Image src={bg} alt="partnership-bg" layout="fill" priority={false} />
+          <Image
+            src={bg}
+            alt="partnership-bg"
+            layout="fill"
+            priority={false}
+            loading="lazy"
+            sizes="100vw"
+          />
         </div>
         <div className="container flex flex-col md:gap-[10px] md:justify-between md:flex-row md:items-center pt-[105px] md:pt-0 md:overflow-y-hidden">
           <div className="md:max-w-[331px] lg:max-w-[446px] xl:max-w-[468px]">
@@ -161,6 +168,8 @@ const PartnershipSection = () => {
                   alt={item.alt}
                   layout="fill"
                   priority={false}
+                  loading="lazy"
+                  sizes="100vw"
                 />
               </li>
             ))}

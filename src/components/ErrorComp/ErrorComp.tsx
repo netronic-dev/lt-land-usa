@@ -35,6 +35,8 @@ const ErrorComp: FC<IErrorComp> = ({
           layout="fill"
           priority={false}
           objectFit="cover"
+          loading="lazy"
+          sizes="100vw"
         />
       </div>
       <div className={style.insideContentBox}>

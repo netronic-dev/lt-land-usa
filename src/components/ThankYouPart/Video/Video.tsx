@@ -49,8 +49,9 @@ const Video = (props: VideoProps) => {
             <div className={style.image_desktop}>
               <Image
                 src={props.videoImage}
-                fill
+                layout="responsive"
                 sizes="100vw"
+                loading="lazy"
                 priority={false}
                 style={{
                   objectFit: "cover",
@@ -61,7 +62,8 @@ const Video = (props: VideoProps) => {
             <div className={style.image_responsive}>
               <Image
                 src={props.videoImageResponsive}
-                fill
+                layout="responsive"
+                loading="lazy"
                 sizes="100vw"
                 priority={false}
                 style={{

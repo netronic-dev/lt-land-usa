@@ -63,6 +63,8 @@ const BurgerMenu: FC<IBurger> = ({ isOpenMenu, handleOpenMenu }) => {
             layout="fill"
             objectFit="cover"
             priority={false}
+            loading="lazy"
+            sizes="100vw"
           />
         </div>
         {tabletStyles ? (

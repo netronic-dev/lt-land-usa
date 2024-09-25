@@ -13,8 +13,9 @@ const Text = (props: any) => {
             <div className={style.image_desktop}>
               <Image
                 src={props.image}
-                fill
+                layout="responsive"
                 sizes="100vw"
+                loading="lazy"
                 priority={false}
                 style={{
                   objectFit: props.objectFit,
@@ -27,9 +28,10 @@ const Text = (props: any) => {
               <div className={style.image_responsive}>
                 <Image
                   src={props.imageResponsive}
-                  fill
+                  layout="responsive"
                   sizes="100vw"
                   priority={false}
+                  loading="lazy"
                   style={{
                     objectFit: props.objectFitResponsive,
                     objectPosition: `${props.objectPositionResponsive}`,

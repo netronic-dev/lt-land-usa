@@ -62,6 +62,7 @@ const NewVideo = (props: any) => {
             }}
             alt="Video_image"
             priority={false}
+            loading="lazy"
           />
           <div
             onClick={onFrameViewChange}

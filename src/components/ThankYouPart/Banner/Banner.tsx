@@ -32,8 +32,8 @@ const Banner = (props: any) => {
             <Image
               src={props.image_2}
               fill
-              priority
               sizes="100vw"
+              loading="lazy"
               style={{
                 objectFit: "contain",
               }}
@@ -48,7 +48,7 @@ const Banner = (props: any) => {
               src={props.image_1}
               fill
               sizes="100vw"
-              priority
+              loading="lazy"
               style={{
                 objectFit: "contain",
               }}

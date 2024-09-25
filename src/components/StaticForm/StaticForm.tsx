@@ -350,6 +350,8 @@ const StaticForm: FC<IStaticFormProps> = ({
                     height={15}
                     width={15}
                     priority={false}
+                    loading="lazy"
+                    sizes="100vw"
                   />{" "}
                   {googleAuthBtnText
                     ? googleAuthBtnText

@@ -99,8 +99,9 @@ const HeroSection = () => {
               src={animationCircleImg}
               alt="Animation-circle"
               layout="responsive"
-              priority
               objectFit="cover"
+              loading="lazy"
+              sizes="100vw"
             />
           </div>
           <div
@@ -112,6 +113,8 @@ const HeroSection = () => {
                 alt="img-shadow"
                 layout="responsive"
                 priority={false}
+                loading="lazy"
+                sizes="100vw"
               />
             </div>
             <ul
@@ -129,7 +132,10 @@ const HeroSection = () => {
                     src={item.url}
                     alt={item.alt}
                     layout="responsive"
-                    priority
+                    priority={false}
+                    sizes="100vw"
+                    loading="lazy"
+                    quality={90}
                     objectFit="cover"
                   />
                 </li>

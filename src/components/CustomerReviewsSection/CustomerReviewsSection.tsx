@@ -109,6 +109,9 @@ const CustomerReviewsSection = () => {
                   objectFit="cover"
                   layout="responsive"
                   priority={false}
+                  quality={90}
+                  loading="lazy"
+                  sizes="100vw"
                   className="rounded-[7px]"
                 />
               </div>

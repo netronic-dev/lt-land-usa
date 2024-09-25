@@ -18,6 +18,8 @@ const Loader = () => {
             layout="fill"
             objectFit="cover"
             priority={false}
+            loading="lazy"
+            sizes="100vw"
           />
         </div>
         <div
@@ -29,6 +31,8 @@ const Loader = () => {
             layout="fill"
             objectFit="cover"
             priority={false}
+            loading="lazy"
+            sizes="100vw"
           />
         </div>
       </div>

@@ -118,6 +118,8 @@ const DiverseGameplaySection = () => {
                     layout="fill"
                     objectFit="cover"
                     priority={false}
+                    loading="lazy"
+                    sizes="100vw"
                   />
                 </div>
               )}
@@ -146,6 +148,8 @@ const DiverseGameplaySection = () => {
                       layout="fill"
                       objectFit="cover"
                       priority={false}
+                      loading="lazy"
+                      sizes="100vw"
                     />
                   ) : (
                     <ul className="pt-[20px] md:pb-0 flex flex-col gap-y-[25px] gap-x-[45px] flex-wrap h-[199px] md:h-[220px]">

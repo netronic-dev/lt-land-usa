@@ -16,6 +16,8 @@ const AboutUsSection = ({ t }: { t: (key: string) => string }) => {
           alt="ellipseBg"
           layout="responsive"
           priority={false}
+          loading="lazy"
+          sizes="100vw"
         />
       </div>
       <div className="container lg:flex lg:items-center lg:justify-between">
