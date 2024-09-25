@@ -98,10 +98,9 @@ const HeroSection = () => {
             <Image
               src={animationCircleImg}
               alt="Animation-circle"
-              layout="responsive"
-              objectFit="cover"
+              fill
               loading="lazy"
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div
@@ -111,10 +110,9 @@ const HeroSection = () => {
               <Image
                 src={imgShadow}
                 alt="img-shadow"
-                layout="responsive"
-                priority={false}
-                loading="lazy"
-                sizes="100vw"
+                fill
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <ul
@@ -131,12 +129,11 @@ const HeroSection = () => {
                   <Image
                     src={item.url}
                     alt={item.alt}
-                    layout="responsive"
+                    fill
                     priority={false}
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     loading="lazy"
                     quality={90}
-                    objectFit="cover"
                   />
                 </li>
               ))}

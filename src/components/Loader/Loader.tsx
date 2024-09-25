@@ -15,11 +15,10 @@ const Loader = () => {
           <Image
             src={circleImg}
             alt="circleImg"
-            layout="fill"
-            objectFit="cover"
+            fill
             priority={false}
             loading="lazy"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div

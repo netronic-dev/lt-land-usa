@@ -115,11 +115,10 @@ const DiverseGameplaySection = () => {
                   <Image
                     src={ellItemBg}
                     alt="ellItemBg"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     priority={false}
                     loading="lazy"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               )}
@@ -145,11 +144,10 @@ const DiverseGameplaySection = () => {
                     <Image
                       src={item.image}
                       alt={item.alt}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
                       priority={false}
                       loading="lazy"
-                      sizes="100vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : (
                     <ul className="pt-[20px] md:pb-0 flex flex-col gap-y-[25px] gap-x-[45px] flex-wrap h-[199px] md:h-[220px]">

@@ -148,11 +148,10 @@ const CheckOutSection = () => {
                   <Image
                     src={isTablet ? item.image : item.imageMobile}
                     alt={item.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     priority={false}
                     loading="lazy"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="rounded-[7px] transition-opacity duration-300 group-hover:opacity-30"
                   />
                   <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-20"></div>
@@ -180,11 +179,10 @@ const CheckOutSection = () => {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     priority={false}
                     loading="lazy"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="rounded-[7px] transition-opacity duration-300 group-hover:opacity-30"
                   />
                   <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-20"></div>

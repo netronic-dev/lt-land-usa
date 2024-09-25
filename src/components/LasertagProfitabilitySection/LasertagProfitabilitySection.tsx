@@ -51,11 +51,10 @@ const LasertagProfitabilitySection = () => {
         <Image
           src={optimizingEllBg}
           alt="optimizingEllBg"
-          layout="fill"
-          objectFit="cover"
+          fill
           priority={false}
           loading="lazy"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div className="container">

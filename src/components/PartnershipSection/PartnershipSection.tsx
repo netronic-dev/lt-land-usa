@@ -102,10 +102,10 @@ const PartnershipSection = () => {
           <Image
             src={bg}
             alt="partnership-bg"
-            layout="fill"
+            fill
             priority={false}
             loading="lazy"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="container flex flex-col md:gap-[10px] md:justify-between md:flex-row md:items-center pt-[105px] md:pt-0 md:overflow-y-hidden">
@@ -166,10 +166,10 @@ const PartnershipSection = () => {
                 <Image
                   src={item.image}
                   alt={item.alt}
-                  layout="fill"
+                  fill
                   priority={false}
                   loading="lazy"
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </li>
             ))}

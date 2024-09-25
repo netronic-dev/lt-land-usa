@@ -14,10 +14,10 @@ const AboutUsSection = ({ t }: { t: (key: string) => string }) => {
         <Image
           src={ellipseBgAboutUs}
           alt="ellipseBg"
-          layout="responsive"
+          fill
           priority={false}
           loading="lazy"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div className="container lg:flex lg:items-center lg:justify-between">

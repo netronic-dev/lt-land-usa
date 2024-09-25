@@ -106,12 +106,11 @@ const CustomerReviewsSection = () => {
                 <Image
                   src={item.image}
                   alt={item.alt}
-                  objectFit="cover"
-                  layout="responsive"
+                  fill
                   priority={false}
                   quality={90}
                   loading="lazy"
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[7px]"
                 />
               </div>
