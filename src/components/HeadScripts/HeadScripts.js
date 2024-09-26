@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { searchParams as searchParamsSelector } from "@/store/searchParamsSlice";
 import { postData } from "@/utils/postData";
 import { getCookieByKey } from "@/utils/getCookieByKey";
+import Image from "next/image";
 
 const options = {
   autoConfig: true,
@@ -62,6 +63,7 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
         />
         <noscript>
           <iframe
+            loading="lazy"
             src="https://www.googletagmanager.com/ns.html?id=GTM-WNVBX97"
             height="0"
             width="0"
@@ -69,11 +71,12 @@ const HeadScripts = ({ GA_MEASUREMENT_ID }) => {
           ></iframe>
         </noscript>
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=1815249061859086&ev=PageView&noscript=1"
+            alt="facebook-pixel"
           />
         </noscript>
       </Head>
