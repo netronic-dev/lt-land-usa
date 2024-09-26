@@ -29,6 +29,7 @@ const Agreement: FC<IAgreement> = ({
           render={({ field }) => (
             <div className={`${style.agreement}`}>
               <button
+                aria-label="Change checkbox"
                 type="button"
                 onClick={onClick}
                 className={`${style.checkBox} ${

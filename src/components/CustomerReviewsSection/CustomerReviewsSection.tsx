@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -43,6 +43,40 @@ const CustomerReviewsSection = () => {
     }
   };
 
+  // const excludeClonedSlides = () => {
+  //   const clonedSlides = document.querySelectorAll(".slick-cloned");
+
+  //   clonedSlides.forEach((slide) => {
+  //     slide.setAttribute("aria-hidden", "true");
+  //     const focusableElements = slide.querySelectorAll(
+  //       "a, button, input, textarea, select"
+  //     );
+  //     focusableElements.forEach((el) => el.setAttribute("tabindex", "-1"));
+  //   });
+  // };
+
+  const manageAriaAndTabindex = () => {
+    const allSlides = document.querySelectorAll(".slick-slide");
+    allSlides.forEach((slide) => {
+      const isActive = slide.classList.contains("slick-active");
+      if (isActive) {
+        slide.setAttribute("aria-hidden", "false");
+
+        const focusableElements = slide.querySelectorAll(
+          "a, button, input, textarea, select"
+        );
+        focusableElements.forEach((el) => el.setAttribute("tabindex", "0"));
+      } else {
+        slide.setAttribute("aria-hidden", "true");
+
+        const focusableElements = slide.querySelectorAll(
+          "a, button, input, textarea, select"
+        );
+        focusableElements.forEach((el) => el.setAttribute("tabindex", "-1"));
+      }
+    });
+  };
+
   const settings = {
     dots: false,
     infinite: true,
@@ -52,6 +86,7 @@ const CustomerReviewsSection = () => {
     slidesToShow: 2,
     slidersToScroll: 1,
     arrows: false,
+    afterChange: manageAriaAndTabindex,
     responsive: [
       {
         breakpoint: 649,
@@ -61,6 +96,10 @@ const CustomerReviewsSection = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    manageAriaAndTabindex();
+  }, []);
 
   return (
     <section className="md:py-[63px] pb-[48px] pt-[25px]">
@@ -115,6 +154,7 @@ const CustomerReviewsSection = () => {
                 />
               </div>
               <button
+                aria-label="Play video"
                 onClick={() => handlePlayClick(item)}
                 className="z-3 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transition-all cursor-pointer w-[77px] h-[77px] flex items-center justify-center rounded-[50%] border-solid border-[1px] border-[var(--primary-text-color)] bg-[transparent] group-hover:bg-[var(--accent-color)]"
               >

@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
@@ -58,6 +58,18 @@ const CheckOutSection = () => {
     }
   };
 
+  const excludeClonedSlides = () => {
+    const clonedSlides = document.querySelectorAll(".slick-cloned");
+
+    clonedSlides.forEach((slide) => {
+      slide.setAttribute("aria-hidden", "true");
+      const focusableElements = slide.querySelectorAll(
+        "a, button, input, textarea, select"
+      );
+      focusableElements.forEach((el) => el.setAttribute("tabindex", "-1"));
+    });
+  };
+
   const settingsSliderTop = {
     dots: false,
     infinite: true,
@@ -67,6 +79,7 @@ const CheckOutSection = () => {
     slidesToShow: 2,
     slidersToScroll: 1,
     arrows: false,
+    afterChange: excludeClonedSlides,
     responsive: [
       {
         breakpoint: 649,
@@ -86,6 +99,7 @@ const CheckOutSection = () => {
     slidesToShow: 3,
     slidersToScroll: 1,
     arrows: false,
+    afterChange: excludeClonedSlides,
     rtl: true,
     responsive: [
       {
@@ -102,6 +116,10 @@ const CheckOutSection = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    excludeClonedSlides();
+  }, []);
 
   return (
     <section id="products" className="pt-[56px] xl:pt-[63px] pb-[78px]">

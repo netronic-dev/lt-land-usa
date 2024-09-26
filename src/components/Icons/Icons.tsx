@@ -267,11 +267,7 @@ const Icons = () => {
                 gradientTransform="translate(107.84 52.2145) rotate(133.611) scale(64.2461 4.13787)"
               >
                 <stop stopColor="#0090FF" />
-                <stop
-                  offset="0.139"
-                  stopColor="#0090FF"
-                  stopOpacity="0.861"
-                />
+                <stop offset="0.139" stopColor="#0090FF" stopOpacity="0.861" />
                 <stop offset="1" stopColor="#0090FF" stopOpacity="0" />
               </radialGradient>
               <radialGradient
@@ -293,11 +289,7 @@ const Icons = () => {
                   stopColor="#64DAF5"
                   stopOpacity="0.8955"
                 />
-                <stop
-                  offset="0.198"
-                  stopColor="#45C3F8"
-                  stopOpacity="0.802"
-                />
+                <stop offset="0.198" stopColor="#45C3F8" stopOpacity="0.802" />
                 <stop
                   offset="0.2995"
                   stopColor="#2CB0FB"

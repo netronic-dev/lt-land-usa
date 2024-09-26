@@ -133,6 +133,7 @@ const ChangeLanguage: FC<IProps> = ({ width }) => {
 
   return (
     <Select
+      aria-label="Change language"
       options={LANGUAGES.map((lang) => ({
         label: lang.label,
         value: lang.value,

@@ -17,7 +17,7 @@ const button = cva("button", {
     intent: {
       order: [
         "bg-[var(--accent-color)]",
-        "text-[var(--primary-text-color)] font-bold uppercase font-manrope",
+        "text-[var(--secondary-text-color)] font-bold uppercase font-manrope",
         "flex justify-center items-center",
         "border-transparent",
         "rounded-[7px]",
@@ -54,9 +54,9 @@ const PrimaryButton: FC<Props> = ({
     <button
       type={type}
       disabled={disabled}
-      className={`${button({ ...props, intent: "order" })} ${
-        style.button
-      } ${className && className}`}
+      className={`${button({ ...props, intent: "order" })} ${style.button} ${
+        className && className
+      }`}
       onClick={onClick}
     >
       {children}

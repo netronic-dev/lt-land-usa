@@ -1,14 +1,14 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import style from "./style.module.scss";
 import { Icon } from "../Icon";
 import {
-  IQualityAndReliabilityList, 
+  IQualityAndReliabilityList,
   QualityAndReliabilityList,
 } from "@/constants/globalConstants";
 
@@ -52,6 +52,18 @@ const QualityAndReliabilitySection = () => {
     }
   };
 
+  const excludeClonedSlides = () => {
+    const clonedSlides = document.querySelectorAll(".slick-cloned");
+
+    clonedSlides.forEach((slide) => {
+      slide.setAttribute("aria-hidden", "true");
+      const focusableElements = slide.querySelectorAll(
+        "a, button, input, textarea, select"
+      );
+      focusableElements.forEach((el) => el.setAttribute("tabindex", "-1"));
+    });
+  };
+
   const settings = {
     dots: false,
     infinite: true,
@@ -61,6 +73,7 @@ const QualityAndReliabilitySection = () => {
     slidesToShow: 2,
     slidersToScroll: 1,
     arrows: false,
+    afterChange: excludeClonedSlides,
     responsive: [
       {
         breakpoint: 1023,
@@ -70,6 +83,10 @@ const QualityAndReliabilitySection = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    excludeClonedSlides();
+  }, []);
 
   return (
     <section id="quality" className="pb-[67px] md:pb-[77px] xl:pb-[67px]">

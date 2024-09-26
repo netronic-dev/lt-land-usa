@@ -99,6 +99,7 @@ const Footer = () => {
                       {item.phone}
                     </a>
                     <a
+                      aria-label="Icon whatsapp"
                       href={item.whatsappLink}
                       target="_blank"
                       rel="noreferrer"
@@ -122,7 +123,12 @@ const Footer = () => {
             <p className="text-[var(--primary-text-color)] font-manrope text-[10px] uppercase md:text-[16px]">
               {t("footer.partOfText")}
             </p>
-            <a href="https://netronic.net/" target="_blank" rel="noreferrer">
+            <a
+              aria-label="Icon netronic"
+              href="https://netronic.net/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Icon
                 name="icon-netronic"
                 size={"0px"}
@@ -137,6 +143,7 @@ const Footer = () => {
             {NetworksList.map((item) => (
               <li key={item.id}>
                 <a
+                  aria-label="Icon footer"
                   href={item.url}
                   target="_blank"
                   rel="noreferrer"

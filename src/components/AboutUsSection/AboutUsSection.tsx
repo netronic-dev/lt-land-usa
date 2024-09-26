@@ -39,6 +39,7 @@ const AboutUsSection = ({ t }: { t: (key: string) => string }) => {
               </span>
             </p>
             <a
+              aria-label="Icon play"
               href="https://www.youtube.com/watch?v=JkCltZm1kb4"
               target="_blank"
               rel="noreferrer"

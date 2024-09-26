@@ -113,22 +113,22 @@ const PartnershipSection = () => {
             <h2 className="xl:max-w-[488px] mb-[35px] text-[var(--primary-text-color)] lg:max-w-[473px] lg:mb-[29px] font-manrope text-[40px] leading-[57px] font-extrabold text-center md:text-start">
               {t("partnershipSection.title")}{" "}
             </h2>
-            <h4 className="text-[var(--primary-text-color)] font-manrope text-[20px] mb-[18px] text-center md:text-start">
+            <h3 className="text-[var(--primary-text-color)] font-manrope text-[20px] mb-[18px] text-center md:text-start">
               {t("partnershipSection.subtitle")}
               <span className="text-[var(--accent-color)]">
                 {" "}
                 {t("partnershipSection.subtitleSpan")}
               </span>
-            </h4>
+            </h3>
             <p className="text-[var(--primary-text-color)] font-manrope text-[18px] text-center md:text-start mb-[30px]">
               {t("partnershipSection.description")}
             </p>
-            <h3 className="text-[var(--primary-text-color)] font-manrope text-[28px] font-extrabold text-center md:text-start mb-[23px]">
+            <h4 className="text-[var(--primary-text-color)] font-manrope text-[28px] font-extrabold text-center md:text-start mb-[23px]">
               <span className="text-[var(--accent-color)]">
                 {t("partnershipSection.subtextSpan")}
               </span>{" "}
               {t("partnershipSection.subtext")}
-            </h3>
+            </h4>
             <p className="text-[var(--primary-text-color)] font-manrope text-[18px] text-center md:text-start mb-[23px] max-w-[329px] lg:max-w-[405px]">
               {t("partnershipSection.text")}
             </p>

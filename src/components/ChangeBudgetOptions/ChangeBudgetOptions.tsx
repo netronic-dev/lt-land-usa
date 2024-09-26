@@ -25,7 +25,7 @@ const ChangeBudgetOptions: FC<IChangeBudgetOptions> = ({
   placeholder,
 }) => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
-    
+
   const customStyles: StylesConfig<ISelectBudgetOptions, false> = {
     control: (provided) => ({
       ...provided,
@@ -110,6 +110,7 @@ const ChangeBudgetOptions: FC<IChangeBudgetOptions> = ({
         name={name}
         render={({ field }) => (
           <Select
+            aria-label="change-budget-label"
             {...field}
             placeholder={placeholder}
             options={options}
