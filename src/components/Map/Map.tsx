@@ -5,8 +5,7 @@ import { csv } from "d3-fetch";
 import { useInView } from "react-intersection-observer";
 import style from "./style.module.scss";
 
-const assetPrefix = process.env.NODE_ENV === "production" ? "/version-b" : "";
-const geoUrl = `${assetPrefix}/map/map.json`;
+const geoUrl = "/map/map.json";
 
 type Data = {
   id: number;
@@ -25,7 +24,7 @@ const Map = () => {
   });
 
   if (inView && data.length === 0) {
-    csv<any>(`${assetPrefix}/map/countries.csv`).then((csvData) => {
+    csv<any>("/map/countries.csv").then((csvData) => {
       const transformedData = csvData as unknown as Data[];
       setData(transformedData);
     });
