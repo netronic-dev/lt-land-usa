@@ -119,7 +119,7 @@ const PageLayout = (props: any) => {
           titleForm="Fill out the form and get the"
           titleSpanForm="catalog by email"
           textForm="After sending the catalog, our manager will contact you using the information provided in the form"
-          orderOldName="Catalog order | LT NET USA (versionB)"
+          orderOldName="Catalog order | LT NET USA"
           destinationURL="https://back.netronic.net/forms"
           letterId={3421156}
           fromName="Lasertag"
@@ -142,7 +142,7 @@ const PageLayout = (props: any) => {
           titleForm="Request a personal demo!"
           textForm="Our manager will demonstrate you all features of the equipment,
             as well our as unique maps"
-          orderOldName="Demo order | LT NET USA (versionB)"
+          orderOldName="Demo order | LT NET USA"
           destinationURL="https://back.netronic.net/forms"
           letterId={3421154}
           fromName="Lasertag"
@@ -164,7 +164,7 @@ const PageLayout = (props: any) => {
           closeModal={modals.formConsultationChangeVisibility}
           titleForm="Make a successful business with LASERTAG.NET"
           textForm="Fill out the form below to contact our manager"
-          orderOldName="Consultation order | LT NET USA (versionB)"
+          orderOldName="Consultation order | LT NET USA"
           destinationURL="https://back.netronic.net/forms"
           letterId={3421159}
           fromName="Lasertag"
@@ -186,7 +186,7 @@ const PageLayout = (props: any) => {
           closeModal={modals.formTestDriveChangeVisibility}
           titleForm="Would you like to book a test drive? "
           textForm="Fill out the form below to express your interest."
-          orderOldName={`Test-drive order ${orderText} | LT NET USA (versionB)`}
+          orderOldName={`Test-drive order ${orderText} | LT NET USA`}
           destinationURL="https://back.netronic.net/forms"
           letterId={3433769}
           fromName="Lasertag"
@@ -209,7 +209,7 @@ const PageLayout = (props: any) => {
           titleForm="Interested in becoming"
           titleSpanForm="a partner?"
           textForm="Fill out the form below to express your interest, and let's explore the possibilities together!"
-          orderOldName={`Partnership | LT NET USA (versionB)`}
+          orderOldName={`Partnership | LT NET USA`}
           destinationURL="https://back.netronic.net/forms"
           letterId={3433743}
           fromName="Lasertag"

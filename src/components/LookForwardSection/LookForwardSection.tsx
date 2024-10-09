@@ -60,7 +60,7 @@ const LookForwardSection = () => {
             textForm={t("lookForwardSection.textStaticForm")}
             textBtn={t("lookForwardSection.textBtn")}
             destinationURL="https://back.netronic.net/forms"
-            orderOldName="Consultation order | LT NET USA (versionB)"
+            orderOldName="Consultation order | LT NET USA"
             letterId={3421159}
             fromName="Lasertag"
             namePlaceholder={t("lookForwardSection.namePlaceholder")}
