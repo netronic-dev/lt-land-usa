@@ -1,16 +1,10 @@
 import dynamic from "next/dynamic";
 import initTranslations from "../i18n";
+import { HeroSection } from "@/components/HeroSection";
 
 const PageLayout = dynamic(() => import("@/components/PageLayout/PageLayout"), {
   ssr: false,
 });
-
-const HeroSection = dynamic(
-  () => import("@/components/HeroSection/HeroSection"),
-  {
-    ssr: false,
-  }
-);
 
 const AboutUsSection = dynamic(
   () => import("@/components/AboutUsSection/AboutUsSection"),

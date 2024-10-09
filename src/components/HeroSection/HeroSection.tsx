@@ -130,9 +130,8 @@ const HeroSection = () => {
                     src={item.url}
                     alt={item.alt}
                     fill
-                    priority={false}
+                    priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    loading="lazy"
                     quality={90}
                   />
                 </li>
