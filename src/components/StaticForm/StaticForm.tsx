@@ -9,6 +9,7 @@ import {
   linkWithCredential,
 } from "firebase/auth";
 import { FC, useEffect, useState } from "react";
+import ReactPixel from "react-facebook-pixel";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useSelector } from "react-redux";
@@ -122,13 +123,13 @@ const StaticForm: FC<IStaticFormProps> = ({
     },
   });
 
-  useEffect(() => {
-    import("react-facebook-pixel")
-      .then((x) => x.default)
-      .then((ReactPixel) => {
-        ReactPixel.track("Lead");
-      });
-  }, []);
+  // useEffect(() => {
+  //   import("react-facebook-pixel")
+  //     .then((x) => x.default)
+  //     .then((ReactPixel) => {
+  //       ReactPixel.track("Lead");
+  //     });
+  // }, []);
 
   const handleServerErrors = (error: { [key: string]: string }) => {
     Object.entries(error).forEach(([key, message]) => {
@@ -283,7 +284,7 @@ const StaticForm: FC<IStaticFormProps> = ({
         category: "form",
         action: "submit",
       });
-      const ReactPixel = (await import("react-facebook-pixel")).default;
+      // const ReactPixel = (await import("react-facebook-pixel")).default;
       ReactPixel.track("Lead");
       sendEventToConversionApi(window.location.href, "Lead");
 

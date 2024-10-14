@@ -7,11 +7,13 @@ import { useCalendlyEventListener } from "react-calendly";
 import ReactGA from "react-ga4";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
+import ReactPixel from "react-facebook-pixel";
 import { addUserData } from "../../store/UserDataSlice";
 import { searchParams } from "../../store/searchParamsSlice";
 import { postData } from "@/utils/postData";
 import { PrimaryButton } from "../PrimaryButton";
 import { getCookieByKey } from "@/utils/getCookieByKey";
+import { sendEventToConversionApi } from "@/utils/sendEventToConversionApi";
 
 const PopupModal = dynamic(
   () => import("react-calendly").then((mod) => mod.PopupModal),
@@ -101,8 +103,9 @@ const CalendlyButton = (props: any) => {
               event_category: "button",
               event_label: "generate_lead",
             });
-            const ReactPixel = (await import("react-facebook-pixel")).default;
+            // const ReactPixel = (await import("react-facebook-pixel")).default;
             ReactPixel.track("Lead");
+            sendEventToConversionApi(window.location.href, "Lead");
 
             router.push("/thanks/call");
           } catch (error) {

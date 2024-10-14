@@ -255,11 +255,7 @@ window.Tawk_API.onChatStarted = function(data) {
     document.dispatchEvent(event);
   }
 };
-
-          Tawk_API.onOfflineSubmit = function(data) {
-            ReactPixel.track("Lead");
-            sendEventToConversionApi(window.location.href, "Lead");
-          };`,
+`,
         }}
       />
       {/* <!--End of Tawk.to Script--> */}
